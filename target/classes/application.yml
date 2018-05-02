@@ -9,10 +9,16 @@ spring:
       prefix: classpath*:/templates/
       suffix: .html
     static-path-pattern: /static/**
-    date-format: yyyy-MM-dd HH:mm:ss
+  #静态html热部署
+  thymeleaf:
+    cache: false
   redis:
-    password: 123456    
-
+    password: 123456
+  #json时间    
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+      
 
 mybatis:
   mapper-locations:

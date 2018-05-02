@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import com.alibaba.fastjson.annotation.JSONField;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.lianxiang.po.base.BasePo;
 
 public class Admin  extends BasePo{
@@ -20,10 +21,10 @@ public class Admin  extends BasePo{
 
     private Byte isSystem;
     
-    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
+   
     private Date createdAt;
     
-    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
+    
     private Date updatedAt;
     
     

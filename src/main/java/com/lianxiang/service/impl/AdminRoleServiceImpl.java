@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,6 +26,7 @@ public class AdminRoleServiceImpl  implements AdminRoleService{
 	private AdminRoleMapper adminRoleMapper;
 
 	@Override
+	@Cacheable(cacheNames = "AdminRoleService-getRoleList")
 	public List<AdminRoleKey> getRoleList(AdminRoleKey adminRole) {
 		AdminRoleExample example =new AdminRoleExample();
 		if (StringUtils.isNotEmpty(adminRole.getAdminId())) {
