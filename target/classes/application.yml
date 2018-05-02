@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active:
+    - dev
+  mvc:
+    favicon:
+      enabled: false
+    view:
+      prefix: classpath*:/templates/
+      suffix: .html
+    static-path-pattern: /static/**
+    date-format: yyyy-MM-dd HH:mm:ss
+  redis:
+    password: 123456    
+
+
+mybatis:
+  mapper-locations:
+  - classpath*:mapper/*.xml
+  type-aliases-package: com.lianxiang.mapper
+  
+  
+logging:
+  config: classpath:logback-spring.xml  
+  level:   
+    com.lianxiang.mapper: debug 
+    com.lianxiang.controller: debug
+    com.lianxiang.service: debug
+    org.springframework: DEBUG
+  
