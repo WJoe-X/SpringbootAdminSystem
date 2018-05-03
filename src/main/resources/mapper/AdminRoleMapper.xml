@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lianxiang.mapper.AdminRoleMapper">
-  <resultMap id="BaseResultMap" type="com.lianxiang.po.AdminRoleKey">
+<mapper namespace="com.lenovo.bootstrap.mapper.AdminRoleMapper">
+  <resultMap id="BaseResultMap" type="com.lenovo.bootstrap.po.AdminRoleKey">
     <id column="admin_id" jdbcType="VARCHAR" property="adminId" />
     <id column="role_id" jdbcType="VARCHAR" property="roleId" />
   </resultMap>
@@ -66,7 +66,7 @@
   <sql id="Base_Column_List">
     admin_id, role_id
   </sql>
-  <select id="selectByExample" parameterType="com.lianxiang.po.AdminRoleExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.lenovo.bootstrap.po.AdminRoleExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -80,22 +80,22 @@
       order by ${orderByClause}
     </if>
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="com.lianxiang.po.AdminRoleKey">
+  <delete id="deleteByPrimaryKey" parameterType="com.lenovo.bootstrap.po.AdminRoleKey">
     delete from admin_role
     where admin_id = #{adminId,jdbcType=VARCHAR}
       and role_id = #{roleId,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.lianxiang.po.AdminRoleExample">
+  <delete id="deleteByExample" parameterType="com.lenovo.bootstrap.po.AdminRoleExample">
     delete from admin_role
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.lianxiang.po.AdminRoleKey">
+  <insert id="insert" parameterType="com.lenovo.bootstrap.po.AdminRoleKey">
     insert into admin_role (admin_id, role_id)
     values (#{adminId,jdbcType=VARCHAR}, #{roleId,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.lianxiang.po.AdminRoleKey">
+  <insert id="insertSelective" parameterType="com.lenovo.bootstrap.po.AdminRoleKey">
     insert into admin_role
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="adminId != null">
@@ -114,7 +114,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.lianxiang.po.AdminRoleExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.lenovo.bootstrap.po.AdminRoleExample" resultType="java.lang.Long">
     select count(*) from admin_role
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />

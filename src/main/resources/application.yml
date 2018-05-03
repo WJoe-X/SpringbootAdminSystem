@@ -12,7 +12,10 @@ spring:
   #静态html热部署
   thymeleaf:
     cache: false
+  cache:
+    type: redis  
   redis:
+    database: 0
     password: 123456
   #json时间    
   jackson:
@@ -23,7 +26,7 @@ spring:
 mybatis:
   mapper-locations:
   - classpath*:mapper/*.xml
-  type-aliases-package: com.lianxiang.mapper
+  type-aliases-package: com.lenovo.bootstrap.mapper
   
   
 logging:

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lianxiang.mapper.RoleMenuMapper">
-  <resultMap id="BaseResultMap" type="com.lianxiang.po.RoleMenuKey">
+<mapper namespace="com.lenovo.bootstrap.mapper.RoleMenuMapper">
+  <resultMap id="BaseResultMap" type="com.lenovo.bootstrap.po.RoleMenuKey">
     <id column="role_id" jdbcType="VARCHAR" property="roleId" />
     <id column="menu_id" jdbcType="VARCHAR" property="menuId" />
   </resultMap>
@@ -66,7 +66,7 @@
   <sql id="Base_Column_List">
     role_id, menu_id
   </sql>
-  <select id="selectByExample" parameterType="com.lianxiang.po.RoleMenuExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.lenovo.bootstrap.po.RoleMenuExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -80,22 +80,22 @@
       order by ${orderByClause}
     </if>
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="com.lianxiang.po.RoleMenuKey">
+  <delete id="deleteByPrimaryKey" parameterType="com.lenovo.bootstrap.po.RoleMenuKey">
     delete from role_menu
     where role_id = #{roleId,jdbcType=VARCHAR}
       and menu_id = #{menuId,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.lianxiang.po.RoleMenuExample">
+  <delete id="deleteByExample" parameterType="com.lenovo.bootstrap.po.RoleMenuExample">
     delete from role_menu
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.lianxiang.po.RoleMenuKey">
+  <insert id="insert" parameterType="com.lenovo.bootstrap.po.RoleMenuKey">
     insert into role_menu (role_id, menu_id)
     values (#{roleId,jdbcType=VARCHAR}, #{menuId,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.lianxiang.po.RoleMenuKey">
+  <insert id="insertSelective" parameterType="com.lenovo.bootstrap.po.RoleMenuKey">
     insert into role_menu
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="roleId != null">
@@ -114,7 +114,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.lianxiang.po.RoleMenuExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.lenovo.bootstrap.po.RoleMenuExample" resultType="java.lang.Long">
     select count(*) from role_menu
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
