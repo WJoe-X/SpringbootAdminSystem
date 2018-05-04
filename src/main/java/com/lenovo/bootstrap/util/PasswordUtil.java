@@ -6,8 +6,7 @@ import org.apache.shiro.util.ByteSource;
 /**
  * Description:密码生成工具类
  * 
- * @author WJoe
- * @time 上午10:13:53
+ * 
  */
 public class PasswordUtil {
 

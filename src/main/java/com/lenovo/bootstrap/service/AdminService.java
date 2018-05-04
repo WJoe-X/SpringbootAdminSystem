@@ -5,6 +5,7 @@ import java.util.List;
 import com.github.pagehelper.PageInfo;
 import com.lenovo.bootstrap.po.Admin;
 import com.lenovo.bootstrap.po.AdminExample;
+import com.lenovo.bootstrap.po.valid.ListVaild;
 
 
 /**
@@ -14,7 +15,7 @@ import com.lenovo.bootstrap.po.AdminExample;
  * @time 下午4:16:02
  */
 public interface AdminService {
-	public PageInfo<Admin> getAllList(Integer pageNum,Integer pageSize);
+	public PageInfo<Admin> getAllList(ListVaild listVaild);
 
 	public Integer getCount(AdminExample example);
 

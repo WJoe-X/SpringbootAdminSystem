@@ -1,6 +1,5 @@
 package com.lenovo.bootstrap.controller;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -11,15 +10,12 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
-import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -30,6 +26,7 @@ import com.lenovo.bootstrap.po.Admin;
 import com.lenovo.bootstrap.po.AdminExample;
 import com.lenovo.bootstrap.po.AdminRoleKey;
 import com.lenovo.bootstrap.po.Role;
+import com.lenovo.bootstrap.po.valid.ListVaild;
 import com.lenovo.bootstrap.service.AdminRoleService;
 import com.lenovo.bootstrap.service.AdminService;
 import com.lenovo.bootstrap.service.RoleService;
@@ -105,10 +102,13 @@ public class ConsoleAdminController {
 	// @RequiresPermissions("admin:index")
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	@ResponseBody
-	public ModelMap list(@RequestParam(required = true, defaultValue = "1") Integer pageNumber,
-			@RequestParam(required = false, defaultValue = "10") Integer pageSize) {
+	public ModelMap list(@Valid ListVaild listVaild,BindingResult result) {
+		if (result.hasErrors()) {
+			for (ObjectError er : result.getAllErrors())
+				return ReturnUtil.Error(er.getDefaultMessage(), null, null);
+		}
 		ModelMap map = new ModelMap();
-		PageInfo<Admin> pageInfo = adminService.getAllList(pageNumber, pageSize);
+		PageInfo<Admin> pageInfo = adminService.getAllList(listVaild);
 		for (Admin list : pageInfo.getList()) {
 			List<Role> rolelist = roleService.findRoleListByAdminId(list.getUid());
 			LOGGER.info(" findRoleListByAdminId : " + list.getCreatedAt());

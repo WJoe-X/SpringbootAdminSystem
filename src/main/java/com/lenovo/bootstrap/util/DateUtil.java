@@ -1,6 +1,3 @@
-/*
- * Copyright (c) 2017 <l_iupeiyu@qq.com> All rights reserved.
- */
 
 package com.lenovo.bootstrap.util;
 
@@ -13,8 +10,7 @@ import java.util.Map;
 
 /**
  * 日期时间工具类
- * author geekcattle
- * date 2016/11/23 0023 下午 14:53
+ * 
  */
 public class DateUtil {
     private static String ymdhms = "yyyy-MM-dd HH:mm:ss";

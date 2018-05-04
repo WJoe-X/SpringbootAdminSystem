@@ -32,8 +32,8 @@ mybatis:
 logging:
   config: classpath:logback-spring.xml  
   level:   
-    com.lianxiang.mapper: debug 
-    com.lianxiang.controller: debug
-    com.lianxiang.service: debug
+    com.lenovo.bootstrap.mapper: debug 
+    com.lenovo.bootstrap.controller: debug
+    com.lenovo.bootstrap.service: debug
     org.springframework: DEBUG
   

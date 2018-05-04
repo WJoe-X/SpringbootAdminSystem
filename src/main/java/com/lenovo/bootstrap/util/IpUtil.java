@@ -1,6 +1,4 @@
-/*
- * Copyright (c) 2017 <l_iupeiyu@qq.com> All rights reserved.
- */
+
 
 package com.lenovo.bootstrap.util;
 
@@ -19,8 +17,7 @@ import java.net.URL;
 
 /**
  * IP工具类
- * author geekcattle
- * date 2017/1/6 0006 下午 13:49
+ * 
  */
 public class IpUtil {
     /**

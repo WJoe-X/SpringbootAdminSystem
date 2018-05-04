@@ -17,7 +17,10 @@ import com.github.pagehelper.PageInfo;
 import com.lenovo.bootstrap.mapper.AdminMapper;
 import com.lenovo.bootstrap.po.Admin;
 import com.lenovo.bootstrap.po.AdminExample;
+import com.lenovo.bootstrap.po.LogExample;
+import com.lenovo.bootstrap.po.valid.ListVaild;
 import com.lenovo.bootstrap.service.AdminService;
+import com.lenovo.bootstrap.util.CamelCaseUtil;
 import com.lenovo.bootstrap.util.PasswordUtil;
 import com.lenovo.bootstrap.util.UuidUtil;
 
@@ -31,17 +34,21 @@ import com.lenovo.bootstrap.util.UuidUtil;
 @Service
 public class AdminServiceImpl implements AdminService {
 	
-	private static final Logger Logger = LoggerFactory.getLogger(AdminServiceImpl.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(AdminServiceImpl.class);
 	
 	@Autowired
 	private AdminMapper adminMapper;
 
 	@Cacheable(cacheNames = "AdminService-getAllList")
 	@Override
-	public PageInfo<Admin> getAllList(Integer pageNum, Integer pageSize) {
-        Logger.info("从数据库查询 adminAllList ");
-		PageHelper.startPage(pageNum, pageSize);
-		List<Admin> list = this.adminMapper.selectByExample(null);
+	public PageInfo<Admin> getAllList(ListVaild listVaild) {
+		AdminExample example = new AdminExample();
+		 LOGGER.info("从数据库查询 adminAllList ");
+			
+		example.setOrderByClause(CamelCaseUtil.toUnderlineName(listVaild.getSort()+" "+listVaild.getOrder()));
+		PageHelper.startPage(listVaild.getPageNumber(), listVaild.getPageSize());
+       
+		List<Admin> list = this.adminMapper.selectByExample(example);
 		return new PageInfo<>(list);
 	}
 

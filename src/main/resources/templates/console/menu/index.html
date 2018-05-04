@@ -27,8 +27,8 @@
             <td th:text="${menu.menuUrl}"></td>
             <td th:text="${menu.menuType}"></td>
             <td><input type="text" th:attr="data-id=${menu.menuId}" name="listorder" th:value="${menu.listorder}" /></td>
-            <td th:text="${menu.createdAt}"></td>
-            <td th:text="${menu.updatedAt}"></td>
+            <td th:text="${#dates.format(menu.updatedAt, 'yyyy-MM-dd HH:mm:ss')}"></td>
+            <td th:text="${#dates.format(menu.updatedAt, 'yyyy-MM-dd HH:mm:ss')}"></td>
             <td>
                 <a th:href="${'/console/menu/from?parentId='+menu.menuId}" ><i class="glyphicon glyphicon-add"></i>添加子菜单</a>
                 <a th:href="${'/console/menu/from?menuId='+menu.menuId}" ><i class="glyphicon glyphicon-edit"></i>修改</a>

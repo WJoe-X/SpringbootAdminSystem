@@ -65,11 +65,11 @@ public class MenuServiceImpl implements MenuService {
 	public List<Menu> getChildMenuList(List<Menu> list, String parentId) {
 		MenuExample example = new MenuExample();
 		example.createCriteria().andParentIdEqualTo(parentId);
-		example.setOrderByClause("created_at");
+		example.setOrderByClause("listorder asc, created_at desc");
 		List<Menu> ll = this.menuMapper.selectByExample(example);
 		for (Menu menu : ll) {
 			list.add(menu);
-			this.getChildMenuList(list, menu.getParentId());
+			this.getChildMenuList(list, menu.getMenuId());
 		}
 
 		return list;
@@ -100,6 +100,13 @@ public class MenuServiceImpl implements MenuService {
 	@Override
 	public int deleteByMenuId(String menuId) {
 		return this.menuMapper.deleteByPrimaryKey(menuId);
+	}
+
+	@Override
+	public List<Menu> selectMenuByRoleId(String roleId) {
+		return menuMapper.selectMenuByRoleId(roleId);
+		
+		
 	}
 
 }

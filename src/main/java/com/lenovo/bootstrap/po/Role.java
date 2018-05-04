@@ -1,6 +1,7 @@
 package com.lenovo.bootstrap.po;
 
 import java.util.Date;
+import java.util.List;
 
 import com.lenovo.bootstrap.po.base.BasePo;
 
@@ -16,6 +17,8 @@ public class Role extends BasePo{
     private Date createdAt;
 
     private Date updatedAt;
+    
+    private List<Menu> menuList;
 
     public String getRoleId() {
         return roleId;
@@ -64,4 +67,14 @@ public class Role extends BasePo{
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
+
+	public List<Menu> getMenuList() {
+		return menuList;
+	}
+
+	public void setMenuList(List<Menu> menuList) {
+		this.menuList = menuList;
+	}
+
+	
 }

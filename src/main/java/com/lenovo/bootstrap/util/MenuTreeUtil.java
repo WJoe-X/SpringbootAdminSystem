@@ -1,6 +1,4 @@
-/*
- * Copyright (c) 2017 <l_iupeiyu@qq.com> All rights reserved.
- */
+
 
 package com.lenovo.bootstrap.util;
 
@@ -16,8 +14,7 @@ import com.lenovo.bootstrap.po.Menu;
 import com.lenovo.bootstrap.po.RoleMenuKey;
 
 /**
- * author geekcattle
- * date 2016/10/21 0021 下午 15:58
+ * 
  */
 public class MenuTreeUtil {
 

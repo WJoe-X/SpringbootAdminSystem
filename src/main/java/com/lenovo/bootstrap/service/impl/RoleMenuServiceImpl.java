@@ -1,10 +1,16 @@
 package com.lenovo.bootstrap.service.impl;
 
+import static org.assertj.core.api.Assertions.assertThatIllegalStateException;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.lenovo.bootstrap.mapper.RoleMenuMapper;
 import com.lenovo.bootstrap.po.RoleMenuExample;
+import com.lenovo.bootstrap.po.RoleMenuKey;
 import com.lenovo.bootstrap.service.RoleMenuService;
 
 /**
@@ -21,10 +27,38 @@ public class RoleMenuServiceImpl implements RoleMenuService {
 	private RoleMenuMapper roleMenuMapper;
 
 	@Override
-	public int deleteByMenuId(String id) {
+	public int deleteByMenuId(String menuId) {
 		RoleMenuExample example = new RoleMenuExample();
-		example.createCriteria().andMenuIdEqualTo(id);
+		example.createCriteria().andMenuIdEqualTo(menuId);
 		return this.roleMenuMapper.deleteByExample(example);
 	}
+
+	@Override
+	public List<RoleMenuKey> findListByRoleId(String id) {
+		RoleMenuExample example = new RoleMenuExample();
+		example.createCriteria().andRoleIdEqualTo(id);
+		return this.roleMenuMapper.selectByExample(example);
+		
+	}
+
+	@Override
+	public int deleteByRoleId(String roleId) {
+		RoleMenuExample example = new RoleMenuExample();
+		example.createCriteria().andRoleIdEqualTo(roleId);
+		return this.roleMenuMapper.deleteByExample(example);
+		
+		
+	}
+
+	@Override
+	@Transactional
+	public int save(RoleMenuKey roleMenu) {
+		
+		return this.roleMenuMapper.insert(roleMenu);
+		
+		
+	}
+
+	
 
 }

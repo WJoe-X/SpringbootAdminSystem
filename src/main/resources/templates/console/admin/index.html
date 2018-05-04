@@ -52,22 +52,24 @@
 			} ] ],
 			url : '/console/admin/list',
 			queryParams : function(params) {
-
+				
 				var temp = {
-					pageNumber : params.pageNumber,
-					pageSize : params.pageSize,
+						pageNumber : (params.offset / params.limit) + 1,
+						pageSize : params.limit,
+						order : params.order,
+						sort : params.sort,
 
 				}
 				return temp;
 			},
 			responseHandler : function(res) {
-				
+
 				return {
 					rows : res.result.pageInfo.list,
 					total : res.result.pageInfo.total
 				}
 			},
-			
+
 			sortName : 'createdAt',
 			sortOrder : 'asc',
 			pagination : true,
@@ -90,7 +92,6 @@
 		}
 
 	}
-
 
 	function operateFormatter(value, row, index) {
 		if (row.isSystem == 0) {

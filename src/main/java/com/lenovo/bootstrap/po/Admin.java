@@ -5,12 +5,16 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import com.alibaba.fastjson.annotation.JSONField;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.lenovo.bootstrap.po.base.BasePo;
 
-public class Admin  extends BasePo implements Serializable{
-    private String uid;
+
+public class Admin   implements Serializable{
+    /**
+	 * @date 2018年5月4日
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private String uid;
 
     private String username;
 
@@ -22,10 +26,10 @@ public class Admin  extends BasePo implements Serializable{
 
     private Byte isSystem;
     
-   
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date createdAt;
     
-    
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
     private Date updatedAt;
     
     

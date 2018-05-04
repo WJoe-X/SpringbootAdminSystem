@@ -5,16 +5,19 @@ import java.util.List;
 import com.lenovo.bootstrap.po.AdminRoleKey;
 
 /**
-*Description:
-*@author WJoe
-*@time 下午2:51:17
-*/
+ * Description:
+ * 
+ * @author WJoe
+ * @time 下午2:51:17
+ */
 public interface AdminRoleService {
 
-	List<AdminRoleKey> getRoleList(AdminRoleKey adminRole);
+	public List<AdminRoleKey> getRoleList(AdminRoleKey adminRole);
 
-	int deleteByAdminId(String uid);
+	public int deleteByAdminId(String uid);
 
-	int save(AdminRoleKey adminRole);
+	public int save(AdminRoleKey adminRole);
+
+	public int deleteByRoleId(String id);
 
 }

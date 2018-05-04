@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.validation.constraints.NotEmpty;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.lenovo.bootstrap.po.base.BasePo;
 
 public class Menu extends BasePo {
@@ -30,8 +31,10 @@ public class Menu extends BasePo {
 
 	private Integer listorder;
 
+	@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss ",timezone = "GMT+8")
 	private Date createdAt;
 
+	@JsonFormat(pattern="yyyy-MM-dd HH:mm:ss ",timezone = "GMT+8")
 	private Date updatedAt;
 
 	private List<Menu> children;

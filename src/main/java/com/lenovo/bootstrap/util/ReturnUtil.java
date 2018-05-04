@@ -1,6 +1,4 @@
-/*
- * Copyright (c) 2017 <l_iupeiyu@qq.com> All rights reserved.
- */
+
 
 package com.lenovo.bootstrap.util;
 
@@ -9,8 +7,7 @@ import org.springframework.ui.ModelMap;
 
 /**
  * JSON统一返回数据格式
- * author geekcattle
- * date 2016/11/23 0023 下午 14:53
+ *
  */
 public class ReturnUtil {
 

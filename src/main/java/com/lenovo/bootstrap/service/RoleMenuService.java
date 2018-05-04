@@ -1,5 +1,9 @@
 package com.lenovo.bootstrap.service;
 
+import java.util.List;
+
+import com.lenovo.bootstrap.po.RoleMenuKey;
+
 /**
  * Description:
  * 
@@ -14,6 +18,18 @@ public interface RoleMenuService {
 	 * @param id
 	 * @return
 	 */
-	public int deleteByMenuId(String id);
+	public int deleteByMenuId(String menuId);
+
+	
+
+	public List<RoleMenuKey> findListByRoleId(String id);
+
+
+
+	public int deleteByRoleId(String roleId);
+
+
+
+	public int save(RoleMenuKey roleMenu);
 
 }

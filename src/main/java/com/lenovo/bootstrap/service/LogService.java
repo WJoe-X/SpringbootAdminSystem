@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.github.pagehelper.PageInfo;
 import com.lenovo.bootstrap.po.Log;
+import com.lenovo.bootstrap.po.valid.ListVaild;
 
 /**
  * Description:日志记录
@@ -24,6 +25,6 @@ public interface LogService {
 	public int saveLoginLog(String username, String ip, String contextPath);
     
 	
-	public PageInfo<Log> getPageList(Integer pageNumber, Integer pageSize);
+	public PageInfo<Log> getPageList(ListVaild listVaild);
 
 }

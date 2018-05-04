@@ -61,4 +61,13 @@ public class AdminRoleServiceImpl  implements AdminRoleService{
 		return 0;
 	}
 
+	@Override
+	public int deleteByRoleId(String id) {
+		AdminRoleExample example = new AdminRoleExample();
+		example.createCriteria().andRoleIdEqualTo(id);
+		return this.adminRoleMapper.deleteByExample(example);
+		
+		
+	}
+
 }

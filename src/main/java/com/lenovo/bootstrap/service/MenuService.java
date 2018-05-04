@@ -55,4 +55,7 @@ public interface MenuService {
 
 	public int deleteByMenuId(String menuId);
 
+	public List<Menu> selectMenuByRoleId(String roleId);
+
+
 }
