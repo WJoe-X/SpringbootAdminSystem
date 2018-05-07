@@ -1,7 +1,14 @@
 package com.lenovo.bootstrap.po;
 
-public class AdminRoleKey {
-    private String adminId;
+import java.io.Serializable;
+
+public class AdminRoleKey implements Serializable{
+    /**
+	 * @date 2018年5月7日
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private String adminId;
 
     private String roleId;
 
@@ -20,4 +27,12 @@ public class AdminRoleKey {
     public void setRoleId(String roleId) {
         this.roleId = roleId == null ? null : roleId.trim();
     }
+
+	@Override
+	public String toString() {
+		return "AdminRoleKey [adminId=" + adminId + ", roleId=" + roleId + "]";
+	}
+    
+    
+    
 }

@@ -1,8 +1,8 @@
 package com.lenovo.bootstrap.service;
 
-import javax.validation.Valid;
-
+import com.github.pagehelper.PageInfo;
 import com.lenovo.bootstrap.po.Member;
+import com.lenovo.bootstrap.po.valid.ListVaild;
 
 /**
  * Description:用户业务接口
@@ -28,5 +28,7 @@ public interface MemberService {
 	public Integer getCountByAccount(String account);
 
 	public Integer save( Member member);
+
+	public PageInfo<Member> findAllList(ListVaild listVaild);
 
 }

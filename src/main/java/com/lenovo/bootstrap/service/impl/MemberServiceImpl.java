@@ -1,17 +1,18 @@
 package com.lenovo.bootstrap.service.impl;
 
-import static org.mockito.Mockito.RETURNS_DEEP_STUBS;
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.lenovo.bootstrap.mapper.MemberMapper;
-import com.lenovo.bootstrap.po.Admin;
 import com.lenovo.bootstrap.po.Member;
 import com.lenovo.bootstrap.po.MemberExample;
+import com.lenovo.bootstrap.po.valid.ListVaild;
 import com.lenovo.bootstrap.service.MemberService;
+import com.lenovo.bootstrap.util.CamelCaseUtil;
 
 /**
  * Description:用户业务实现类
@@ -45,6 +46,17 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public Integer save(Member member) {
 		return this.memberMapper.insert(member);
+	}
+
+	@Override
+	public PageInfo<Member> findAllList(ListVaild listVaild) {
+		MemberExample example = new MemberExample();
+	
+	example.setOrderByClause(CamelCaseUtil.toUnderlineName(listVaild.getSort()+" "+listVaild.getOrder()));
+	PageHelper.startPage(listVaild.getPageNumber(), listVaild.getPageSize());
+	List<Member> list = this.memberMapper.selectByExample(example);
+	return new PageInfo<>(list);
+		
 	}
 
 }

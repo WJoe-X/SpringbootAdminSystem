@@ -26,7 +26,7 @@ public class AdminRoleServiceImpl  implements AdminRoleService{
 	private AdminRoleMapper adminRoleMapper;
 
 	@Override
-	@Cacheable(cacheNames = "AdminRoleService-getRoleList")
+	//@Cacheable(cacheNames = "AdminRoleService-getRoleList")
 	public List<AdminRoleKey> getRoleList(AdminRoleKey adminRole) {
 		AdminRoleExample example =new AdminRoleExample();
 		if (StringUtils.isNotEmpty(adminRole.getAdminId())) {

@@ -17,7 +17,6 @@ import com.github.pagehelper.PageInfo;
 import com.lenovo.bootstrap.mapper.AdminMapper;
 import com.lenovo.bootstrap.po.Admin;
 import com.lenovo.bootstrap.po.AdminExample;
-import com.lenovo.bootstrap.po.LogExample;
 import com.lenovo.bootstrap.po.valid.ListVaild;
 import com.lenovo.bootstrap.service.AdminService;
 import com.lenovo.bootstrap.util.CamelCaseUtil;
@@ -39,7 +38,7 @@ public class AdminServiceImpl implements AdminService {
 	@Autowired
 	private AdminMapper adminMapper;
 
-	@Cacheable(cacheNames = "AdminService-getAllList")
+	//@Cacheable(cacheNames = "AdminService-getAllList")
 	@Override
 	public PageInfo<Admin> getAllList(ListVaild listVaild) {
 		AdminExample example = new AdminExample();
@@ -53,7 +52,7 @@ public class AdminServiceImpl implements AdminService {
 	}
 
 	@Override
-	@Cacheable(cacheNames = "AdminService-getCount")
+	//@Cacheable(cacheNames = "AdminService-getCount")
 	public Integer getCount(AdminExample example) {
 		Long count = this.adminMapper.countByExample(example);
 
