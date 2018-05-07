@@ -7,6 +7,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,7 +67,7 @@ public class ConsoleAdminController {
 	 * @param model
 	 * @return
 	 */
-	// @RequiresPermissions("admin:edit")
+    @RequiresPermissions("admin:edit")
 	@RequestMapping(value = "/from", method = { RequestMethod.GET })
 	public String from(Admin admin, Model model) {
 		String checkRoleId = "";
@@ -98,7 +99,7 @@ public class ConsoleAdminController {
 	 * @param admin
 	 * @return
 	 */
-	// @RequiresPermissions("admin:index")
+	@RequiresPermissions("admin:index")
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	@ResponseBody
 	public ModelMap list(@Valid ListVaild listVaild,BindingResult result) {
@@ -119,7 +120,7 @@ public class ConsoleAdminController {
 	}
 
 	@Transactional
-	// @RequiresPermissions("admin:save")
+	@RequiresPermissions("admin:save")
 	@RequestMapping(value = "/save", method = { RequestMethod.POST })
 	@ResponseBody
 	public ModelMap save(@Valid Admin admin, BindingResult result) {
@@ -169,7 +170,7 @@ public class ConsoleAdminController {
 		}
 	}
 
-	// @RequiresPermissions("admin:editpwd")
+	@RequiresPermissions("admin:editpwd")
 	@RequestMapping(value = "/savepwd", method = { RequestMethod.POST })
 	@ResponseBody
 	public ModelMap editPwd(String uid, String password) {
@@ -186,7 +187,7 @@ public class ConsoleAdminController {
 		}
 	}
 
-	// @RequiresPermissions("admin:delete")
+	@RequiresPermissions("admin:delete")
 	@RequestMapping(value = "/delete", method = { RequestMethod.GET })
 	@ResponseBody
 	public ModelMap delete(String[] ids) {

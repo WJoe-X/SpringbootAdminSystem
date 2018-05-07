@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Param;
 
 import com.lenovo.bootstrap.po.Menu;
 import com.lenovo.bootstrap.po.MenuExample;
+import com.lenovo.bootstrap.vo.MenuVo;
 
 public interface MenuMapper {
 	long countByExample(MenuExample example);

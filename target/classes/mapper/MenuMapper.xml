@@ -325,7 +325,7 @@
 	</select>
 
 
-	<resultMap id="queryResulpMap" type="com.lenovo.bootstrap.vo.MenuVo">
+	<resultMap id="queryResulpMap" type="com.lenovo.bootstrap.po.Menu">
 		<id column="menu_id" property="menuId" jdbcType="VARCHAR" />
 		<result column="menu_name" property="menuName" jdbcType="VARCHAR" />
 		<result column="menu_type" property="menuType" jdbcType="VARCHAR" />

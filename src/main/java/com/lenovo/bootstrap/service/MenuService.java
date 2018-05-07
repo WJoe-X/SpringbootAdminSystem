@@ -7,6 +7,7 @@ import javax.validation.Valid;
 
 import com.lenovo.bootstrap.po.Menu;
 import com.lenovo.bootstrap.po.MenuExample;
+import com.lenovo.bootstrap.vo.MenuVo;
 
 /**
  * Description:
