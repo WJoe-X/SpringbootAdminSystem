@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en"　xmlns:th="http://www.thymeleaf.org">
+<html lang="en" 　xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>后台管理系统</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -7,16 +7,16 @@
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
 	name="viewport" />
 <link rel="stylesheet"
-	href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	href="/assets/bootstrap-3.3.5/css/bootstrap.min.css" />
 <link rel="stylesheet"
-	href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	href="/assets/font-awesome-4.7.0/css/font-awesome.min.css" />
 <link rel="stylesheet"
-	href="//cdn.bootcss.com/ionicons/2.0.1/css/ionicons.min.css" />
+	href="/assets/ionicons-2.0.1/css/ionicons.min.css" />
 <link rel="stylesheet"
-	href="/static/assets/adminlte-2.3.7/css/AdminLTE.min.css" />
+	href="/assets/adminlte-2.3.7/css/AdminLTE.min.css" />
 <link rel="stylesheet"
-	href="/static/assets/adminlte-2.3.7/css/skins/_all-skins.min.css" />
-<link rel="stylesheet" href="/static/css/app.css" />
+	href="/assets/adminlte-2.3.7/css/skins/_all-skins.min.css" />
+<link rel="stylesheet" href="/css/app.css" />
 <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -25,12 +25,12 @@
 <body class="hold-transition skin-blue fixed sidebar-mini">
 	<div class="wapper">
 		<header class="main-header">
-			<a href="/console/index" class="logo"> <span class="logo-mini"><b>SBA</b></span>
-				<span class="logo-lg"><b>Spring</b>BootAdmin</span>
+			<a href="/console/index" class="logo"> 
+				<span class="logo-lg"><b>NUI</b> CMS</span>
 			</a>
 			<nav class="navbar navbar-static-top">
 				<a href="#" class="sidebar-toggle" data-toggle="offcanvas"
-					role="button"> <span class="sr-only">Toggle navigation</span> <span
+					role="button">  <span
 					class="icon-bar"></span> <span class="icon-bar"></span> <span
 					class="icon-bar"></span>
 				</a>
@@ -38,18 +38,18 @@
 					<ul class="nav navbar-nav">
 						<li class="dropdown user user-menu"><a href="#"
 							class="dropdown-toggle" data-toggle="dropdown"> <img
-								src="/static/assets/adminlte-2.3.7/img/user2-160x160.jpg"
+								src="/assets/adminlte-2.3.7/img/user2-160x160.jpg"
 								class="user-image" alt="User Image" /> <span class="hidden-xs"
 								th:text="${admin.username}"></span>
 						</a>
 							<ul class="dropdown-menu">
 								<li class="user-header"><img
-									src="/static/assets/adminlte-2.3.7/img/user2-160x160.jpg"
+									src="/assets/adminlte-2.3.7/img/user2-160x160.jpg"
 									class="img-circle" alt="User Image" />
-									<p th:text="${admin.username}"></p> 
-									<small th:text="${#dates.format(admin.updatedAt, 'yyyy-MM-dd HH:mm:ss')}"></small>
-									
-									</li>
+									<p th:text="${admin.username}"></p> <small
+									th:text="${#dates.format(admin.updatedAt, 'yyyy-MM-dd HH:mm:ss')}"></small>
+
+								</li>
 								<li class="user-footer">
 									<div class="pull-left">
 										<a href="/user" class="btn btn-default btn-flat">修改</a>
@@ -67,12 +67,13 @@
 			<section class="sidebar">
 				<div class="user-panel">
 					<div class="pull-left image">
-						<img src="/static/assets/adminlte-2.3.7/img/user2-160x160.jpg"
+						<img src="/assets/adminlte-2.3.7/img/user2-160x160.jpg"
 							class="img-circle" alt="User Image" />
 					</div>
 					<div class="pull-left info">
 						<p th:text="${admin.username}"></p>
-						<small th:text="${#dates.format(admin.updatedAt, 'yyyy-MM-dd HH:mm:ss')}"></small>
+						<small
+							th:text="${#dates.format(admin.updatedAt, 'yyyy-MM-dd HH:mm:ss')}"></small>
 					</div>
 				</div>
 				<ul class="sidebar-menu">
@@ -101,15 +102,15 @@
 		<footer class="main-footer navbar-fixed-bottom"> </footer>
 	</div>
 	<script type="text/javascript"
-		src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+		src="/assets/jquery-2.2.4/js/jquery.min.js"></script>
 	<script type="text/javascript"
-		src="//cdn.bootcss.com/jquery-migrate/1.4.1/jquery-migrate.min.js"></script>
+		src="/assets/jquery-migrate-1.4.1/js/jquery-migrate.min.js"></script>
 	<script type="text/javascript"
-		src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		src="/assets/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 	<script type="text/javascript"
-		src="/static/assets/adminlte-2.3.7/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+		src="/assets/adminlte-2.3.7/plugins/slimScroll/jquery.slimscroll.min.js"></script>
 	<script type="text/javascript"
-		src="/static/assets/adminlte-2.3.7/js/app.min.js"></script>
-	<script type="text/javascript" src="/static/js/index.js"></script>
+		src="/assets/adminlte-2.3.7/js/app.min.js"></script>
+	<script type="text/javascript" src="/js/index.js"></script>
 </body>
 </html>

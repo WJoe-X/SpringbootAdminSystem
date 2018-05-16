@@ -52,12 +52,12 @@
 			} ] ],
 			url : '/console/admin/list',
 			queryParams : function(params) {
-				
+
 				var temp = {
-						pageNumber : (params.offset / params.limit) + 1,
-						pageSize : params.limit,
-						order : params.order,
-						sort : params.sort,
+					pageNumber : (params.offset / params.limit) + 1,
+					pageSize : params.limit,
+					order : params.order,
+					sort : params.sort,
 
 				}
 				return temp;
@@ -71,14 +71,14 @@
 			},
 
 			sortName : 'createdAt',
-			sortOrder : 'asc',
+			sortOrder : 'desc',
 			pagination : true,
 			sidePagination : 'server',
 			pageSize : 10,
 			pageList : [ 20, 40, 50, 100 ],
 			toolbar : "#toolbar",
 			showRefresh : true,
-			showToggle : true
+
 		});
 	}
 

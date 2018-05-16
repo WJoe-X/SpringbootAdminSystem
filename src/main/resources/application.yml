@@ -3,12 +3,18 @@ spring:
     active:
     - dev
   mvc:
-    favicon:
+    favicon:  
       enabled: false
     view:
       prefix: classpath*:/templates/
       suffix: .html
     static-path-pattern: /static/**
+  servlet:
+  #图片上传配置
+    multipart:
+      max-file-size: 500kb
+      max-request-size: 500kb
+           
   #静态html热部署
   thymeleaf:
     cache: false
@@ -21,7 +27,7 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
-      
+
 
 mybatis:
   mapper-locations:
@@ -35,5 +41,5 @@ logging:
     com.lenovo.bootstrap.mapper: debug 
     com.lenovo.bootstrap.controller: debug
     com.lenovo.bootstrap.service: debug
-    org.springframework: DEBUG
-  
+    org.springframework: debug
+    

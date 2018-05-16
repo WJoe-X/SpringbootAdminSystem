@@ -5,7 +5,11 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import javax.validation.constraints.NotEmpty;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
+
+import net.bytebuddy.implementation.bind.annotation.Default;
 
 
 public class Admin   implements Serializable{
@@ -16,14 +20,15 @@ public class Admin   implements Serializable{
 
 	private String uid;
 
+	@NotEmpty
     private String username;
-
+	@NotEmpty
     private String password;
 
     private Byte state;
 
     private String salt;
-
+    
     private Byte isSystem;
     
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")

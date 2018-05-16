@@ -1,7 +1,10 @@
 package com.lenovo.bootstrap.service.impl;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +20,8 @@ import com.lenovo.bootstrap.po.valid.ListVaild;
 import com.lenovo.bootstrap.service.LogService;
 import com.lenovo.bootstrap.util.CamelCaseUtil;
 import com.lenovo.bootstrap.util.UuidUtil;
+import com.lenovo.bootstrap.vo.CountPerDayVo;
+
 
 /**
  * Description:
@@ -29,6 +34,10 @@ import com.lenovo.bootstrap.util.UuidUtil;
 public class LogServiceImpl implements LogService {
 	
 	private static final Logger LOGGER= LoggerFactory.getLogger(LogServiceImpl.class);
+	
+	private final static String LOG_DATE = "dateTime";
+
+	private final static String LOG_COUNT_NUMBER = "countNumber";
 
 	@Autowired
 	private LogMapper logmapper;
@@ -52,6 +61,25 @@ public class LogServiceImpl implements LogService {
 		PageHelper.startPage(listVaild.getPageNumber(), listVaild.getPageSize());
 		List<Log> list= this.logmapper.selectByExample(example);
 	    return new PageInfo<>(list);
+	}
+
+	@Override
+	public  Map<String, List<?>> count() {
+		Map<String, List<?>> map = new HashMap<>();
+		
+		List<CountPerDayVo> list =this.logmapper.countPerDay();
+		
+		List<String> datePerDay = new ArrayList<>();
+		List<Integer> countNumber = new ArrayList<>();
+		
+		for (CountPerDayVo countPerDayVo : list) {
+			datePerDay.add(countPerDayVo.getDateTime());
+			countNumber.add(countPerDayVo.getCountNumber());
+		}
+		map.put(LOG_DATE, datePerDay);
+		map.put(LOG_COUNT_NUMBER, countNumber);
+		return map;
+		
 	}
 
 }

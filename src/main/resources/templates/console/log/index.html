@@ -42,7 +42,7 @@
 					pageSize : params.limit,
 					order : params.order,
 					sort : params.sort,
- 
+
 				}
 				return temp;
 			},
@@ -52,15 +52,15 @@
 					total : res.result.pageInfo.total
 				}
 			},
-			
+
 			sortName : 'logTime',
-			sortOrder : 'asc',
+			sortOrder : 'desc',
 			pagination : true,
 			sidePagination : 'server',
 			pageSize : 10,
-			pageList : [ 10,30,50,70 ],
+			pageList : [ 10, 30, 50, 70 ],
 			showRefresh : true,
-			showToggle : true
+
 		});
 	}
 </script>

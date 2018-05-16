@@ -11,8 +11,6 @@ import org.springframework.transaction.annotation.Transactional;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.lenovo.bootstrap.mapper.RoleMapper;
-import com.lenovo.bootstrap.po.Log;
-import com.lenovo.bootstrap.po.LogExample;
 import com.lenovo.bootstrap.po.Role;
 import com.lenovo.bootstrap.po.RoleExample;
 import com.lenovo.bootstrap.po.valid.ListVaild;

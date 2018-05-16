@@ -44,6 +44,8 @@ public interface AdminService {
 	 * @return
 	 */
 	public int updateById(Admin updateAdmin);
+
+	public Integer getCountByUsername(String username);
 	
 	
 }

@@ -15,8 +15,10 @@ import org.springframework.transaction.annotation.Transactional;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.lenovo.bootstrap.mapper.AdminMapper;
+import com.lenovo.bootstrap.mapper.RoleMapper;
 import com.lenovo.bootstrap.po.Admin;
 import com.lenovo.bootstrap.po.AdminExample;
+import com.lenovo.bootstrap.po.Role;
 import com.lenovo.bootstrap.po.valid.ListVaild;
 import com.lenovo.bootstrap.service.AdminService;
 import com.lenovo.bootstrap.util.CamelCaseUtil;
@@ -32,27 +34,34 @@ import com.lenovo.bootstrap.util.UuidUtil;
 
 @Service
 public class AdminServiceImpl implements AdminService {
-	
+
 	private static final Logger LOGGER = LoggerFactory.getLogger(AdminServiceImpl.class);
-	
+
 	@Autowired
 	private AdminMapper adminMapper;
+	
+	@Autowired
+	private RoleMapper roleMapper;
 
-	//@Cacheable(cacheNames = "AdminService-getAllList")
+	// @Cacheable(cacheNames = "AdminService-getAllList")
 	@Override
 	public PageInfo<Admin> getAllList(ListVaild listVaild) {
 		AdminExample example = new AdminExample();
-		 LOGGER.info("从数据库查询 adminAllList ");
-			
-		example.setOrderByClause(CamelCaseUtil.toUnderlineName(listVaild.getSort()+" "+listVaild.getOrder()));
+		LOGGER.info("从数据库查询 adminAllList ");
+
+		example.setOrderByClause(CamelCaseUtil.toUnderlineName(listVaild.getSort() + " " + listVaild.getOrder()));
 		PageHelper.startPage(listVaild.getPageNumber(), listVaild.getPageSize());
-       
 		List<Admin> list = this.adminMapper.selectByExample(example);
+		for (Admin admin : list) {
+			List<Role> rolelist = roleMapper.selectRoleListByAdminId(admin.getUid());
+			admin.setRoleList(rolelist);
+		}
+		
 		return new PageInfo<>(list);
 	}
 
 	@Override
-	//@Cacheable(cacheNames = "AdminService-getCount")
+	// @Cacheable(cacheNames = "AdminService-getCount")
 	public Integer getCount(AdminExample example) {
 		Long count = this.adminMapper.countByExample(example);
 
@@ -131,6 +140,15 @@ public class AdminServiceImpl implements AdminService {
 	public int updateById(Admin updateAdmin) {
 		updateAdmin.setUpdatedAt(new Date());
 		return this.adminMapper.updateByPrimaryKey(updateAdmin);
+	}
+
+	@Override
+	public Integer getCountByUsername(String username) {
+		AdminExample example = new AdminExample();
+		example.createCriteria().andUsernameEqualTo(username);
+		Long s = this.adminMapper.countByExample(example);
+
+		return s.intValue();
 	}
 
 }

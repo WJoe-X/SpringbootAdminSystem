@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Param;
 
 import com.lenovo.bootstrap.po.Log;
 import com.lenovo.bootstrap.po.LogExample;
+import com.lenovo.bootstrap.vo.CountPerDayVo;
 
 public interface LogMapper {
     long countByExample(LogExample example);
@@ -28,4 +29,6 @@ public interface LogMapper {
     int updateByPrimaryKeySelective(Log record);
 
     int updateByPrimaryKey(Log record);
+    
+    List<CountPerDayVo> countPerDay();
 }

@@ -149,7 +149,7 @@ public class MemberController {
 	}
 
 	/**
-	 * 处理注册操作
+	 * 前端用户注册
 	 *
 	 * @param member
 	 * @param bindingResult
@@ -172,15 +172,6 @@ public class MemberController {
 				return ReturnUtil.Error("密码不能为空", null, null);
 			}
 			LOGGER.info(member.getAccount() + "用户可以注册");
-			String Id = UuidUtil.getUUID();
-			member.setUid(Id);
-			String salt = new SecureRandomNumberGenerator().nextBytes().toHex();
-			member.setSalt(salt);
-			String password = PasswordUtil.createCustomPwd(member.getPassword(), member.getSalt());
-			member.setPassword(password);
-			member.setState((byte) 1);
-			member.setCreatedAt(new Date());
-			member.setUpdatedAt(new Date());
 			memberService.save(member);
 			LOGGER.info(member.getAccount() + "用户注册成功");
 			return ReturnUtil.Success("操作成功", null, null);

@@ -12,7 +12,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -22,12 +21,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.lenovo.bootstrap.po.Menu;
-import com.lenovo.bootstrap.po.MenuExample;
 import com.lenovo.bootstrap.service.MenuService;
 import com.lenovo.bootstrap.service.RoleMenuService;
 import com.lenovo.bootstrap.util.MenuTreeUtil;
 import com.lenovo.bootstrap.util.ReturnUtil;
-import com.lenovo.bootstrap.util.UuidUtil;
 
 /**
  * Description:
@@ -93,7 +90,6 @@ public class MenuController {
 
 	@RequiresPermissions("menu:save")
 	@RequestMapping(value = "/save", method = { RequestMethod.POST })
-	@Transactional
 	@ResponseBody
 	public ModelMap save(@Valid Menu menu, BindingResult result) {
 		try {
@@ -102,16 +98,7 @@ public class MenuController {
 					return ReturnUtil.Error(er.getDefaultMessage(), null, null);
 			}
 
-			menuService.save(menu);
-			if (!menu.getParentId().equals("0")) {
-				// 更新父类总数
-				MenuExample example = new MenuExample();
-				example.createCriteria().andParentIdEqualTo(menu.getParentId());
-				Integer parentCount = menuService.getCount(example);
-				Menu parentMenu = menuService.getByMenuId(menu.getParentId());
-				parentMenu.setChildNum(parentCount);
-				menuService.save(parentMenu);
-			}
+			this.menuService.saveMenu(menu);
 			return ReturnUtil.Success("操作成功", null, "/console/menu/index");
 		} catch (Exception e) {
 			e.printStackTrace();

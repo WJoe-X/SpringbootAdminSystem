@@ -139,7 +139,7 @@ public class AdminController {
 			redirectAttributes.addFlashAttribute("message", "用户名或密码不正确");
 		}
 		token.clear();
-		return "console/login";
+		return "redirect:/console/login";
 
 	}
 
@@ -185,6 +185,7 @@ public class AdminController {
 	public ModelMap main() {
 		try {
 			return ReturnUtil.Success(null, this.getTotal(), null);
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 			return ReturnUtil.Error(null, null, null);

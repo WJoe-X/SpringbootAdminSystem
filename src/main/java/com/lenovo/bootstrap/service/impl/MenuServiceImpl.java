@@ -1,8 +1,12 @@
 package com.lenovo.bootstrap.service.impl;
 
+import static org.mockito.Mockito.RETURNS_DEEP_STUBS;
+
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+import javax.validation.Valid;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -89,11 +93,12 @@ public class MenuServiceImpl implements MenuService {
 			menu.setMenuId(Id);
 			return this.menuMapper.insert(menu);
 		} else {
-			return this.menuMapper.insert(menu);
+			return this.menuMapper.updateByPrimaryKeySelective(menu);
 		}
 	}
 
 	@Override
+	@Transactional
 	public int updateByMenuId(Menu menu) {
 		return this.menuMapper.updateByPrimaryKey(menu);
 	}
@@ -106,8 +111,28 @@ public class MenuServiceImpl implements MenuService {
 	@Override
 	public List<Menu> selectMenuByRoleId(String roleId) {
 		return menuMapper.selectMenuByRoleId(roleId);
-		
-		
+
 	}
 
+	@Override
+	@Transactional
+	public Integer saveMenu(@Valid Menu menu) {
+		if (StringUtils.isEmpty(menu.getMenuId())) {
+			String Id = UuidUtil.getUUID();
+			menu.setMenuId(Id);
+			this.menuMapper.insert(menu);
+		} else {
+			this.menuMapper.updateByPrimaryKeySelective(menu);
+		}
+		if (!menu.getParentId().equals("0")) {
+			// 更新父类总数
+			MenuExample example = new MenuExample();
+			example.createCriteria().andParentIdEqualTo(menu.getParentId());
+			Integer parentCount = this.getCount(example);
+			Menu parentMenu = this.getByMenuId(menu.getParentId());
+			parentMenu.setChildNum(parentCount);
+			return this.save(parentMenu);
+		}
+		return null;
+	}
 }

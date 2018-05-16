@@ -1,6 +1,7 @@
 package com.lenovo.bootstrap.service;
 
 import java.util.List;
+import java.util.Map;
 
 import com.github.pagehelper.PageInfo;
 import com.lenovo.bootstrap.po.Log;
@@ -26,5 +27,12 @@ public interface LogService {
     
 	
 	public PageInfo<Log> getPageList(ListVaild listVaild);
+	
+	
+	/**
+	 * 统计每天的登录数
+	 * @return
+	 */
+	public  Map<String, List<?>> count();
 
 }

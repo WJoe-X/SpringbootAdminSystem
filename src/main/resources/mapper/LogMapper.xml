@@ -1,211 +1,230 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lenovo.bootstrap.mapper.LogMapper">
-  <resultMap id="BaseResultMap" type="com.lenovo.bootstrap.po.Log">
-    <id column="log_id" jdbcType="VARCHAR" property="logId" />
-    <result column="log_user" jdbcType="VARCHAR" property="logUser" />
-    <result column="log_time" jdbcType="TIMESTAMP" property="logTime" />
-    <result column="log_ip" jdbcType="VARCHAR" property="logIp" />
-    <result column="log_action" jdbcType="VARCHAR" property="logAction" />
-  </resultMap>
-  <sql id="Example_Where_Clause">
-    <where>
-      <foreach collection="oredCriteria" item="criteria" separator="or">
-        <if test="criteria.valid">
-          <trim prefix="(" prefixOverrides="and" suffix=")">
-            <foreach collection="criteria.criteria" item="criterion">
-              <choose>
-                <when test="criterion.noValue">
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue">
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue">
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue">
-                  and ${criterion.condition}
-                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
-            </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Update_By_Example_Where_Clause">
-    <where>
-      <foreach collection="example.oredCriteria" item="criteria" separator="or">
-        <if test="criteria.valid">
-          <trim prefix="(" prefixOverrides="and" suffix=")">
-            <foreach collection="criteria.criteria" item="criterion">
-              <choose>
-                <when test="criterion.noValue">
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue">
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue">
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue">
-                  and ${criterion.condition}
-                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
-            </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Base_Column_List">
-    log_id, log_user, log_time, log_ip, log_action
-  </sql>
-  <select id="selectByExample" parameterType="com.lenovo.bootstrap.po.LogExample" resultMap="BaseResultMap">
-    select
-    <if test="distinct">
-      distinct
-    </if>
-    <include refid="Base_Column_List" />
-    from log
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-    <if test="orderByClause != null">
-      order by ${orderByClause}
-    </if>
-  </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from log
-    where log_id = #{logId,jdbcType=VARCHAR}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
-    delete from log
-    where log_id = #{logId,jdbcType=VARCHAR}
-  </delete>
-  <delete id="deleteByExample" parameterType="com.lenovo.bootstrap.po.LogExample">
-    delete from log
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-  </delete>
-  <insert id="insert" parameterType="com.lenovo.bootstrap.po.Log">
-    insert into log (log_id, log_user, log_time, 
-      log_ip, log_action)
-    values (#{logId,jdbcType=VARCHAR}, #{logUser,jdbcType=VARCHAR}, #{logTime,jdbcType=TIMESTAMP}, 
-      #{logIp,jdbcType=VARCHAR}, #{logAction,jdbcType=VARCHAR})
-  </insert>
-  <insert id="insertSelective" parameterType="com.lenovo.bootstrap.po.Log">
-    insert into log
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="logId != null">
-        log_id,
-      </if>
-      <if test="logUser != null">
-        log_user,
-      </if>
-      <if test="logTime != null">
-        log_time,
-      </if>
-      <if test="logIp != null">
-        log_ip,
-      </if>
-      <if test="logAction != null">
-        log_action,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="logId != null">
-        #{logId,jdbcType=VARCHAR},
-      </if>
-      <if test="logUser != null">
-        #{logUser,jdbcType=VARCHAR},
-      </if>
-      <if test="logTime != null">
-        #{logTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="logIp != null">
-        #{logIp,jdbcType=VARCHAR},
-      </if>
-      <if test="logAction != null">
-        #{logAction,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <select id="countByExample" parameterType="com.lenovo.bootstrap.po.LogExample" resultType="java.lang.Long">
-    select count(*) from log
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-  </select>
-  <update id="updateByExampleSelective" parameterType="map">
-    update log
-    <set>
-      <if test="record.logId != null">
-        log_id = #{record.logId,jdbcType=VARCHAR},
-      </if>
-      <if test="record.logUser != null">
-        log_user = #{record.logUser,jdbcType=VARCHAR},
-      </if>
-      <if test="record.logTime != null">
-        log_time = #{record.logTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.logIp != null">
-        log_ip = #{record.logIp,jdbcType=VARCHAR},
-      </if>
-      <if test="record.logAction != null">
-        log_action = #{record.logAction,jdbcType=VARCHAR},
-      </if>
-    </set>
-    <if test="_parameter != null">
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByExample" parameterType="map">
-    update log
-    set log_id = #{record.logId,jdbcType=VARCHAR},
-      log_user = #{record.logUser,jdbcType=VARCHAR},
-      log_time = #{record.logTime,jdbcType=TIMESTAMP},
-      log_ip = #{record.logIp,jdbcType=VARCHAR},
-      log_action = #{record.logAction,jdbcType=VARCHAR}
-    <if test="_parameter != null">
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.lenovo.bootstrap.po.Log">
-    update log
-    <set>
-      <if test="logUser != null">
-        log_user = #{logUser,jdbcType=VARCHAR},
-      </if>
-      <if test="logTime != null">
-        log_time = #{logTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="logIp != null">
-        log_ip = #{logIp,jdbcType=VARCHAR},
-      </if>
-      <if test="logAction != null">
-        log_action = #{logAction,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where log_id = #{logId,jdbcType=VARCHAR}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.lenovo.bootstrap.po.Log">
-    update log
-    set log_user = #{logUser,jdbcType=VARCHAR},
-      log_time = #{logTime,jdbcType=TIMESTAMP},
-      log_ip = #{logIp,jdbcType=VARCHAR},
-      log_action = #{logAction,jdbcType=VARCHAR}
-    where log_id = #{logId,jdbcType=VARCHAR}
-  </update>
+	<resultMap id="BaseResultMap" type="com.lenovo.bootstrap.po.Log">
+		<id column="log_id" jdbcType="VARCHAR" property="logId" />
+		<result column="log_user" jdbcType="VARCHAR" property="logUser" />
+		<result column="log_time" jdbcType="TIMESTAMP" property="logTime" />
+		<result column="log_ip" jdbcType="VARCHAR" property="logIp" />
+		<result column="log_action" jdbcType="VARCHAR" property="logAction" />
+	</resultMap>
+	<sql id="Example_Where_Clause">
+		<where>
+			<foreach collection="oredCriteria" item="criteria" separator="or">
+				<if test="criteria.valid">
+					<trim prefix="(" prefixOverrides="and" suffix=")">
+						<foreach collection="criteria.criteria" item="criterion">
+							<choose>
+								<when test="criterion.noValue">
+									and ${criterion.condition}
+								</when>
+								<when test="criterion.singleValue">
+									and ${criterion.condition} #{criterion.value}
+								</when>
+								<when test="criterion.betweenValue">
+									and ${criterion.condition} #{criterion.value} and
+									#{criterion.secondValue}
+								</when>
+								<when test="criterion.listValue">
+									and ${criterion.condition}
+									<foreach close=")" collection="criterion.value" item="listItem"
+										open="(" separator=",">
+										#{listItem}
+									</foreach>
+								</when>
+							</choose>
+						</foreach>
+					</trim>
+				</if>
+			</foreach>
+		</where>
+	</sql>
+	<sql id="Update_By_Example_Where_Clause">
+		<where>
+			<foreach collection="example.oredCriteria" item="criteria"
+				separator="or">
+				<if test="criteria.valid">
+					<trim prefix="(" prefixOverrides="and" suffix=")">
+						<foreach collection="criteria.criteria" item="criterion">
+							<choose>
+								<when test="criterion.noValue">
+									and ${criterion.condition}
+								</when>
+								<when test="criterion.singleValue">
+									and ${criterion.condition} #{criterion.value}
+								</when>
+								<when test="criterion.betweenValue">
+									and ${criterion.condition} #{criterion.value} and
+									#{criterion.secondValue}
+								</when>
+								<when test="criterion.listValue">
+									and ${criterion.condition}
+									<foreach close=")" collection="criterion.value" item="listItem"
+										open="(" separator=",">
+										#{listItem}
+									</foreach>
+								</when>
+							</choose>
+						</foreach>
+					</trim>
+				</if>
+			</foreach>
+		</where>
+	</sql>
+	<sql id="Base_Column_List">
+		log_id, log_user, log_time, log_ip, log_action
+	</sql>
+	<select id="selectByExample" parameterType="com.lenovo.bootstrap.po.LogExample"
+		resultMap="BaseResultMap">
+		select
+		<if test="distinct">
+			distinct
+		</if>
+		<include refid="Base_Column_List" />
+		from log
+		<if test="_parameter != null">
+			<include refid="Example_Where_Clause" />
+		</if>
+		<if test="orderByClause != null">
+			order by ${orderByClause}
+		</if>
+	</select>
+	<select id="selectByPrimaryKey" parameterType="java.lang.String"
+		resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from log
+		where log_id = #{logId,jdbcType=VARCHAR}
+	</select>
+	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+		delete from log
+		where log_id = #{logId,jdbcType=VARCHAR}
+	</delete>
+	<delete id="deleteByExample" parameterType="com.lenovo.bootstrap.po.LogExample">
+		delete from log
+		<if test="_parameter != null">
+			<include refid="Example_Where_Clause" />
+		</if>
+	</delete>
+	<insert id="insert" parameterType="com.lenovo.bootstrap.po.Log">
+		insert into log (log_id, log_user, log_time,
+		log_ip, log_action)
+		values (#{logId,jdbcType=VARCHAR}, #{logUser,jdbcType=VARCHAR},
+		#{logTime,jdbcType=TIMESTAMP},
+		#{logIp,jdbcType=VARCHAR}, #{logAction,jdbcType=VARCHAR})
+	</insert>
+	<insert id="insertSelective" parameterType="com.lenovo.bootstrap.po.Log">
+		insert into log
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="logId != null">
+				log_id,
+			</if>
+			<if test="logUser != null">
+				log_user,
+			</if>
+			<if test="logTime != null">
+				log_time,
+			</if>
+			<if test="logIp != null">
+				log_ip,
+			</if>
+			<if test="logAction != null">
+				log_action,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="logId != null">
+				#{logId,jdbcType=VARCHAR},
+			</if>
+			<if test="logUser != null">
+				#{logUser,jdbcType=VARCHAR},
+			</if>
+			<if test="logTime != null">
+				#{logTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="logIp != null">
+				#{logIp,jdbcType=VARCHAR},
+			</if>
+			<if test="logAction != null">
+				#{logAction,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<select id="countByExample" parameterType="com.lenovo.bootstrap.po.LogExample"
+		resultType="java.lang.Long">
+		select count(*) from log
+		<if test="_parameter != null">
+			<include refid="Example_Where_Clause" />
+		</if>
+	</select>
+	<update id="updateByExampleSelective" parameterType="map">
+		update log
+		<set>
+			<if test="record.logId != null">
+				log_id = #{record.logId,jdbcType=VARCHAR},
+			</if>
+			<if test="record.logUser != null">
+				log_user = #{record.logUser,jdbcType=VARCHAR},
+			</if>
+			<if test="record.logTime != null">
+				log_time = #{record.logTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="record.logIp != null">
+				log_ip = #{record.logIp,jdbcType=VARCHAR},
+			</if>
+			<if test="record.logAction != null">
+				log_action = #{record.logAction,jdbcType=VARCHAR},
+			</if>
+		</set>
+		<if test="_parameter != null">
+			<include refid="Update_By_Example_Where_Clause" />
+		</if>
+	</update>
+	<update id="updateByExample" parameterType="map">
+		update log
+		set log_id = #{record.logId,jdbcType=VARCHAR},
+		log_user = #{record.logUser,jdbcType=VARCHAR},
+		log_time = #{record.logTime,jdbcType=TIMESTAMP},
+		log_ip = #{record.logIp,jdbcType=VARCHAR},
+		log_action = #{record.logAction,jdbcType=VARCHAR}
+		<if test="_parameter != null">
+			<include refid="Update_By_Example_Where_Clause" />
+		</if>
+	</update>
+	<update id="updateByPrimaryKeySelective" parameterType="com.lenovo.bootstrap.po.Log">
+		update log
+		<set>
+			<if test="logUser != null">
+				log_user = #{logUser,jdbcType=VARCHAR},
+			</if>
+			<if test="logTime != null">
+				log_time = #{logTime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="logIp != null">
+				log_ip = #{logIp,jdbcType=VARCHAR},
+			</if>
+			<if test="logAction != null">
+				log_action = #{logAction,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where log_id = #{logId,jdbcType=VARCHAR}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="com.lenovo.bootstrap.po.Log">
+		update log
+		set log_user = #{logUser,jdbcType=VARCHAR},
+		log_time = #{logTime,jdbcType=TIMESTAMP},
+		log_ip = #{logIp,jdbcType=VARCHAR},
+		log_action = #{logAction,jdbcType=VARCHAR}
+		where log_id = #{logId,jdbcType=VARCHAR}
+	</update>
+
+	<select id="countPerDay" resultType="com.lenovo.bootstrap.vo.CountPerDayVo">
+		SELECT
+		COUNT(1) AS countNumber,
+		DATE_FORMAT(log_time,'%Y-%m-%d') AS dateTime
+		FROM
+		log
+		GROUP BY DATE_FORMAT(log_time,'%Y-%m-%d')
+
+	</select>
 </mapper>

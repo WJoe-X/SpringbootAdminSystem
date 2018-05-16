@@ -58,5 +58,12 @@ public interface MenuService {
 
 	public List<Menu> selectMenuByRoleId(String roleId);
 
+	/**
+	 * 添加新的菜单
+	 * 
+	 * @param menu
+	 * @return
+	 */
+	public Integer saveMenu(@Valid Menu menu);
 
 }
