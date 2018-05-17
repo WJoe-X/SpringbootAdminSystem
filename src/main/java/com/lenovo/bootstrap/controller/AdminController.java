@@ -29,15 +29,19 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.method.annotation.ModelAndViewMethodReturnValueHandler;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.lenovo.bootstrap.enums.LoginEnum;
 import com.lenovo.bootstrap.po.Admin;
 import com.lenovo.bootstrap.po.Menu;
+import com.lenovo.bootstrap.po.Picture;
 import com.lenovo.bootstrap.po.valid.AdminValid;
 import com.lenovo.bootstrap.service.AdminService;
 import com.lenovo.bootstrap.service.LogService;
 import com.lenovo.bootstrap.service.MenuService;
+import com.lenovo.bootstrap.service.PictureService;
 import com.lenovo.bootstrap.service.RoleService;
 import com.lenovo.bootstrap.shiro.CustomerAuthenticationToken;
 import com.lenovo.bootstrap.util.IpUtil;
@@ -68,6 +72,9 @@ public class AdminController {
 
 	@Autowired
 	private LogService logService;
+	
+	@Autowired
+	private PictureService pictureService;
 
 	/**
 	 * 后台登录界面
@@ -212,10 +219,15 @@ public class AdminController {
 	}
 
 	@GetMapping("user/{uid}")
-	@ResponseBody
-	public ModelMap edtpwd(@PathVariable("uid") String uid) {
+	public ModelAndView edtpwd(@PathVariable("uid") String uid,Model model) {
 		Admin admin = this.adminService.getById(uid);
-		return ReturnUtil.Success("", admin, "console/savepwd");
+		/*Picture picture = this.pictureService.findById(29);*/
+		ModelAndView mv = new ModelAndView();
+		/*mv.addObject("picture", picture);*/
+		
+		mv.addObject("admin",admin);
+		mv.setViewName("/console/admin/savepwd");
+		return mv;
 	}
 
 	@RequestMapping("/403")

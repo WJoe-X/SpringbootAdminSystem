@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32541871-fa57-486a-98f9-23b24be85213" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/AdminController.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/AdminController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/LogController.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/LogController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/MenuController.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/MenuController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/RoleController.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/RoleController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/po/Role.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/po/Role.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/LogService.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/LogService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/MenuService.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/MenuService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/impl/LogServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/impl/LogServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/impl/MenuServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/impl/MenuServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/table.sql" afterPath="$PROJECT_DIR$/src/main/resources/table.sql" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/console/log/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/console/log/index.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/console/login.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/console/login.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/console/menu/from.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/console/menu/from.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/console/menu/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/console/menu/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.lianxiang.adminDemo/adminDemo/pom.properties" afterPath="$PROJECT_DIR$/target/classes/META-INF/maven/com.lianxiang.adminDemo/adminDemo/pom.properties" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/AdminController.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/AdminController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/LogController.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/LogController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/MenuController.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/MenuController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/RoleController.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/RoleController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/po/Role.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/po/Role.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/LogService.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/LogService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/MenuService.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/MenuService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/impl/LogServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/impl/LogServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/impl/MenuServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/impl/MenuServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/table.sql" afterPath="$PROJECT_DIR$/target/classes/table.sql" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/console/log/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/console/log/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/console/login.html" afterPath="$PROJECT_DIR$/target/classes/templates/console/login.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/console/menu/from.html" afterPath="$PROJECT_DIR$/target/classes/templates/console/menu/from.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/console/menu/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/console/menu/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/console/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/console/index.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/console/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/console/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -61,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="519">
-              <caret line="94" column="29" lean-forward="true" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
+              <caret line="94" column="29" lean-forward="false" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -97,7 +69,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -229,8 +201,7 @@
     <option name="totallyTimeSpent" value="5346000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1796875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -312,7 +283,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="519">
-          <caret line="94" column="29" lean-forward="true" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
+          <caret line="94" column="29" lean-forward="false" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
           <folding />
         </state>
       </provider>

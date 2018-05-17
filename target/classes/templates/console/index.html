@@ -25,14 +25,13 @@
 <body class="hold-transition skin-blue fixed sidebar-mini">
 	<div class="wapper">
 		<header class="main-header">
-			<a href="/console/index" class="logo"> 
-				<span class="logo-lg"><b>NUI</b> CMS</span>
+			<a href="/console/index" class="logo"> <span class="logo-lg"><b>NUI</b>
+					CMS</span>
 			</a>
 			<nav class="navbar navbar-static-top">
 				<a href="#" class="sidebar-toggle" data-toggle="offcanvas"
-					role="button">  <span
-					class="icon-bar"></span> <span class="icon-bar"></span> <span
-					class="icon-bar"></span>
+					role="button"> <span class="icon-bar"></span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span>
 				</a>
 				<div class="navbar-custom-menu">
 					<ul class="nav navbar-nav">
@@ -51,17 +50,19 @@
 
 								</li>
 								<li class="user-footer">
-									<div class="pull-left">
-										<a  href="'/console/user/'+'${admin.uid}'" class="btn btn-default btn-flat">修改</a>
-									</div>
+									<!-- <div class="pull-left">
+										<a onclick="edtpwd()"  class="btn btn-default btn-flat">修改</a>
+									</div> -->
 									<div class="pull-right">
 										<a href="/console/logout" class="btn btn-default btn-flat">退出</a>
 									</div>
 								</li>
+
 							</ul></li>
 					</ul>
 				</div>
 			</nav>
+			  <input type="hidden" name="msg" id="msg" th:value="${admin.uid}" />
 		</header>
 		<aside class="main-sidebar">
 			<section class="sidebar">
@@ -113,4 +114,18 @@
 		src="/assets/adminlte-2.3.7/js/app.min.js"></script>
 	<script type="text/javascript" src="/js/index.js"></script>
 </body>
+
+<script type="text/javascript">
+
+	function edtpwd(){
+		var edtpwd=$("#msg").val();
+		console.log(edtpwd);
+		$.ajax({
+			  type: 'GET',
+			  url: "/console/user/" +edtpwd  ,
+			 
+		
+			});
+	}
+</script>
 </html>
