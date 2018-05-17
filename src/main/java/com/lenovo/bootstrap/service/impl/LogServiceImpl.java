@@ -6,6 +6,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.validation.Valid;
+
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,6 +82,19 @@ public class LogServiceImpl implements LogService {
 		map.put(LOG_DATE, datePerDay);
 		map.put(LOG_COUNT_NUMBER, countNumber);
 		return map;
+		
+	}
+
+	@Override
+	public PageInfo<Log> getPageList(@Valid ListVaild listVaild, Log log) {
+		LogExample example = new LogExample();
+		example.setOrderByClause(CamelCaseUtil.toUnderlineName(listVaild.getSort()+" "+listVaild.getOrder()));
+		if(StringUtils.isNotEmpty(log.getLogUser()));
+		example.createCriteria().andLogUserEqualTo(log.getLogUser());
+		PageHelper.startPage(listVaild.getPageNumber(), listVaild.getPageSize());
+		List<Log> list= this.logmapper.selectByExample(example);
+	    return new PageInfo<>(list);
+		
 		
 	}
 

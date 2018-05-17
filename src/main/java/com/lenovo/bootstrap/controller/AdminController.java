@@ -1,5 +1,7 @@
 package com.lenovo.bootstrap.controller;
 
+import static org.assertj.core.api.Assertions.assertThatIllegalStateException;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,6 +24,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -122,21 +126,21 @@ public class AdminController {
 			}
 		} catch (UnknownAccountException uae) {
 			LOGGER.info("对用户[" + username + "]进行登录验证..验证未通过,未知账户");
-			redirectAttributes.addFlashAttribute("message", "未知账户");
+			redirectAttributes.addFlashAttribute("msg", "未知账户");
 		} catch (IncorrectCredentialsException ice) {
 			LOGGER.info("对用户[" + username + "]进行登录验证..验证未通过,错误的凭证");
-			redirectAttributes.addFlashAttribute("message", "密码不正确");
+			redirectAttributes.addFlashAttribute("msg", "密码不正确");
 		} catch (LockedAccountException lae) {
 			LOGGER.info("对用户[" + username + "]进行登录验证..验证未通过,账户已锁定");
-			redirectAttributes.addFlashAttribute("message", "账户已锁定");
+			redirectAttributes.addFlashAttribute("msg", "账户已锁定");
 		} catch (ExcessiveAttemptsException eae) {
 			LOGGER.info("对用户[" + username + "]进行登录验证..验证未通过,错误次数过多");
-			redirectAttributes.addFlashAttribute("message", "用户名或密码错误次数过多");
+			redirectAttributes.addFlashAttribute("msg", "用户名或密码错误次数过多");
 		} catch (AuthenticationException ae) {
 			// 通过处理Shiro的运行时AuthenticationException就可以控制用户登录失败或密码错误时的情景
 			LOGGER.info("对用户[" + username + "]进行登录验证..验证未通过,堆栈轨迹如下");
 			ae.printStackTrace();
-			redirectAttributes.addFlashAttribute("message", "用户名或密码不正确");
+			redirectAttributes.addFlashAttribute("msg", "用户名或密码不正确");
 		}
 		token.clear();
 		return "redirect:/console/login";
@@ -185,7 +189,7 @@ public class AdminController {
 	public ModelMap main() {
 		try {
 			return ReturnUtil.Success(null, this.getTotal(), null);
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 			return ReturnUtil.Error(null, null, null);
@@ -205,6 +209,13 @@ public class AdminController {
 		redirectAttributes.addFlashAttribute("message", "您已安全退出");
 
 		return "redirect:/console/login";
+	}
+
+	@GetMapping("user/{uid}")
+	@ResponseBody
+	public ModelMap edtpwd(@PathVariable("uid") String uid) {
+		Admin admin = this.adminService.getById(uid);
+		return ReturnUtil.Success("", admin, "console/savepwd");
 	}
 
 	@RequestMapping("/403")

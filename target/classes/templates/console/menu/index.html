@@ -4,11 +4,11 @@
 </head>
 <body>
 	<section class="content-header">
-		<h1>资源管理</h1>
-		<small>资源列表</small>
+		<h1>菜单管理</h1>
+		<small>菜单列表</small>
 	</section>
 	<section class="content table-content">
-		<a href="/console/menu/from" class="btn btn-primary">添加资源</a>
+		<a href="/console/menu/from" class="btn btn-primary">添加菜单</a>
 		<table class="table table-bordered" id="dataGrid">
 			<tr>
 				<th>菜单名称</th>
@@ -29,7 +29,7 @@
 				<td><input type="text" th:attr="data-id=${menu.menuId}"
 					name="listorder" th:value="${menu.listorder}" /></td>
 				<td
-					th:text="${#dates.format(menu.updatedAt, 'yyyy-MM-dd HH:mm:ss')}"></td>
+					th:text="${#dates.format(menu.createdAt, 'yyyy-MM-dd HH:mm:ss')}"></td>
 				<td
 					th:text="${#dates.format(menu.updatedAt, 'yyyy-MM-dd HH:mm:ss')}"></td>
 				<td><a th:href="${'/console/menu/from?parentId='+menu.menuId}"><i

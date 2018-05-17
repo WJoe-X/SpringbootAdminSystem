@@ -23,27 +23,27 @@ public interface AdminService {
 
 	public Admin findByUsername(String username);
 
-	public int deleteById(String id);
+	public Integer deleteById(String id);
 
 	/**
 	 * 创建新用户
 	 * @param admin
 	 * @return
 	 */
-	public int save(Admin admin);
+	public Integer save(Admin admin);
 
 	public void saveByExample(Admin admin);
 
 	public List<Admin> getPageList(Admin admin);
 
-	public int updatePwd(String uid, String newPassword);
+	public Integer updatePwd(String uid, String newPassword);
 
 	/**
 	 * 更新用户资料
 	 * @param updateAdmin
 	 * @return
 	 */
-	public int updateById(Admin updateAdmin);
+	public Integer updateById(Admin updateAdmin);
 
 	public Integer getCountByUsername(String username);
 	

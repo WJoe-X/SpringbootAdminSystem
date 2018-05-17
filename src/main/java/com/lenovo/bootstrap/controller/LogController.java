@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.validation.Valid;
 
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,9 +40,9 @@ public class LogController {
 	@Autowired
 	private LogService logService;
 
-	
 	/**
 	 * 返回日志视图
+	 * 
 	 * @param model
 	 * @return
 	 */
@@ -59,14 +60,20 @@ public class LogController {
 	 */
 	@ResponseBody
 	@RequestMapping(value = "/list", method = { RequestMethod.GET })
-	public ModelMap list(@Valid ListVaild listVaild, BindingResult result) {
+	public ModelMap list(@Valid ListVaild listVaild, BindingResult result, Log log) {
 		if (result.hasErrors()) {
 			for (ObjectError er : result.getAllErrors())
 				return ReturnUtil.Error(er.getDefaultMessage(), null, null);
 		}
-		ModelMap map = new ModelMap();
+
 		LOGGER.info("LogList pageNumber : {} pageSize : {} .", listVaild.getPageNumber(), listVaild.getPageSize());
-		PageInfo<Log> pageInfo = logService.getPageList(listVaild);
+		PageInfo<Log> pageInfo = new PageInfo<>();
+		if (StringUtils.isEmpty(log.getLogUser())) {
+			pageInfo = logService.getPageList(listVaild);
+		} else {
+			pageInfo = logService.getPageList(listVaild, log);
+		}
+		ModelMap map = new ModelMap();
 		map.put("pageInfo", pageInfo);
 		return ReturnUtil.Success("加载成功", map, null);
 	}

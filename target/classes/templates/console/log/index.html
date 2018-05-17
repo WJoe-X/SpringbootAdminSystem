@@ -6,6 +6,21 @@
 	<section class="content-header">
 		<h1>日志管理</h1>
 	</section>
+	<div class="panel-body" style="padding-bottom: 0px;">
+		<form id="formSearch" class="form-horizontal">
+			<div class="form-group" style="margin-top: 15px">
+				<label class="control-label col-sm-1" for="user">操作用户</label>
+				<div class="col-sm-3">
+					<input type="text" class="form-control" id="user">
+				</div>
+				<div class="col-sm-4" style="text-align: left;">
+					<button type="button" style="margin-left: 50px" id="search"
+						class="btn btn-primary">查询</button>
+				</div>
+			</div>
+
+		</form>
+	</div>
 	<section class="content table-content">
 		<table id="dataGrid"></table>
 	</section>
@@ -15,6 +30,9 @@
 	$table = $("#dataGrid");
 	$(function() {
 		initDataGrid();
+		 //2.初始化Button的点击事件
+	   var oButton = new ButtonInit();
+		 oButton.Init();
 	});
 	function initDataGrid() {
 		$table.bootstrapTable({
@@ -42,6 +60,7 @@
 					pageSize : params.limit,
 					order : params.order,
 					sort : params.sort,
+					logUser : $("#user").val()
 
 				}
 				return temp;
@@ -63,5 +82,19 @@
 
 		});
 	}
+
+            var ButtonInit = function() {
+                var oInit = new Object();
+                oInit.Init = function() {
+                    //初始化页面上面的按钮事件
+                    $("#search")
+                        .click(function() {
+                            $table.bootstrapTable('refresh');
+                        });
+                };
+                return oInit;
+            };
+
+	  
 </script>
 </html>

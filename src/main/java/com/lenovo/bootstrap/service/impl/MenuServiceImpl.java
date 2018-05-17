@@ -1,12 +1,9 @@
 package com.lenovo.bootstrap.service.impl;
 
-import static org.mockito.Mockito.RETURNS_DEEP_STUBS;
-
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-import javax.validation.Valid;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +15,6 @@ import com.lenovo.bootstrap.po.Menu;
 import com.lenovo.bootstrap.po.MenuExample;
 import com.lenovo.bootstrap.service.MenuService;
 import com.lenovo.bootstrap.util.UuidUtil;
-import com.lenovo.bootstrap.vo.MenuVo;
 
 /**
  * Description:菜单业务接口
@@ -88,6 +84,8 @@ public class MenuServiceImpl implements MenuService {
 	@Override
 	@Transactional
 	public int save(Menu menu) {
+		menu.setCreatedAt(new Date());
+		menu.setUpdatedAt(menu.getCreatedAt());
 		if (StringUtils.isEmpty(menu.getMenuId())) {
 			String Id = UuidUtil.getUUID();
 			menu.setMenuId(Id);
@@ -109,21 +107,15 @@ public class MenuServiceImpl implements MenuService {
 	}
 
 	@Override
-	public List<Menu> selectMenuByRoleId(String roleId) {
+	public List<Menu> findMenuByRoleId(String roleId) {
 		return menuMapper.selectMenuByRoleId(roleId);
 
 	}
 
 	@Override
 	@Transactional
-	public Integer saveMenu(@Valid Menu menu) {
-		if (StringUtils.isEmpty(menu.getMenuId())) {
-			String Id = UuidUtil.getUUID();
-			menu.setMenuId(Id);
-			this.menuMapper.insert(menu);
-		} else {
-			this.menuMapper.updateByPrimaryKeySelective(menu);
-		}
+	public Integer saveOrUpdateMenu(Menu menu) {
+		this.save(menu);
 		if (!menu.getParentId().equals("0")) {
 			// 更新父类总数
 			MenuExample example = new MenuExample();

@@ -8,7 +8,6 @@ import org.apache.shiro.crypto.SecureRandomNumberGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -84,14 +83,14 @@ public class AdminServiceImpl implements AdminService {
 
 	@Override
 	@Transactional
-	public int deleteById(String id) {
+	public Integer deleteById(String id) {
 		return this.adminMapper.deleteByPrimaryKey(id);
 
 	}
 
 	@Override
 	@Transactional
-	public int save(Admin admin) {
+	public Integer save(Admin admin) {
 		if (StringUtils.isEmpty(admin.getPassword())) {
 			return 0;
 		}
@@ -121,7 +120,7 @@ public class AdminServiceImpl implements AdminService {
 
 	@Override
 	@Transactional
-	public int updatePwd(String uid, String password) {
+	public Integer updatePwd(String uid, String password) {
 		Admin admin = new Admin();
 		if (StringUtils.isNotEmpty(uid) && StringUtils.isNotEmpty(password)) {
 			admin = adminMapper.selectByPrimaryKey(uid);
@@ -137,7 +136,7 @@ public class AdminServiceImpl implements AdminService {
 
 	@Override
 	@Transactional
-	public int updateById(Admin updateAdmin) {
+	public Integer updateById(Admin updateAdmin) {
 		updateAdmin.setUpdatedAt(new Date());
 		return this.adminMapper.updateByPrimaryKey(updateAdmin);
 	}

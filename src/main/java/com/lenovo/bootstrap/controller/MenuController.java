@@ -88,6 +88,12 @@ public class MenuController {
 		return "console/menu/from";
 	}
 
+	/**
+	 * 更新或者修改菜单
+	 * @param menu
+	 * @param result
+	 * @return
+	 */
 	@RequiresPermissions("menu:save")
 	@RequestMapping(value = "/save", method = { RequestMethod.POST })
 	@ResponseBody
@@ -98,7 +104,7 @@ public class MenuController {
 					return ReturnUtil.Error(er.getDefaultMessage(), null, null);
 			}
 
-			this.menuService.saveMenu(menu);
+			this.menuService.saveOrUpdateMenu(menu);
 			return ReturnUtil.Success("操作成功", null, "/console/menu/index");
 		} catch (Exception e) {
 			e.printStackTrace();

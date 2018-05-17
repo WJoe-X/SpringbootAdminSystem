@@ -2,75 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32541871-fa57-486a-98f9-23b24be85213" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/BootstrapApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/BootstrapApplication.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/AdminController.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/AdminController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/ConsoleAdminController.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/ConsoleAdminController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/LogController.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/LogController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/MemberController.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/MemberController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/MenuController.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/MenuController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/RoleController.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/controller/RoleController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/mapper/LogMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/mapper/LogMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/AdminService.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/AdminService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/po/Role.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/po/Role.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/LogService.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/LogService.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/MenuService.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/MenuService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/impl/AdminServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/impl/AdminServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/impl/LogServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/impl/LogServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/impl/MemberServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/impl/MemberServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/impl/MenuServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/impl/MenuServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/impl/RoleServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/service/impl/RoleServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/shiro/realm/AdminShiroRealm.java" afterPath="$PROJECT_DIR$/src/main/java/com/lenovo/bootstrap/shiro/realm/AdminShiroRealm.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/LogMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/LogMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/css/AdminLTE.min.css" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/css/AdminLTE.min.css" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/table.sql" afterPath="$PROJECT_DIR$/src/main/resources/table.sql" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/console/admin/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/console/admin/index.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/console/footer.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/console/footer.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/console/header.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/console/header.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/console/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/console/index.html" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/console/log/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/console/log/index.html" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/console/login.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/console/login.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/console/member/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/console/member/index.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/console/role/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/console/role/index.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout/header.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/header.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/login.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/member/login.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/member/reg.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/member/reg.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/console/menu/from.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/console/menu/from.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/console/menu/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/console/menu/index.html" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/com.lianxiang.adminDemo/adminDemo/pom.properties" afterPath="$PROJECT_DIR$/target/classes/META-INF/maven/com.lianxiang.adminDemo/adminDemo/pom.properties" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" afterPath="$PROJECT_DIR$/target/classes/application.yml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/BootstrapApplication.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/BootstrapApplication.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/AdminController.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/AdminController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/ConsoleAdminController.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/ConsoleAdminController.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/LogController.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/LogController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/MemberController.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/MemberController.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/MenuController.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/MenuController.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/RoleController.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/controller/RoleController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/mapper/LogMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/mapper/LogMapper.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/AdminService.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/AdminService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/po/Role.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/po/Role.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/LogService.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/LogService.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/MenuService.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/MenuService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/impl/AdminServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/impl/AdminServiceImpl.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/impl/LogServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/impl/LogServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/impl/MemberServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/impl/MemberServiceImpl.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/impl/MenuServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/impl/MenuServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/impl/RoleServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/service/impl/RoleServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/shiro/realm/AdminShiroRealm.class" afterPath="$PROJECT_DIR$/target/classes/com/lenovo/bootstrap/shiro/realm/AdminShiroRealm.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" afterPath="$PROJECT_DIR$/target/classes/generatorConfig.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/LogMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/LogMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/assets/adminlte-2.3.7/css/AdminLTE.min.css" afterPath="$PROJECT_DIR$/target/classes/static/assets/adminlte-2.3.7/css/AdminLTE.min.css" />
       <change beforePath="$PROJECT_DIR$/target/classes/table.sql" afterPath="$PROJECT_DIR$/target/classes/table.sql" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/console/admin/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/console/admin/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/console/footer.html" afterPath="$PROJECT_DIR$/target/classes/templates/console/footer.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/console/header.html" afterPath="$PROJECT_DIR$/target/classes/templates/console/header.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/console/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/console/index.html" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/console/log/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/console/log/index.html" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/console/login.html" afterPath="$PROJECT_DIR$/target/classes/templates/console/login.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/console/member/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/console/member/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/console/role/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/console/role/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/layout/header.html" afterPath="$PROJECT_DIR$/target/classes/templates/layout/header.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/member/login.html" afterPath="$PROJECT_DIR$/target/classes/templates/member/login.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/member/reg.html" afterPath="$PROJECT_DIR$/target/classes/templates/member/reg.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/console/menu/from.html" afterPath="$PROJECT_DIR$/target/classes/templates/console/menu/from.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/console/menu/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/console/menu/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -84,7 +45,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="count.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="count.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/count.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="789">
@@ -92,6 +53,16 @@
               <folding>
                 <element signature="n#style#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="519">
+              <caret line="94" column="29" lean-forward="true" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -116,6 +87,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/templates/console/log/count.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/console/image/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/console/log/index.html" />
       </list>
     </option>
   </component>
@@ -125,7 +97,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -146,7 +118,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -200,10 +171,21 @@
               <item name="console" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="bootstrap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="console" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -239,14 +221,16 @@
       <updated>1525922694517</updated>
       <workItem from="1525922699132" duration="1696000" />
       <workItem from="1526286510887" duration="1953000" />
+      <workItem from="1526541186277" duration="1697000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3649000" />
+    <option name="totallyTimeSpent" value="5346000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1796875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -296,14 +280,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/image/index.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/count.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/image/index.html" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/count.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="789">
@@ -311,6 +306,14 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="94" column="29" lean-forward="true" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>

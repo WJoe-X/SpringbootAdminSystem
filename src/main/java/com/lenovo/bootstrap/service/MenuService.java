@@ -3,11 +3,8 @@ package com.lenovo.bootstrap.service;
 import java.util.List;
 import java.util.Set;
 
-import javax.validation.Valid;
-
 import com.lenovo.bootstrap.po.Menu;
 import com.lenovo.bootstrap.po.MenuExample;
-import com.lenovo.bootstrap.vo.MenuVo;
 
 /**
  * Description:
@@ -50,20 +47,33 @@ public interface MenuService {
 	 */
 	public Menu getByMenuId(String menuId);
 
+	/**
+	 * 保存menu信息
+	 * 
+	 * @param menu
+	 * @return
+	 */
 	public int save(Menu menu);
 
 	public int updateByMenuId(Menu menu);
 
 	public int deleteByMenuId(String menuId);
 
-	public List<Menu> selectMenuByRoleId(String roleId);
+	/**
+	 * 根据角色id所拥有的菜单权限
+	 * 
+	 * @param roleId
+	 * @return
+	 */
+	public List<Menu> findMenuByRoleId(String roleId);
 
 	/**
-	 * 添加新的菜单
+	 * 根据是否存在menuId,添加新的菜单或者更新菜单
+	 * 
 	 * 
 	 * @param menu
 	 * @return
 	 */
-	public Integer saveMenu(@Valid Menu menu);
+	public Integer saveOrUpdateMenu(Menu menu);
 
 }

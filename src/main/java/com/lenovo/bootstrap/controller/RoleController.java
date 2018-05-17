@@ -84,7 +84,7 @@ public class RoleController {
 		ModelMap map = new ModelMap();
 		PageInfo<Role> pageInfo = roleService.getPageList(listVaild);
 		for (Role list : pageInfo.getList()) {
-			List<Menu> menuList = menuService.selectMenuByRoleId(list.getRoleId());
+			List<Menu> menuList = menuService.findMenuByRoleId(list.getRoleId());
 			list.setMenuList(menuList);
 		}
 		map.put("pageInfo", pageInfo);
