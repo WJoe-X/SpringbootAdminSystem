@@ -14,7 +14,7 @@
 					<div class="box-body">
 						<form class="form-horizontal js-ajax-form"
 							action="/console/admin/save" method="post"
-							onsubmit="return checkFrom();">
+							>
 							<input type="hidden" name="uid" id="uid" th:value="${admin.uid}" />
 							<input type="hidden" name="isSystem" th:value="${admin.isSystem}" />
 							<div class="form-group">
@@ -23,14 +23,14 @@
 									<input type="text" name="username" class="form-control"
 										id="username"
 										th:readonly="${!#strings.equals(admin.uid,null)}"
-										th:value="${admin.username}" />
+										th:value="${admin.username}" required="true" />
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="password" class="col-sm-2 control-label">密码</label>
 								<div class="col-sm-10">
 									<input type="password" name="password" class="form-control"
-										id="password" />
+										id="password" required="true"/>
 								</div>
 							</div>
 							<div class="form-group">
@@ -57,7 +57,7 @@
 							</div>
 							<div class="form-group">
 								<div class="col-sm-offset-2 col-sm-10">
-									<button type="submit" class="btn btn-default js-ajax-submit">提交</button>
+									<button type="submit" class="btn btn-default js-ajax-submit" onclick="checkFrom()">提交</button>
 								</div>
 							</div>
 						</form>
@@ -68,7 +68,7 @@
 	</section>
 	<div th:include="console/footer"></div>
 
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		function checkFrom() {
 
 			var username = $('#username').val();
@@ -76,7 +76,7 @@
 			var state = $('#state').val();
 			var roleId = $('#roleId').val();
 			if (username == null || username == "") {
-				/* alert("请输入用户名"); */
+				alert("请输入用户名");
 				$('#username').focus();
 				return false;
 			} else if (password == null || password == "") {
@@ -87,16 +87,15 @@
 				alert("请选择状态");
 				$('#state').focus();
 				return false;
-			} 
-			 else if (roleId == null || roleId == "") {
-					alert("请选择状态");
-					$('#roleId').focus();
-					return false;}
-			 else {
+			} else if (roleId == null || roleId == "") {
+				alert("请选择状态");
+				$('#roleId').focus();
+				return false;
+			} else {
 				return true;
 			}
 
 		}
-	</script>
+	</script> -->
 </body>
 </html>

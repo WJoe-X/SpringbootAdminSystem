@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.github.pagehelper.PageInfo;
+import com.lenovo.bootstrap.aspect.TimeLog;
 import com.lenovo.bootstrap.po.Admin;
 import com.lenovo.bootstrap.po.AdminRoleKey;
 import com.lenovo.bootstrap.po.Role;
@@ -100,6 +101,7 @@ public class ConsoleAdminController {
 	 * @param admin
 	 * @return
 	 */
+	@TimeLog
 	@RequiresPermissions("admin:index")
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	@ResponseBody
