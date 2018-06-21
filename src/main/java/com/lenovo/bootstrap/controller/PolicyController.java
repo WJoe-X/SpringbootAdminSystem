@@ -3,23 +3,24 @@ package com.lenovo.bootstrap.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.mockito.internal.invocation.RealMethod.FromBehavior;
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.lenovo.bootstrap.service.PolicyService;
 import com.lenovo.bootstrap.util.ReturnUtil;
 import com.lenovo.bootstrap.vo.PolicyPropertyVo;
-
-import net.sf.jsqlparser.statement.create.table.Index;
 
 /**
  * Description:
@@ -46,6 +47,7 @@ public class PolicyController {
 		return "console/policy/index";
 
 	}
+
 	/**
 	 * 跳转console/policy/from,添加policy
 	 * 
@@ -75,20 +77,76 @@ public class PolicyController {
 		return null;
 	}
 
-	
+	/**
+	 * 添加策略
+	 * 
+	 * @param json
+	 * @return
+	 */
 	@PostMapping()
 	@ResponseBody
-	public ModelMap save(@RequestBody String json){
+	public ModelMap save(@RequestBody String json) {
 		try {
 			LOGGER.info("-----------策略     {}--", json);
-			 //String str = "{'name':'75','shoppingCartItemList':[{'id':'407','num':'10'}]}";  
-			Boolean boo =this.policyService.savePolicyToJson(json);
+			// String str =
+			// "{'name':'75','shoppingCartItemList':[{'id':'407','num':'10'}]}";
+			Boolean boo = this.policyService.savePolicyToJson(json);
 			if (boo) {
 				return ReturnUtil.Success("添加策略成功");
 			}
 		} catch (Exception e) {
-			LOGGER.error(e.getMessage());// TODO: handle exception
+			LOGGER.error(e.getMessage());
 		}
 		return ReturnUtil.Error("添加策略失败");
 	}
+
+	/**
+	 * 跳转到修改页面
+	 * 
+	 * @param name
+	 * @param req
+	 * @return
+	 */
+	@GetMapping("m")
+	public String toGetPolicy(String name, HttpServletRequest req) {
+		req.setAttribute("name", name);
+		return "/console/policy/modify";
+
+	}
+
+	/**
+	 * 根据名字读取相应的策略
+	 * 
+	 * @param name
+	 * @return
+	 */
+	@RequestMapping(value = "{name}", method = RequestMethod.GET)
+	@ResponseBody
+	public String getPolicy(@PathVariable("name") String name) {
+		try {
+			LOGGER.info("--------------name : {} ", name);
+			String result = this.policyService.getPolicy(name);
+			return result;
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage());
+		}
+		return "请求json文件失败";
+	}
+
+	@RequestMapping(value = "/{name}", method = RequestMethod.DELETE)
+	@ResponseBody
+	public ModelMap deletePolicy(@PathVariable("name") String name) {
+		try {
+			LOGGER.info("--------------delete --name : {} ", name);
+			Boolean boo = this.policyService.deletePolicy(name);
+			if (boo) {
+				return ReturnUtil.Success("删除成功", null, "/console/index");
+			}
+			return ReturnUtil.Success("文件不存在", null, "/console/policy/index");
+		} catch (Exception e) {
+			LOGGER.error(e.getMessage());// TODO: handle exception
+		}
+		return ReturnUtil.Error("删除失败", null, "/console/picture/index");
+	}
+
 }

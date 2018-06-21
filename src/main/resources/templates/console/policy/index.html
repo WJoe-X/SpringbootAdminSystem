@@ -77,19 +77,31 @@
 	
 	
 	function operateFormatter(value, row, index) {
-		if (row.isSystem == 0) {
-			return [ '<a href="/console/admin/from?uid=' + row.uid + '" >',
+		 
+			return [ '<a href="/console/policy/m?name=' + row.name + '" >',
 					'<i class="glyphicon glyphicon-edit"></i>修改', '</a>  ',
 					'<a class="remove" href="javascript:void(0);">',
 					'<i class="glyphicon glyphicon-remove"></i>删除', '</a>' ]
 					.join('');
-		}
+		
 	}
 
 	window.operateEvents = {
-		'click .remove' : function(e, value, row, index) {
-			operaModel.delRow(row.uid, '/console/admin/delete', 'uid');
-		}
+			'click .remove' : function(e, value, row, index) {
+				$.ajax({
+					url : "/console/policy/" + row.name,
+					type : "delete",
+					dataType : "json",
+					data : row.name,
+					success : function(msg) {
+						alert(msg.msg);
+						window.location.href="/console/policy/index";
+					},
+					error : function(xhr, textstatus, thrown) {
+						alert("删除失败！");
+					}
+				});
+			}
 	};
 </script>
 </html>

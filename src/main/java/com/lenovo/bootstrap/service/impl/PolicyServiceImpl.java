@@ -1,8 +1,10 @@
 package com.lenovo.bootstrap.service.impl;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.FilenameFilter;
 import java.io.IOException;
@@ -63,11 +65,10 @@ public class PolicyServiceImpl implements PolicyService {
 			});
 			List<PolicyPropertyVo> policyPropertyVos = new ArrayList<>();
 			PolicyPropertyVo policyPropertyVo = new PolicyPropertyVo();
-			for (File jsonfile : filelist) {
-				policyPropertyVo.setName(jsonfile.getName().substring(0, jsonfile.getName().lastIndexOf(".")));
-				policyPropertyVo.setUpdatedDate(sdf.format(jsonfile.lastModified()));
+			for (int i=0; i<filelist.length;i++) {
+				policyPropertyVo.setName(filelist[i].getName().substring(0, filelist[i].getName().lastIndexOf(".")));
+				policyPropertyVo.setUpdatedDate(sdf.format(filelist[i].lastModified()));
 				policyPropertyVos.add(policyPropertyVo);
-
 			}
 			return policyPropertyVos;
 		}
@@ -75,13 +76,13 @@ public class PolicyServiceImpl implements PolicyService {
 	}
 
 	@Override
-	public Boolean savePolicyToJson(String json) {
+	public Boolean savePolicyToJson(String json) throws Exception {
 		try {
 			JSONObject jsonObject = JSONObject.parseObject(json);
 			String path = FILE_PATH + "/" + jsonObject.getString("name") + "." + JSON;
 			File file = ResourceUtils.getFile(path);
 			LOGGER.info("-------保存绝对路径--{}", file.getAbsolutePath());
-			
+
 			PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(file)));
 			writer.write(json);
 			writer.close();
@@ -91,5 +92,27 @@ public class PolicyServiceImpl implements PolicyService {
 		}
 		return false;
 
+	}
+
+	@Override
+	public String getPolicy(String policyName) throws Exception {
+		String path = FILE_PATH + "/" + policyName + "." + JSON;
+		File file = ResourceUtils.getFile(path);
+		if (!file.exists()) {
+			return null;
+		}
+		String result = new String(Files.readAllBytes(Paths.get(path)));
+		LOGGER.info("----------------{}  文件里的内容     --  {}", policyName, result);
+		return result;
+	}
+
+	@Override
+	public Boolean deletePolicy(String name) throws Exception {
+		String path = FILE_PATH + "/" + name + "." + JSON;
+		File file = ResourceUtils.getFile(path);
+		if (!file.exists()) {
+			return true;
+		}
+		return file.delete();
 	}
 }

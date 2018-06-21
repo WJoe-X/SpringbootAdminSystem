@@ -17,7 +17,7 @@
 								<label for="name" class="col-sm-2 control-label">策略名称</label>
 								<div class="col-sm-10">
 									<input type="text" name="name" class="form-control" id="name"
-										required="true" />
+										required="true" th:value="${name}" />
 								</div>
 							</div>
 							<div class="form-group">
@@ -76,9 +76,34 @@
 			</div>
 		</div>
 	</section>
+
 	<div th:include="console/footer"></div>
 
 	<script type="text/javascript">
+		$(function() {
+			var name = $('#name').val();
+			$
+					.ajax({
+						type : "GET",//方法类型
+						contentType : "text/plain",
+						dataType : "json",//预期服务器返回的数据类型
+						url : "/console/policy/" + name,//url
+						success : function(result) {
+							$('#HomepageLocation').val(result.HomepageLocation);
+							$('#HomepageIsNewTabPage').val(
+									result.HomepageIsNewTabPage);
+							$('#RestoreOnStartup').val(result.RestoreOnStartup);
+							$('#URLWhitelist').val(result.URLWhitelist);
+							$('#URLBlacklist').val(result.URLBlacklist);
+
+						},
+						error : function() {
+							alert("取得失败");
+						}
+
+					});
+		});
+
 		function upload() {
 			var name = $('#name').val();
 			var HomepageLocation = $('#HomepageLocation').val();
@@ -114,12 +139,12 @@
 				url : "/console/policy",//url
 				data : js,
 				success : function(result) {
-					alert("添加成功");
-					window.location.href ="/console/policy/index";
+					alert("修改成功！");
+					window.location.href = "/console/policy/index";
 				},
 				error : function() {
-					alert("添加失败！");
-					window.location.href ="/console/policy/index";
+					alert("修改失败！");
+					window.location.href = "/console/policy/index";
 				}
 			});
 		}
