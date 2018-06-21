@@ -44,7 +44,6 @@ public class PolicyServiceImpl implements PolicyService {
 
 	@Override
 	public List<PolicyPropertyVo> getPolicyProperty() throws Exception {
-
 		File file = ResourceUtils.getFile(FILE_PATH);
 		if (!file.exists()) {
 			file.mkdir();
@@ -53,19 +52,17 @@ public class PolicyServiceImpl implements PolicyService {
 		if (!file.isDirectory()) { // 通过isDirectory()判断当前路径是不是文件夹
 			LOGGER.info("--------------｛｝      这不是一个文件夹-------------", file.getName());
 		} else if (file.isDirectory()) {
-
 			// 获取json格式的文件列表
 			File[] filelist = file.listFiles(new FilenameFilter() {
-
 				@Override
 				public boolean accept(File dir, String name) {
 					return name.endsWith(JSON);
-
 				}
 			});
 			List<PolicyPropertyVo> policyPropertyVos = new ArrayList<>();
-			PolicyPropertyVo policyPropertyVo = new PolicyPropertyVo();
+			
 			for (int i=0; i<filelist.length;i++) {
+				PolicyPropertyVo policyPropertyVo = new PolicyPropertyVo();
 				policyPropertyVo.setName(filelist[i].getName().substring(0, filelist[i].getName().lastIndexOf(".")));
 				policyPropertyVo.setUpdatedDate(sdf.format(filelist[i].lastModified()));
 				policyPropertyVos.add(policyPropertyVo);
