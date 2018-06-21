@@ -25,7 +25,7 @@ public class TimeLogAspect {
 	private static ThreadLocal<Long> startTime = new ThreadLocal<Long>();
 
 	/**
-	 * 切点为自定义注解SystemControllerLog
+	 * 切点为自定义注解TimeLog
 	 */
 	@Pointcut("@annotation(com.lenovo.bootstrap.aspect.TimeLog)")
 	public void controllerAspect() {
@@ -34,7 +34,7 @@ public class TimeLogAspect {
 	@Before(value = "controllerAspect()")
 	public void before(JoinPoint joinPoint) {
 		startTime.set(System.currentTimeMillis());
-		LOGGER.info("----进入  {}  类的   {} 方法 ", joinPoint.getTarget().getClass().getName(),
+		LOGGER.debug("----进入  {}  类的   {} 方法 ", joinPoint.getTarget().getClass().getName(),
 				joinPoint.getSignature().getName());
 	}
 

@@ -1,5 +1,22 @@
-{"properties": [{
-  "name": "picture.upload-path",
-  "type": "java.lang.String",
-  "description": "A description for 'picture.upload-path'"
-}]}
+{"properties": [
+  {
+    "name": "picture.upload-path",
+    "type": "java.lang.String",
+    "description": "A description for 'picture.upload-path'"
+  },
+  {
+    "name": "logback.file",
+    "type": "java.lang.String",
+    "description": "A description for 'logback.file'"
+  },
+  {
+    "name": "picture.upload-path",
+    "type": "java.lang.String",
+    "description": "A description for 'picture.upload-path'"
+  },
+  {
+    "name": "picture.upload-path",
+    "type": "java.lang.String",
+    "description": "A description for 'picture.upload-path'"
+  }
+]}

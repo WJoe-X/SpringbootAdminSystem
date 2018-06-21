@@ -1,7 +1,5 @@
 package com.lenovo.bootstrap.controller;
 
-import static org.assertj.core.api.Assertions.assertThatIllegalStateException;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,13 +28,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.method.annotation.ModelAndViewMethodReturnValueHandler;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.lenovo.bootstrap.enums.LoginEnum;
 import com.lenovo.bootstrap.po.Admin;
 import com.lenovo.bootstrap.po.Menu;
-import com.lenovo.bootstrap.po.Picture;
 import com.lenovo.bootstrap.po.valid.AdminValid;
 import com.lenovo.bootstrap.service.AdminService;
 import com.lenovo.bootstrap.service.LogService;
@@ -73,8 +69,6 @@ public class AdminController {
 	@Autowired
 	private LogService logService;
 	
-	@Autowired
-	private PictureService pictureService;
 
 	/**
 	 * 后台登录界面

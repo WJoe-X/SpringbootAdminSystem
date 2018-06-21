@@ -27,14 +27,5 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="F:/Maven/repository/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar" sourcepath="F:/Maven/repository/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.apache.shiro"/>
-			<attribute name="maven.artifactId" value="shiro-core"/>
-			<attribute name="maven.version" value="1.4.0"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

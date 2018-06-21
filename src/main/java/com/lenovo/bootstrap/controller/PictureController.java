@@ -1,16 +1,12 @@
 package com.lenovo.bootstrap.controller;
 
-import static org.hamcrest.CoreMatchers.nullValue;
-
 import javax.validation.Valid;
 
-import org.apache.ibatis.javassist.bytecode.Mnemonic;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,7 +27,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.github.pagehelper.PageInfo;
 import com.lenovo.bootstrap.po.Picture;
-import com.lenovo.bootstrap.po.Role;
 import com.lenovo.bootstrap.po.valid.ListVaild;
 import com.lenovo.bootstrap.service.PictureService;
 import com.lenovo.bootstrap.util.ReturnUtil;

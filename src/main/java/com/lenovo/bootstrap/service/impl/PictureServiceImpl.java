@@ -53,7 +53,6 @@ public class PictureServiceImpl implements PictureService {
 		this.rootLocation = Paths.get(properties.getLocation());
 	}
 
-
 	@Override
 	public Path load(String filename) {
 		return rootLocation.resolve(filename);
@@ -77,7 +76,6 @@ public class PictureServiceImpl implements PictureService {
 
 	}
 
-	
 	@Override
 	@Transactional
 	public void store(MultipartFile file) {
@@ -93,7 +91,7 @@ public class PictureServiceImpl implements PictureService {
 						"Cannot store file with relative path outside current directory " + filename);
 			}
 			try (InputStream inputStream = file.getInputStream()) {
-
+				LOGGER.info("------------------保存图片的路径-------"+ this.rootLocation.resolve(filename));
 				Files.copy(inputStream, this.rootLocation.resolve(filename), StandardCopyOption.REPLACE_EXISTING);
 			}
 		} catch (IOException e) {
@@ -139,7 +137,6 @@ public class PictureServiceImpl implements PictureService {
 	@Override
 	public Boolean deleteFromFile(String originPicUrl) throws Exception {
 
-		
 		return Files.deleteIfExists(this.rootLocation.resolve(originPicUrl));
 
 	}

@@ -1,7 +1,5 @@
 package com.lenovo.bootstrap.service.impl;
 
-import static org.assertj.core.api.Assertions.assertThatIllegalStateException;
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
