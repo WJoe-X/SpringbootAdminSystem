@@ -11,9 +11,9 @@ Date: 2017-05-24 15:18:32
 */
 
 SET FOREIGN_KEY_CHECKS=0;
-DROP DATABASE IF EXISTS `niu_cms`;
-CREATE DATABASE  `niu_cms` DEFAULT CHARACTER SET utf8 ;
-USE `niu_cms`;
+DROP DATABASE IF EXISTS `admindemo`;
+CREATE DATABASE  `admindemo` DEFAULT CHARACTER SET utf8 ;
+USE `admindemo`;
 -- ----------------------------
 -- Table structure for admin
 -- ----------------------------
@@ -144,6 +144,8 @@ INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`
 INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('203d58d4c700443e912f2846df5bd56a', '图片删除', 'auth', '/console/picture/delete', 'picture:delete', '16b6a67592f94442ab270be030b1bb15', NULL, '0', '0', '2018-05-16 11:08:59', '2018-05-16 11:08:59');
 INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('4bfd250431b640eeb8a8477dc6b3095a', '图片修改', 'auth', '/console/picture/edit', 'picture:edit', '16b6a67592f94442ab270be030b1bb15', NULL, '0', '0', '2018-05-16 11:08:14', '2018-05-16 11:08:14');
 INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('b3496a2ddaf445f881f865a094e71820', '图片处理', 'menu', '/console/picture/setting', 'picture:setting', '0', NULL, '1', '0', '2018-05-16 11:07:09', '2018-05-16 11:07:09');
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('3576373e60384ba9b02f445361a4c9b0', '政策管理', 'menu', '/console/policy/setting', 'policy:setting', '0', NULL, '1', '0', '2018-06-20 13:45:02', '2018-06-20 13:45:02');
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('6293ffc6c6d14bf8b6e0d9b5317edd49', '政策列表', 'auth', '/console/policy/index', 'policy:index', '3576373e60384ba9b02f445361a4c9b0', NULL, '0', '0', '2018-06-20 13:45:02', '2018-06-20 13:45:02');
 
 -- ----------------------------
 -- Table structure for role
