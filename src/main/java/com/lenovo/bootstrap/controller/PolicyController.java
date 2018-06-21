@@ -78,7 +78,7 @@ public class PolicyController {
 	
 	@PostMapping()
 	@ResponseBody
-	public ModelMap save(String json){
+	public ModelMap save(@RequestBody String json){
 		try {
 			LOGGER.info("-----------策略     {}--", json);
 			 //String str = "{'name':'75','shoppingCartItemList':[{'id':'407','num':'10'}]}";  
