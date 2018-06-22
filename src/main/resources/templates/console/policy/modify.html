@@ -90,7 +90,7 @@
 				url : "/console/policy/" + name,//url
 				success : function(result) {
 					$('#HomepageLocation').val(result.HomepageLocation);
-					$('#ShowHomeButton').val(result.ShowHomeButton);
+					$('#ShowHomeButton').val(result.ShowHomeButton.toString());
 					/* $('#RestoreOnStartup').val(result.RestoreOnStartup); */
 					$('#URLWhitelist').val(result.URLWhitelist);
 					$('#URLBlacklist').val(result.URLBlacklist);
