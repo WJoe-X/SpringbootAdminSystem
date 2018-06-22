@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="console/header">
+</head>
+<body>
+	<section class="content-header">
+		<h1>图片管理</h1>
+	</section>
+	<section class="content table-content">
+		<table id="dataGrid"></table>
+	</section>
+	<div id="toolbar">
+		<a href="/console/picture/from" class="btn btn-primary">添加图片</a>
+	</div>
+	<div th:include="console/footer"></div>
+</body>
+<script type="text/javascript">
+	$table = $("#dataGrid");
+	$(function() {
+		initDataGrid();
+	});
+	function initDataGrid() {
+		$table
+				.bootstrapTable({
+					height : tableModel.getHeight(),
+					idField : "id",
+					columns : [ [
+							{
+								title : "图片标题",
+								field : "title"
+							},
+							{
+								title : "初始图片",
+								field : "originPicUrl",
+								formatter : function(value, row, index) {
+									return [
+											'<a href="/console/picture/file/' + value + '" >',
+											'原始图片', '</a>  ' ].join('');
+								}
+							},
+							{
+								title : "处理过的图片",
+								field : "fixedPicUrl",
+								formatter : function(value, row, index) {
+									return [
+											'<a href="/console/picture/file/' + value + '" >',
+											'处理后图片', '</a>  ' ].join('');
+								}
+							}, {
+								title : "创建时间",
+								field : "createAt",
+								sortable : true
+							}, {
+								title : "更新日期",
+								field : "updateAt",
+								sortable : true
+							}, {
+								title : "上传者",
+								field : "uploaderName"
+							}, {
+								title : "操作",
+								field : "operate",
+								align : 'center',
+								events : operateEvents,
+								formatter : operateFormatter
+							} ] ],
+					url : '/console/picture/list',
+					queryParams : function(params) {
+						console.info(params);
+						var temp = {
+							pageNumber : (params.offset / params.limit) + 1,
+							pageSize : params.limit,
+							order : params.order,
+							sort : params.sort
+
+						}
+						return temp;
+					},
+					responseHandler : function(res) {
+
+						return {
+							rows : res.result.pageInfo.list,
+							total : res.result.pageInfo.total
+						}
+					},
+					
+					onDblClickRow : function(row, $element, field){
+							window.location.href="/console/picture/" +row.id;	
+					}, 
+
+					sortName : 'createAt',
+					sortOrder : 'desc',
+					pagination : true,
+					sidePagination : 'server',
+					pageSize : 10,
+					pageList : [ 20, 40, 50, 100 ],
+					toolbar : "#toolbar",
+					showRefresh : true,
+
+				});
+	}
+
+	function getRole(value, row, index) {
+		if (row.isSystem == 1) {
+			return "超级管理（不受角色限制）"
+		} else {
+			return $.map(value, function(v) {
+				return v.roleName;
+			}).join(",");
+		}
+
+	}
+
+	function operateFormatter(value, row, index) {
+
+		return [ '<a href="/console/picture/from?id=' + row.id + '" >',
+				'<i class="glyphicon glyphicon-edit"></i>修改', '</a>  ',
+				'<a class="remove" href="javascript:void(0);">',
+				'<i class="glyphicon glyphicon-remove"></i>删除', '</a>' ]
+				.join('');
+
+	}
+
+	window.operateEvents = {
+		'click .remove' : function(e, value, row, index) {
+			$.ajax({
+				url : "/console/picture/" + row.id,
+				type : "delete",
+				dataType : "json",
+				data : row.id,
+				success : function(msg) {
+					alert(msg.msg);
+					window.location.href="/console/picture/index";
+				},
+				error : function(xhr, textstatus, thrown) {
+					alert("删除失败！");
+				}
+			});
+		}
+	};
+</script>
+</html>

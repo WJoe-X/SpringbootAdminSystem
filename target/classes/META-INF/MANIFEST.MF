@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: adminDemo
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: WJoe
+Implementation-Vendor-Id: com.lenovo.bootstrap
+Build-Jdk: 1.8.0_151
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/bootstrap
+Created-By: Maven Integration for Eclipse
+

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="console/header">
+</head>
+<body>
+	<section class="content">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="box box-primary">
+					<div class="box-header with-border">
+						<h3 class="box-title" th:text="图片详情页"></h3>
+					</div>
+					<div class="box-body">
+						<form class="form-horizontal js-ajax-form">
+							<div class="form-group">
+								<label for="title" class="col-sm-2 control-label">标题</label>
+								<div class="col-sm-10">
+									<label for="title" class="col-sm-2 control-label"
+										th:text="${picture.title}"></label>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="image" class="col-sm-2 control-label">原始图片</label>
+								<div class="col-sm-10">
+									<img width="400px"
+										th:src="@{~/{name}(name=${picture.originPicUrl})}">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="image" class="col-sm-2 control-label">处理后图片</label>
+								<div class="col-sm-10">
+									<img width="400px"
+										th:src="@{~/{name}(name=${picture.fixedPicUrl})}">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-2 col-sm-10">
+									<button class="btn btn-default js-ajax-submit"
+										onclick="goback()">返回</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div th:include="console/footer"></div>
+	<script type="text/javascript">
+		function goback() {
+			window.history.go(-1);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="32541871-fa57-486a-98f9-23b24be85213" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/blue.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/blue@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/flat.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/flat.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/flat@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/green.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/green.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/green@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/grey.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/grey.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/grey@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/orange.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/orange.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/orange@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/pink.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/pink.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/pink@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/purple.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/purple.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/purple@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/red.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/red.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/red@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/yellow.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/yellow.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/flat/yellow@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/futurico/futurico.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/futurico/futurico.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/futurico/futurico@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/icheck.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/icheck.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/line/_all.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/line/aero.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/line/blue.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/line/green.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/line/grey.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/line/line.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/line/line.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/line/line@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/line/orange.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/line/pink.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/line/purple.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/line/red.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/line/yellow.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/_all.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/aero.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/aero.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/aero@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/blue.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/blue.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/blue@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/green.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/green.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/green@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/grey.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/grey.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/grey@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/minimal.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/minimal.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/minimal@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/orange.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/orange.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/orange@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/pink.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/pink.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/pink@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/purple.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/purple.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/purple@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/red.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/red.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/red@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/yellow.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/yellow.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/minimal/yellow@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/polaris/polaris.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/polaris/polaris.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/polaris/polaris@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/_all.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/aero.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/aero.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/aero@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/blue.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/blue.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/blue@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/green.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/green.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/green@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/grey.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/grey.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/grey@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/orange.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/orange.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/orange@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/pink.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/pink.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/pink@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/purple.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/purple.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/purple@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/red.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/red.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/red@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/square.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/square.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/square@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/yellow.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/yellow.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/iCheck/square/yellow@2x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/input-mask/jquery.inputmask.date.extensions.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/input-mask/jquery.inputmask.extensions.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/input-mask/jquery.inputmask.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/input-mask/jquery.inputmask.numeric.extensions.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/input-mask/jquery.inputmask.phone.extensions.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/input-mask/jquery.inputmask.regex.extensions.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/input-mask/phone-codes/phone-be.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/input-mask/phone-codes/phone-codes.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/input-mask/phone-codes/readme.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/ionslider/img/sprite-skin-flat.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/ionslider/img/sprite-skin-nice.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/ionslider/ion.rangeSlider.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/ionslider/ion.rangeSlider.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/ionslider/ion.rangeSlider.skinFlat.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/ionslider/ion.rangeSlider.skinNice.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/jQuery/jquery-2.2.3.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/jQueryUI/jquery-ui.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/jQueryUI/jquery-ui.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/jvectormap/jquery-jvectormap-1.2.2.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/jvectormap/jquery-jvectormap-usa-en.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/jvectormap/jquery-jvectormap-world-mill-en.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/knob/jquery.knob.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/morris/morris.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/morris/morris.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/morris/morris.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/pace/pace.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/pace/pace.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/pace/pace.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/pace/pace.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/ar.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/az.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/bg.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/ca.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/cs.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/da.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/de.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/el.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/en.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/es.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/et.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/eu.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/fa.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/fi.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/fr.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/gl.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/he.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/hi.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/hr.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/hu.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/id.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/is.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/it.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/ja.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/km.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/ko.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/lt.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/lv.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/mk.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/ms.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/nb.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/nl.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/pl.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/pt-BR.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/pt.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/ro.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/ru.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/sk.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/sr-Cyrl.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/sr.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/sv.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/th.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/tr.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/uk.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/vi.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/zh-CN.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/i18n/zh-TW.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/select2.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/select2.full.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/select2.full.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/select2.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/select2.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/select2/select2.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/slimScroll/jquery.slimscroll.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/slimScroll/jquery.slimscroll.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/sparkline/jquery.sparkline.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/sparkline/jquery.sparkline.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/timepicker/bootstrap-timepicker.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/timepicker/bootstrap-timepicker.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/timepicker/bootstrap-timepicker.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/adminlte-2.3.7/plugins/timepicker/bootstrap-timepicker.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-3.3.5/css/bootstrap-theme.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-3.3.5/css/bootstrap-theme.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-3.3.5/css/bootstrap-theme.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-3.3.5/css/bootstrap.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-3.3.5/css/bootstrap.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-3.3.5/css/bootstrap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-3.3.5/js/bootstrap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-3.3.5/js/bootstrap.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-3.3.5/js/npm.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-table-1.12.1/css/bootstrap-table.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-table-1.12.1/js/bootstrap-table-zh-CN.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-table-1.12.1/js/bootstrap-table.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-table-1.12.1/js/bootstrap-table.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-treeview-1.2.0/css/bootstrap-treeview.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/bootstrap-treeview-1.2.0/js/bootstrap-treeview.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/HELP-US-OUT.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/css/font-awesome.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/css/font-awesome.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/fonts/FontAwesome.otf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/less/animated.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/less/bordered-pulled.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/less/core.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/less/fixed-width.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/less/font-awesome.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/less/icons.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/less/larger.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/less/list.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/less/mixins.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/less/path.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/less/rotated-flipped.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/less/screen-reader.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/less/stacked.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/less/variables.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/scss/_animated.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/scss/_bordered-pulled.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/scss/_core.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/scss/_fixed-width.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/scss/_icons.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/scss/_larger.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/scss/_list.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/scss/_mixins.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/scss/_path.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/scss/_rotated-flipped.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/scss/_screen-reader.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/scss/_stacked.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/scss/_variables.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/font-awesome-4.7.0/scss/font-awesome.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/highchart-6.1.0/js/highcharts.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/.gitignore" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/LICENSE" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/XP510下载须知.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/bower.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/builder/build_data.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/builder/cheatsheet/icon-row.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/builder/cheatsheet/template.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/builder/generate.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/builder/manifest.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/builder/scripts/eotlitetool.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/builder/scripts/generate_font.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/builder/scripts/sfnt2woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/cheatsheet.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/component.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/composer.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/css/ionicons.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/css/ionicons.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/fonts/ionicons.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/fonts/ionicons.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/fonts/ionicons.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/fonts/ionicons.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/less/_ionicons-font.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/less/_ionicons-icons.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/less/_ionicons-variables.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/less/ionicons.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/alert-circled.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/alert.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-add-contact.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-add.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-alarm.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-archive.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-arrow-back.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-arrow-down-left.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-arrow-down-right.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-arrow-forward.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-arrow-up-left.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-arrow-up-right.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-battery.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-book.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-calendar.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-call.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-camera.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-chat.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-checkmark.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-clock.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-close.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-contact.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-contacts.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-data.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-developer.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-display.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-download.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-drawer.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-dropdown.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-earth.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-folder.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-forums.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-friends.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-hand.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-image.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-inbox.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-information.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-keypad.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-lightbulb.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-locate.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-location.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-mail.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-microphone.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-mixer.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-more.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-note.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-playstore.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-printer.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-promotion.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-reminder.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-remove.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-search.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-send.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-settings.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-share.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-social-user.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-social.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-sort.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-stair-drawer.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-star.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-stopwatch.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-storage.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-system-back.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-system-home.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-system-windows.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-timer.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-trash.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-user-menu.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-volume.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/android-wifi.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/aperture.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/archive.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-down-a.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-down-b.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-down-c.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-expand.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-graph-down-left.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-graph-down-right.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-graph-up-left.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-graph-up-right.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-left-a.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-left-b.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-left-c.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-move.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-resize.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-return-left.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-return-right.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-right-a.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-right-b.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-right-c.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-shrink.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-swap.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-up-a.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-up-b.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/arrow-up-c.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/asterisk.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/at.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/bag.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/battery-charging.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/battery-empty.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/battery-full.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/battery-half.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/battery-low.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/beaker.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/beer.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/bluetooth.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/bonfire.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/bookmark.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/briefcase.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/bug.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/calculator.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/calendar.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/camera.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/card.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/cash.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/chatbox-working.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/chatbox.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/chatboxes.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/chatbubble-working.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/chatbubble.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/chatbubbles.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/checkmark-circled.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/checkmark-round.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/checkmark.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/chevron-down.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/chevron-left.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/chevron-right.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/chevron-up.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/clipboard.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/clock.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/ionicons-2.0.1/png/512/close-circled.png" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="count.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/count.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2370">
+              <caret line="79" column="17" lean-forward="false" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2820">
+              <caret line="94" column="29" lean-forward="false" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/policy/add.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="85" column="57" lean-forward="false" selection-start-line="85" selection-start-column="57" selection-end-line="85" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modify.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/policy/modify.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="552">
+              <caret line="98" column="34" lean-forward="true" selection-start-line="98" selection-start-column="34" selection-end-line="98" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/admin/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1200">
+              <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/resources/templates/console/log/count.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/console/image/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/console/log/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/console/policy/add.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/console/policy/modify.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
+    <option name="height" value="990" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="bootstrap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootstrap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootstrap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootstrap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootstrap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootstrap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="console" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootstrap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="console" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootstrap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="console" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bootstrap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="console" type="462c0819:PsiDirectoryNode" />
+              <item name="policy" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="32541871-fa57-486a-98f9-23b24be85213" name="Default" comment="" />
+      <created>1525922694517</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1525922694517</updated>
+      <workItem from="1525922699132" duration="1696000" />
+      <workItem from="1526286510887" duration="1953000" />
+      <workItem from="1526541186277" duration="1697000" />
+      <workItem from="1527647401206" duration="29000" />
+      <workItem from="1529487239970" duration="2342000" />
+      <workItem from="1529564640203" duration="1246000" />
+      <workItem from="1529648846639" duration="3217000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="12180000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1796875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/count.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2370">
+          <caret line="79" column="17" lean-forward="false" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2820">
+          <caret line="94" column="29" lean-forward="false" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/policy/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2700">
+          <caret line="90" column="15" lean-forward="false" selection-start-line="90" selection-start-column="15" selection-end-line="90" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/policy/modify.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2730">
+          <caret line="91" column="34" lean-forward="true" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/count.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2370">
+          <caret line="79" column="17" lean-forward="false" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2820">
+          <caret line="94" column="29" lean-forward="false" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/policy/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2700">
+          <caret line="90" column="15" lean-forward="true" selection-start-line="90" selection-start-column="15" selection-end-line="90" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/count.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2370">
+          <caret line="79" column="17" lean-forward="false" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2820">
+          <caret line="94" column="29" lean-forward="false" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/count.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2370">
+          <caret line="79" column="17" lean-forward="false" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2820">
+          <caret line="94" column="29" lean-forward="false" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/count.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/count.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/image/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/count.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2370">
+          <caret line="79" column="17" lean-forward="false" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/log/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2820">
+          <caret line="94" column="29" lean-forward="false" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/policy/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="85" column="57" lean-forward="false" selection-start-line="85" selection-start-column="57" selection-end-line="85" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/console/policy/modify.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="98" column="34" lean-forward="true" selection-start-line="98" selection-start-column="34" selection-end-line="98" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

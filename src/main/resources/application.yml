@@ -1,0 +1,31 @@
+spring:
+  profiles:
+    active:
+    - dev
+  mvc:
+    favicon:
+      enabled: false
+    view:
+      prefix: classpath*:/templates/
+      suffix: .html
+    static-path-pattern: /static/**
+  servlet:
+    multipart:
+      max-file-size: 500kb
+      max-request-size: 500kb
+  thymeleaf:
+    cache: false
+  cache:
+    type: redis
+  redis:
+    database: 0
+    password: 123456
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+mybatis:
+  mapper-locations:
+  - classpath*:mapper/*.xml
+  type-aliases-package: com.lenovo.bootstrap.mapper
+logging:
+  config: classpath:logback-spring.xml
