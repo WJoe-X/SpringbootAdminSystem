@@ -10,14 +10,16 @@ public class StorageProperties {
      * Folder location for storing files
      */
 	@Value("${picture.upload-path}")
-    private String location;
+    private String pictureLocation;
 
-    public String getLocation() {
-        return location;
+	
+
+	public String getpictureLocation() {
+        return pictureLocation;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setpictureLocation(String pictureLocation) {
+        this.pictureLocation = pictureLocation;
     }
 
 }

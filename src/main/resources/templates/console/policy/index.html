@@ -27,14 +27,10 @@
 			columns : [ [ {
 				title : "文件名称",
 				field : "name"
-			},  {
-				title : "创建时间",
-				field : "createdDate",
-				sortable : true
 			}, {
 				title : "更新日期",
 				field : "updatedDate",
-				
+
 				sortable : true
 			}, {
 				title : "操作",
@@ -47,10 +43,10 @@
 			queryParams : function(params) {
 
 				var temp = {
-					//pageNumber : (params.offset / params.limit) + 1,
-					//pageSize : params.limit,
-					//order : params.order,
-					//sort : params.sort,
+				//pageNumber : (params.offset / params.limit) + 1,
+				//pageSize : params.limit,
+				//order : params.order,
+				//sort : params.sort,
 
 				}
 				return temp;
@@ -58,50 +54,49 @@
 			responseHandler : function(res) {
 
 				return {
-					rows : res
-					
+					rows : res.list,
+					total : res.total
 				}
 			},
 
 			sortName : 'updatedDate',
 			sortOrder : 'desc',
 			pagination : true,
-			sidePagination : 'server',
-			pageSize : 10,
-			pageList : [ 20, 40, 50, 100 ],
+			 sidePagination : 'server', 
+			pageSize : 100,
+			 
 			toolbar : "#toolbar",
 			showRefresh : true,
 
 		});
 	}
-	
-	
+
 	function operateFormatter(value, row, index) {
-		 
-			return [ '<a href="/console/policy/m?name=' + row.name + '" >',
-					'<i class="glyphicon glyphicon-edit"></i>修改', '</a>  ',
-					'<a class="remove" href="javascript:void(0);">',
-					'<i class="glyphicon glyphicon-remove"></i>删除', '</a>' ]
-					.join('');
-		
+
+		return [ '<a href="/console/policy/m?name=' + row.name + '" >',
+				'<i class="glyphicon glyphicon-edit"></i>修改', '</a>  ',
+				'<a class="remove" href="javascript:void(0);">',
+				'<i class="glyphicon glyphicon-remove"></i>删除', '</a>' ]
+				.join('');
+
 	}
 
 	window.operateEvents = {
-			'click .remove' : function(e, value, row, index) {
-				$.ajax({
-					url : "/console/policy/" + row.name,
-					type : "delete",
-					dataType : "json",
-					data : row.name,
-					success : function(msg) {
-						alert(msg.msg);
-						window.location.href="/console/policy/index";
-					},
-					error : function(xhr, textstatus, thrown) {
-						alert("删除失败！");
-					}
-				});
-			}
+		'click .remove' : function(e, value, row, index) {
+			$.ajax({
+				url : "/console/policy/" + row.name,
+				type : "delete",
+				dataType : "json",
+				data : row.name,
+				success : function(msg) {
+					alert(msg.msg);
+					window.location.href = "/console/policy/index";
+				},
+				error : function(xhr, textstatus, thrown) {
+					alert("删除失败！");
+				}
+			});
+		}
 	};
 </script>
 </html>

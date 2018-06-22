@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.github.pagehelper.PageInfo;
 import com.lenovo.bootstrap.service.PolicyService;
 import com.lenovo.bootstrap.util.ReturnUtil;
 import com.lenovo.bootstrap.vo.PolicyPropertyVo;
@@ -66,11 +70,11 @@ public class PolicyController {
 	 */
 	@GetMapping("list")
 	@ResponseBody
-	public List<PolicyPropertyVo> list() {
+	public PageInfo<PolicyPropertyVo> list() {
 		List<PolicyPropertyVo> list = new ArrayList<>();
 		try {
 			list = this.policyService.getPolicyProperty();
-			return list;
+			return new PageInfo<PolicyPropertyVo>(list);
 		} catch (Exception e) {
 			LOGGER.error(e.getMessage());
 		}
@@ -109,6 +113,7 @@ public class PolicyController {
 	 */
 	@GetMapping("m")
 	public String toGetPolicy(String name, HttpServletRequest req) {
+		LOGGER.info("--------选中的json文件名 : {}  ！",name);
 		req.setAttribute("name", name);
 		return "/console/policy/modify";
 
@@ -120,7 +125,7 @@ public class PolicyController {
 	 * @param name
 	 * @return
 	 */
-	@RequestMapping(value = "{name}", method = RequestMethod.GET)
+	@RequestMapping(value = "/{name}", method = RequestMethod.GET)
 	@ResponseBody
 	public String getPolicy(@PathVariable("name") String name) {
 		try {
@@ -133,6 +138,11 @@ public class PolicyController {
 		return "请求json文件失败";
 	}
 
+	/**
+	 * 删除文件
+	 * @param name
+	 * @return
+	 */
 	@RequestMapping(value = "/{name}", method = RequestMethod.DELETE)
 	@ResponseBody
 	public ModelMap deletePolicy(@PathVariable("name") String name) {
@@ -149,4 +159,13 @@ public class PolicyController {
 		return ReturnUtil.Error("删除失败", null, "/console/picture/index");
 	}
 
+	@GetMapping("/file/{name}")
+	public ResponseEntity<Resource> serveFile(@PathVariable("name") String filename) {
+
+		Resource file = this.policyService.loadAsResource(filename);
+		return ResponseEntity.ok()
+				.header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getFilename() + "\"")
+				.body(file);
+	}
+	
 }

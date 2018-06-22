@@ -10,6 +10,17 @@
 	<section class="content table-content">
 		<a href="/console/menu/from" class="btn btn-primary">添加菜单</a>
 		<table class="table table-bordered" id="dataGrid">
+
+			<colgroup>
+				<col style= "width:20%" >
+				<col style="width:10%" >
+				<col style="width:10%" >
+				<col style="width:8%" >
+				<col style="width:8%" >
+				<col style="width:10%">
+				<col style="width:10%" >
+				<col style="width:24%" >
+			</colgroup>
 			<tr>
 				<th>菜单名称</th>
 				<th>权限标识</th>
@@ -27,7 +38,7 @@
 				<td th:text="${menu.menuUrl}"></td>
 				<td th:text="${menu.menuType}"></td>
 				<td><input type="text" th:attr="data-id=${menu.menuId}"
-					name="listorder" th:value="${menu.listorder}" /></td>
+					style="width: 100%" name="listorder" th:value="${menu.listorder}" /></td>
 				<td
 					th:text="${#dates.format(menu.createdAt, 'yyyy-MM-dd HH:mm:ss')}"></td>
 				<td

@@ -7,6 +7,8 @@ package com.lenovo.bootstrap.service;
 
 import java.util.List;
 
+import org.springframework.core.io.Resource;
+
 import com.lenovo.bootstrap.vo.PolicyPropertyVo;
 
 public interface PolicyService {
@@ -41,5 +43,12 @@ public interface PolicyService {
 	 * @return
 	 */
 	Boolean deletePolicy(String name) throws Exception;
+
+	/**
+	 * 加载文件
+	 * @param filename
+	 * @return
+	 */
+	Resource loadAsResource(String filename);
 
 }

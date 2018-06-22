@@ -16,7 +16,7 @@ public class PolicyPropertyVo {
 	private String name;
 
 	
-	private String createdDate;
+	
 	
 	private String updatedDate;
 
@@ -28,13 +28,7 @@ public class PolicyPropertyVo {
 		this.name = name;
 	}
 
-	public String getCreatedDate() {
-		return createdDate;
-	}
 
-	public void setCreatedDate(String createdDate) {
-		this.createdDate = createdDate;
-	}
 
 	public String getUpdatedDate() {
 		return updatedDate;

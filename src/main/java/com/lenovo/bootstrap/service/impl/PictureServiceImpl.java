@@ -50,7 +50,7 @@ public class PictureServiceImpl implements PictureService {
 
 	@Autowired
 	public PictureServiceImpl(StorageProperties properties) {
-		this.rootLocation = Paths.get(properties.getLocation());
+		this.rootLocation = Paths.get(properties.getpictureLocation());
 	}
 
 	@Override

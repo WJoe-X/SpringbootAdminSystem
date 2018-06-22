@@ -5,7 +5,7 @@
 <body>
 	<section class="content">
 		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
+			<div class="col-md-9 col-md-offset-1">
 				<div class="box box-primary">
 					<div class="box-header with-border">
 						<h3 class="box-title" th:text="添加政策"></h3>
@@ -14,33 +14,34 @@
 						<form id="form" class="form-horizontal js-ajax-form">
 
 							<div class="form-group">
-								<label for="name" class="col-sm-2 control-label">策略名称</label>
-								<div class="col-sm-10">
+								<label for="name" class="col-sm-3 control-label">策略名称</label>
+								<div class="col-sm-9">
 									<input type="text" name="name" class="form-control" id="name"
 										required="true" />
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="HomepageLocation" class="col-sm-2 control-label">配置主页网址</label>
-								<div class="col-sm-10">
+								<label for="HomepageLocation" class="col-sm-3 control-label">配置主页网址</label>
+								<div class="col-sm-9">
 									<input type="text" name="HomepageLocation" class="form-control"
 										id="HomepageLocation" />
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="HomepageIsNewTabPage" class="col-sm-2 control-label">使用“新标签页”作为主页</label>
-								<div class="col-sm-10">
-									<select name="HomepageIsNewTabPage" class="form-control"
-										id="HomepageIsNewTabPage">
-										<option value="true">是</option>
-										<option value="false">否</option>
+								<label for="ShowHomeButton" class="col-sm-3 control-label">在工具栏上显示“主页”按钮</label>
+								<div class="col-sm-9">
+									<select name="ShowHomeButton" class="form-control"
+										id="ShowHomeButton">
+										<option value="">不设置</option>
+										<option value=true>是</option>
+										<option value=false>否</option>
 									</select>
 								</div>
 							</div>
 
-							<div class="form-group">
-								<label for="RestoreOnStartup" class="col-sm-2 control-label">启动时的操作</label>
-								<div class="col-sm-10">
+							<!-- <div class="form-group">
+								<label for="RestoreOnStartup" class="col-sm-3 control-label">启动时的操作</label>
+								<div class="col-sm-9">
 									<select name="RestoreOnStartup" class="form-control"
 										id="RestoreOnStartup">
 										<option value="4">打开网址列表</option>
@@ -48,24 +49,24 @@
 										<option value="5">打开新标签页</option>
 									</select>
 								</div>
-							</div>
+							</div> -->
 							<div class="form-group">
-								<label for="URLWhitelist" class="col-sm-2 control-label">网址白名单列表</label>
-								<div class="col-sm-10">
+								<label for="URLWhitelist" class="col-sm-3 control-label">网址白名单列表</label>
+								<div class="col-sm-9">
 									<input type="text" name="URLWhitelist" class="form-control"
-										id="URLWhitelist" />
+										id="URLWhitelist" placeholder="以;分隔网址"/>
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="URLBlacklist" class="col-sm-2 control-label">网址黑名单列表</label>
-								<div class="col-sm-10">
+								<label for="URLBlacklist" class="col-sm-3 control-label">网址黑名单列表</label>
+								<div class="col-sm-9">
 									<input type="text" name="URLBlacklist" class="form-control"
-										id="URLBlacklist" />
+										id="URLBlacklist" placeholder="以;分隔网址"/>
 								</div>
 							</div>
 
 							<div class="form-group">
-								<div class="col-sm-offset-2 col-sm-10">
+								<div class="col-sm-offset-10 col-sm-10">
 									<input type="button" class="btn btn-default js-ajax-submit"
 										onclick="upload()" value="提交"></input>
 								</div>
@@ -82,8 +83,8 @@
 		function upload() {
 			var name = $('#name').val();
 			var HomepageLocation = $('#HomepageLocation').val();
-			var HomepageIsNewTabPage = $('#HomepageIsNewTabPage').val();
-			var RestoreOnStartup = $('#RestoreOnStartup').val();
+			var ShowHomeButton = $('#ShowHomeButton').val();
+			/* var RestoreOnStartup = $('#RestoreOnStartup').val(); */
 			var URLWhitelist = $('#URLWhitelist').val();
 			var URLBlacklist = $('#URLBlacklist').val();
 			var json = {};
@@ -92,18 +93,18 @@
 				json.HomepageLocation = HomepageLocation;
 
 			}
-			if (HomepageIsNewTabPage != null && HomepageIsNewTabPage != "") {
-				json.HomepageIsNewTabPage = HomepageIsNewTabPage;
+			if (ShowHomeButton != null && ShowHomeButton != "") {
+				json.ShowHomeButton = isBoo(ShowHomeButton);
 			}
-			if (RestoreOnStartup != null && RestoreOnStartup != "") {
+			/* if (RestoreOnStartup != null && RestoreOnStartup != "") {
 				json.RestoreOnStartup = RestoreOnStartup;
 			}
-
+ */
 			if (URLWhitelist != null && URLWhitelist != "") {
-				json.URLWhitelist = URLWhitelist;
+				json.URLWhitelist = URLWhitelist.split(";");
 			}
 			if (URLBlacklist != null && URLBlacklist != "") {
-				json.URLBlacklist = URLBlacklist;
+				json.URLBlacklist = URLBlacklist.split(";");
 			}
 			var js = JSON.stringify(json); //注意要转字符串				
 			$.ajax({
@@ -122,6 +123,14 @@
 					window.location.href ="/console/policy/index";
 				}
 			});
+		}
+		
+		function isBoo(param) {
+			if ("true" == param ) {
+				return true;
+			}else {
+				return false;
+			}
 		}
 	</script>
 </body>
