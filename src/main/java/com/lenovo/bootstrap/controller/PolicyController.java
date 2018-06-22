@@ -159,6 +159,11 @@ public class PolicyController {
 		return ReturnUtil.Error("删除失败", null, "/console/picture/index");
 	}
 
+	/**
+	 * 下载json文件 路径为   ip地址/console/policy/file/文件名
+	 * @param filename
+	 * @return
+	 */
 	@GetMapping("/file/{name}")
 	public ResponseEntity<Resource> serveFile(@PathVariable("name") String filename) {
 
