@@ -89,14 +89,11 @@
 				dataType : "json",//预期服务器返回的数据类型
 				url : "/console/policy/" + name,//url
 				success : function(result) {
-					alert(result.ShowHomeButton);
-					console.log(result.ShowHomeButton);
 					$('#HomepageLocation').val(result.HomepageLocation);
 					$('#ShowHomeButton').val(result.ShowHomeButton.toString());
 					/* $('#RestoreOnStartup').val(result.RestoreOnStartup); */
 					$('#URLWhitelist').val(result.URLWhitelist);
 					$('#URLBlacklist').val(result.URLBlacklist);
-
 				},
 				error : function() {
 					alert("取得失败");

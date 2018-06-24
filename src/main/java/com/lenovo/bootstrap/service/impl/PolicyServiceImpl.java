@@ -6,6 +6,7 @@ import java.io.FileWriter;
 import java.io.FilenameFilter;
 import java.io.PrintWriter;
 import java.net.MalformedURLException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -41,13 +42,13 @@ public class PolicyServiceImpl implements PolicyService {
 	private static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 	private static final String JSON = "json";
- 
-	/*private final Path rootLocation;
-	
-	@Autowired
-	public PolicyServiceImpl(StorageProperties properties) {
-		this.rootLocation = Paths.get(properties.getpLocation());
-	}*/
+
+	/*
+	 * private final Path rootLocation;
+	 * 
+	 * @Autowired public PolicyServiceImpl(StorageProperties properties) {
+	 * this.rootLocation = Paths.get(properties.getpLocation()); }
+	 */
 	@Override
 	public List<PolicyPropertyVo> getPolicyProperty() throws Exception {
 		File file = ResourceUtils.getFile(FILE_PATH);
@@ -66,8 +67,8 @@ public class PolicyServiceImpl implements PolicyService {
 				}
 			});
 			List<PolicyPropertyVo> policyPropertyVos = new ArrayList<>();
-			
-			for (int i=0; i<filelist.length;i++) {
+
+			for (int i = 0; i < filelist.length; i++) {
 				PolicyPropertyVo policyPropertyVo = new PolicyPropertyVo();
 				policyPropertyVo.setName(filelist[i].getName().substring(0, filelist[i].getName().lastIndexOf(".")));
 				policyPropertyVo.setUpdatedDate(sdf.format(filelist[i].lastModified()));
@@ -82,14 +83,15 @@ public class PolicyServiceImpl implements PolicyService {
 	public Boolean savePolicyToJson(String json) throws Exception {
 		try {
 			JSONObject jsonObject = JSONObject.parseObject(json);
-			
+
 			String path = FILE_PATH + "/" + jsonObject.getString("name") + "." + JSON;
 			File file = ResourceUtils.getFile(path);
 			LOGGER.info("-------保存绝对路径--{}", file.getAbsolutePath());
 			jsonObject.remove("name");
-			String jsString =jsonObject.toJSONString();
-			PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter(file)));
+			String jsString = jsonObject.toJSONString();
+			BufferedWriter writer = Files.newBufferedWriter(file.toPath(), StandardCharsets.UTF_8);
 			writer.write(jsString);
+			writer.flush();
 			writer.close();
 			return true;
 		} catch (Exception e) {
@@ -137,7 +139,5 @@ public class PolicyServiceImpl implements PolicyService {
 			throw new StorageException("Could not read file: " + filename, e);
 		}
 
-		
-		
 	}
 }
