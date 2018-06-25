@@ -89,11 +89,24 @@
 				dataType : "json",//预期服务器返回的数据类型
 				url : "/console/policy/" + name,//url
 				success : function(result) {
-					$('#HomepageLocation').val(result.HomepageLocation);
-					$('#ShowHomeButton').val(result.ShowHomeButton.toString());
-					/* $('#RestoreOnStartup').val(result.RestoreOnStartup); */
-					$('#URLWhitelist').val(result.URLWhitelist);
+					if(result.HomepageLocation!=null){
+						$('#HomepageLocation').val(result.HomepageLocation);
+					}
+					if(result.URLWhitelist!=null){
+						$('#URLWhitelist').val(result.URLWhitelist);
+					}
+					if(result.URLBlacklist!=null){
+						$('#URLBlacklist').val(result.URLBlacklist);
+					}
+					if(result.ShowHomeButton!=null){
+						$('#ShowHomeButton').val(result.ShowHomeButton);
+					}
+					
+					/* $('#URLWhitelist').val(result.URLWhitelist);
 					$('#URLBlacklist').val(result.URLBlacklist);
+					$('#ShowHomeButton').val(result.ShowHomeButton.toString()); */
+					/* $('#RestoreOnStartup').val(result.RestoreOnStartup); */
+					
 				},
 				error : function() {
 					alert("取得失败");
