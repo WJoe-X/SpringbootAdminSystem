@@ -39,6 +39,13 @@
 								</div>
 							</div>
 
+							<div class="form-group">
+								<label for="NewTabPageLocation" class="col-sm-3 control-label">新标签页网址</label>
+								<div class="col-sm-9">
+									<input type="text" name="NewTabPageLocation"
+										class="form-control" id="NewTabPageLocation" />
+								</div>
+							</div>
 							<!-- <div class="form-group">
 								<label for="RestoreOnStartup" class="col-sm-2 control-label">启动时的操作</label>
 								<div class="col-sm-10">
@@ -83,43 +90,49 @@
 	<script type="text/javascript">
 		$(function() {
 			var name = $('#name').val();
-			$.ajax({
-				type : "GET",//方法类型
-				contentType : "text/plain",
-				dataType : "json",//预期服务器返回的数据类型
-				url : "/console/policy/" + name,//url
-				success : function(result) {
-					if(result.HomepageLocation!=null){
-						$('#HomepageLocation').val(result.HomepageLocation);
-					}
-					if(result.URLWhitelist!=null){
-						$('#URLWhitelist').val(result.URLWhitelist);
-					}
-					if(result.URLBlacklist!=null){
-						$('#URLBlacklist').val(result.URLBlacklist);
-					}
-					if(result.ShowHomeButton!=null){
-						$('#ShowHomeButton').val(result.ShowHomeButton.toString());
-					}
-					
-					/* $('#URLWhitelist').val(result.URLWhitelist);
-					$('#URLBlacklist').val(result.URLBlacklist);
-					$('#ShowHomeButton').val(result.ShowHomeButton.toString()); */
-					/* $('#RestoreOnStartup').val(result.RestoreOnStartup); */
-					
-				},
-				error : function() {
-					alert("取得失败");
-				}
+			$
+					.ajax({
+						type : "GET",//方法类型
+						contentType : "text/plain",
+						dataType : "json",//预期服务器返回的数据类型
+						url : "/console/policy/" + name,//url
+						success : function(result) {
+							if (result.HomepageLocation != null) {
+								$('#HomepageLocation').val(
+										result.HomepageLocation);
+							}
+							if (result.URLWhitelist != null) {
+								$('#URLWhitelist').val(result.URLWhitelist);
+							}
+							if (result.URLBlacklist != null) {
+								$('#URLBlacklist').val(result.URLBlacklist);
+							}
+							if (result.ShowHomeButton != null) {
+								$('#ShowHomeButton').val(
+										result.ShowHomeButton.toString());
+							}
+							if (result.NewTabPageLocation != null) {
+								$('#NewTabPageLocation').val(
+										result.NewTabPageLocation);
+							}
+							/* $('#URLWhitelist').val(result.URLWhitelist);
+							$('#URLBlacklist').val(result.URLBlacklist);
+							$('#ShowHomeButton').val(result.ShowHomeButton.toString()); */
+							/* $('#RestoreOnStartup').val(result.RestoreOnStartup); */
 
-			});
+						},
+						error : function() {
+							alert("取得失败");
+						}
+
+					});
 		});
 
 		function upload() {
 			var name = $('#name').val();
 			var HomepageLocation = $('#HomepageLocation').val();
 			var ShowHomeButton = $('#ShowHomeButton').val();
-			/* var RestoreOnStartup = $('#RestoreOnStartup').val(); */
+			var NewTabPageLocation = $('#NewTabPageLocation').val();
 			var URLWhitelist = $('#URLWhitelist').val();
 			var URLBlacklist = $('#URLBlacklist').val();
 			var json = {};
@@ -131,9 +144,9 @@
 			if (ShowHomeButton != null && ShowHomeButton != "") {
 				json.ShowHomeButton = isBoo(ShowHomeButton);
 			}
-			/* if (RestoreOnStartup != null && RestoreOnStartup != "") {
-				json.RestoreOnStartup = RestoreOnStartup;
-			} */
+			if (NewTabPageLocation != null && NewTabPageLocation != "") {
+				json.NewTabPageLocation = NewTabPageLocation;
+			}
 
 			if (URLWhitelist != null && URLWhitelist != "") {
 				json.URLWhitelist = URLWhitelist.split(",");

@@ -1,1 +1,1 @@
-{"URLWhitelist":["www.baidu.com","www.id.com"],"HomepageLocation":"www.baidu.com","ShowHomeButton":true,"URLBlacklist":["qq.com"]}
+{"NewTabPageLocation":"www.baidu.com","URLWhitelist":["www.baidu.com","www.id.com"],"HomepageLocation":"www.baidu.com","ShowHomeButton":false,"URLBlacklist":["qq.com"]}

@@ -38,7 +38,13 @@
 									</select>
 								</div>
 							</div>
-
+							<div class="form-group">
+								<label for="NewTabPageLocation" class="col-sm-3 control-label">新标签页网址</label>
+								<div class="col-sm-9">
+									<input type="text" name="NewTabPageLocation"
+										class="form-control" id="NewTabPageLocation" />
+								</div>
+							</div>
 							<!-- <div class="form-group">
 								<label for="RestoreOnStartup" class="col-sm-3 control-label">启动时的操作</label>
 								<div class="col-sm-9">
@@ -54,14 +60,14 @@
 								<label for="URLWhitelist" class="col-sm-3 control-label">网址白名单列表</label>
 								<div class="col-sm-9">
 									<input type="text" name="URLWhitelist" class="form-control"
-										id="URLWhitelist" placeholder="以,分隔网址"/>
+										id="URLWhitelist" placeholder="以,分隔网址" />
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="URLBlacklist" class="col-sm-3 control-label">网址黑名单列表</label>
 								<div class="col-sm-9">
 									<input type="text" name="URLBlacklist" class="form-control"
-										id="URLBlacklist" placeholder="以,分隔网址"/>
+										id="URLBlacklist" placeholder="以,分隔网址" />
 								</div>
 							</div>
 
@@ -84,7 +90,7 @@
 			var name = $('#name').val();
 			var HomepageLocation = $('#HomepageLocation').val();
 			var ShowHomeButton = $('#ShowHomeButton').val();
-			/* var RestoreOnStartup = $('#RestoreOnStartup').val(); */
+			var NewTabPageLocation = $('#NewTabPageLocation').val();
 			var URLWhitelist = $('#URLWhitelist').val();
 			var URLBlacklist = $('#URLBlacklist').val();
 			var json = {};
@@ -96,10 +102,10 @@
 			if (ShowHomeButton != null && ShowHomeButton != "") {
 				json.ShowHomeButton = isBoo(ShowHomeButton);
 			}
-			/* if (RestoreOnStartup != null && RestoreOnStartup != "") {
-				json.RestoreOnStartup = RestoreOnStartup;
+			if (NewTabPageLocation != null && NewTabPageLocation != "") {
+				json.NewTabPageLocation = NewTabPageLocation;
 			}
- */
+
 			if (URLWhitelist != null && URLWhitelist != "") {
 				json.URLWhitelist = URLWhitelist.split(",");
 			}
@@ -116,19 +122,19 @@
 				data : js,
 				success : function(result) {
 					alert("添加成功");
-					window.location.href ="/console/policy/index";
+					window.location.href = "/console/policy/index";
 				},
 				error : function() {
 					alert("添加失败！");
-					window.location.href ="/console/policy/index";
+					window.location.href = "/console/policy/index";
 				}
 			});
 		}
-		
+
 		function isBoo(param) {
-			if ("true" == param ) {
+			if ("true" == param) {
 				return true;
-			}else {
+			} else {
 				return false;
 			}
 		}
