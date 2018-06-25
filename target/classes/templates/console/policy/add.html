@@ -54,14 +54,14 @@
 								<label for="URLWhitelist" class="col-sm-3 control-label">网址白名单列表</label>
 								<div class="col-sm-9">
 									<input type="text" name="URLWhitelist" class="form-control"
-										id="URLWhitelist" placeholder="以;分隔网址"/>
+										id="URLWhitelist" placeholder="以,分隔网址"/>
 								</div>
 							</div>
 							<div class="form-group">
 								<label for="URLBlacklist" class="col-sm-3 control-label">网址黑名单列表</label>
 								<div class="col-sm-9">
 									<input type="text" name="URLBlacklist" class="form-control"
-										id="URLBlacklist" placeholder="以;分隔网址"/>
+										id="URLBlacklist" placeholder="以,分隔网址"/>
 								</div>
 							</div>
 
@@ -101,10 +101,10 @@
 			}
  */
 			if (URLWhitelist != null && URLWhitelist != "") {
-				json.URLWhitelist = URLWhitelist.split(";");
+				json.URLWhitelist = URLWhitelist.split(",");
 			}
 			if (URLBlacklist != null && URLBlacklist != "") {
-				json.URLBlacklist = URLBlacklist.split(";");
+				json.URLBlacklist = URLBlacklist.split(",");
 			}
 			var js = JSON.stringify(json); //注意要转字符串				
 			$.ajax({

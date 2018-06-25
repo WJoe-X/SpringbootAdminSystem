@@ -191,6 +191,7 @@ public class ShrioConfig {
 		filterChainDefinitionMap.put("/**/logout", "logout");
 		filterChainDefinitionMap.put("/**/reg", "anon");
 		// 配置记住我或认证通过可以访问的地址
+		filterChainDefinitionMap.put("/console/policy/file/**", "anon");
 		filterChainDefinitionMap.put("/console/**", "admin");
 		// filterChainDefinitionMap.put("/member/**", "custom");
 		// 如果不设置默认会自动寻找Web工程根目录下的"/login.jsp"页面

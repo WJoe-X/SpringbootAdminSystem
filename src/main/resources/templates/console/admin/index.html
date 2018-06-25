@@ -21,65 +21,67 @@
 		initDataGrid();
 	});
 	function initDataGrid() {
-		$table.bootstrapTable({
-			height : tableModel.getHeight(),
-			idField : "uid",
-			columns : [ [ {
-				title : "用户名",
-				field : "username"
-			}, {
-				title : "角色",
-				field : "roleList",
-				formatter : getRole
-			}, {
-				title : "状态",
-				field : "state",
-				formatter : tableModel.getState
-			}, {
-				title : "创建时间",
-				field : "createdAt",
-				sortable : true
-			}, {
-				title : "更新日期",
-				field : "updatedAt",
-				sortable : true
-			}, {
-				title : "操作",
-				field : "operate",
-				align : 'center',
-				events : operateEvents,
-				formatter : operateFormatter
-			} ] ],
-			url : '/console/admin/list',
-			queryParams : function(params) {
+		$table
+				.bootstrapTable({
+					height : tableModel.getHeight(),
+					idField : "uid",
+					columns : [ [ {
+						title : "用户名",
+						field : "username"
+					}, {
+						title : "角色",
+						field : "roleList",
+						formatter : getRole
+					}, {
+						title : "状态",
+						field : "state",
+						formatter : tableModel.getState
+					}, {
+						title : "创建时间",
+						field : "createdAt",
+						sortable : true
+					}, {
+						title : "更新日期",
+						field : "updatedAt",
+						sortable : true
+					}, {
+						title : "操作",
+						field : "operate",
+						align : 'center',
+						events : operateEvents,
+						formatter : operateFormatter
+					} ] ],
+					url : '/console/admin/list',
+					queryParams : function(params) {
 
-				var temp = {
-					pageNumber : (params.offset / params.limit) + 1,
-					pageSize : params.limit,
-					order : params.order,
-					sort : params.sort,
+						var temp = {
+							pageNumber : (params.offset / params.limit) + 1,
+							pageSize : params.limit,
+							order : params.order,
+							sort : params.sort,
 
-				}
-				return temp;
-			},
-			responseHandler : function(res) {
+						}
+						return temp;
+					},
+					responseHandler : function(res) {
 
-				return {
-					rows : res.result.pageInfo.list,
-					total : res.result.pageInfo.total
-				}
-			},
+						return {
+							rows : res.result.pageInfo.list,
+							total : res.result.pageInfo.total
+						}
+					},
 
-			sortName : 'createdAt',
-			sortOrder : 'desc',
-			pagination : true,
-			sidePagination : 'server',
-			pageSize : 10,
-			pageList : [ 20, 40, 50, 100 ],
-			toolbar : "#toolbar",
-			showRefresh : true,
+					sortName : 'createdAt',
+					sortOrder : 'desc',
+					pagination : true,
+					sidePagination : 'server',
+					pageSize : 10,
+					pageList : [ 20, 40, 50, 100 ],
+					toolbar : "#toolbar",
+					showRefresh : true,
+					
 
-		});
+				});
 	}
 
 	function getRole(value, row, index) {
