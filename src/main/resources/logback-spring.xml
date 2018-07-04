@@ -57,7 +57,7 @@
 		<appender name="ROLLING"
 			class="ch.qos.logback.core.rolling.RollingFileAppender">
 			<!-- 文件路径 -->
-			<file>log/bootstrap.log</file>
+			<file>logs/bootstrap.log</file>
 			<rollingPolicy
 				class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
 				<!-- rollover daily -->
