@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="console/header">
+
+</head>
+
+<body>
+	<section class="content-header">
+		<h1>日志统计</h1>
+	</section>
+	<section class="content table-content">
+		<div id="container"
+				style="width: 800px; height: 500px; margin: 0 auto"></div>
+	</section>
+
+	
+	<div th:include="console/footer"></div>
+	<script src="/assets/highchart-6.1.0/js/highcharts.js"></script>
+	
+</body>
+
+	
+<script type="text/javascript">
+$(function() { 
+	$.ajax({
+		type : "GET",
+		url : "/console/log/countNumber",
+		dataType : "json",
+		success : function(data) {
+			var dateTime = data.dateTime;
+			var countNumber = data.countNumber;
+
+			var options = {
+				chart :{
+
+				type : "column"
+				},
+				title : {
+					text : "登录统计图"
+				},
+
+				subtitle : {
+					text : ""
+				},
+
+				xAxis : {
+					categories : dateTime
+				},
+				yAxis : {
+					title : {
+						text : '登录次数'
+					},
+
+					plotLines : [ {
+						value : 0,
+						width : 1,
+						color : '#808080'
+					} ]
+				},
+				tooltip : {
+
+					valueSuffix : '次'
+				},
+
+				legend : {
+					layout : 'vertical',
+					align : 'right',
+					verticalAlign : 'middle',
+					borderWidth : 0
+				},
+				credits : {
+					enabled : false
+
+				},
+				series : [ {
+					name : "登录次数",
+					colorByPoint : true,
+					data : countNumber
+				} 
+				]
+			};
+
+			var chart = Highcharts.chart('container', options);
+		}
+	}) 
+});
+		
+	</script>
+</html>

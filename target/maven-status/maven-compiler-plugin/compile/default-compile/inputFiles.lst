@@ -27,6 +27,7 @@ F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\util\IpUtil.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\po\Member.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\po\valid\ListVaild.java
+F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\vo\PolicyPropertyVo.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\po\base\BasePo.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\po\AdminRoleKey.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\po\Admin.java
@@ -44,6 +45,7 @@ F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\po\AdminExample.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\po\LogExample.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\service\impl\AdminRoleServiceImpl.java
+F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\service\PolicyService.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\mapper\AdminRoleMapper.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\po\Role.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\util\UuidUtil.java
@@ -56,6 +58,7 @@ F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\po\MenuExample.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\shiro\realm\CustomShiroRealm.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\property\StorageProperties.java
+F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\service\impl\PolicyServiceImpl.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\shiro\filter\AdminFormAuthenticationFilter.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\po\RoleMenuKey.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\controller\LogController.java
@@ -70,6 +73,7 @@ F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\controller\ConsoleMemberController.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\mapper\RoleMenuMapper.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\service\impl\RoleServiceImpl.java
+F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\controller\PolicyController.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\controller\MemberController.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\mapper\AdminMapper.java
 F:\eclipse-jee-neon-3-win32\eclipse\workspace\bootstrap\src\main\java\com\lenovo\bootstrap\util\MenuTreeUtil.java

@@ -2,6 +2,7 @@ com\lenovo\bootstrap\po\AdminRoleExample$Criterion.class
 com\lenovo\bootstrap\po\AdminExample$GeneratedCriteria.class
 com\lenovo\bootstrap\controller\PictureController.class
 com\lenovo\bootstrap\po\Role.class
+com\lenovo\bootstrap\service\impl\PolicyServiceImpl.class
 com\lenovo\bootstrap\shiro\realm\CustomShiroRealm.class
 com\lenovo\bootstrap\property\StorageProperties.class
 com\lenovo\bootstrap\shiro\CustomerAuthenticationToken.class
@@ -20,6 +21,7 @@ com\lenovo\bootstrap\service\AdminService.class
 com\lenovo\bootstrap\po\AdminRoleExample$GeneratedCriteria.class
 com\lenovo\bootstrap\service\RoleService.class
 com\lenovo\bootstrap\service\impl\RoleMenuServiceImpl.class
+com\lenovo\bootstrap\vo\PolicyPropertyVo.class
 com\lenovo\bootstrap\po\valid\AdminValid.class
 com\lenovo\bootstrap\po\MenuExample$Criterion.class
 com\lenovo\bootstrap\service\impl\LogServiceImpl.class
@@ -43,11 +45,13 @@ com\lenovo\bootstrap\mapper\RoleMenuMapper.class
 com\lenovo\bootstrap\service\PictureService.class
 com\lenovo\bootstrap\aspect\TimeLog.class
 com\lenovo\bootstrap\mapper\AdminMapper.class
+com\lenovo\bootstrap\service\PolicyService.class
 com\lenovo\bootstrap\po\RoleMenuKey.class
 com\lenovo\bootstrap\po\valid\MemberValid.class
 com\lenovo\bootstrap\service\impl\AdminRoleServiceImpl.class
 com\lenovo\bootstrap\controller\MemberController.class
 com\lenovo\bootstrap\vo\MenuVo.class
+com\lenovo\bootstrap\controller\PolicyController.class
 com\lenovo\bootstrap\po\LogExample$Criteria.class
 com\lenovo\bootstrap\po\MenuExample.class
 com\lenovo\bootstrap\util\CamelCaseUtil.class
@@ -83,6 +87,7 @@ com\lenovo\bootstrap\po\MemberExample.class
 com\lenovo\bootstrap\po\AdminRoleExample.class
 com\lenovo\bootstrap\mapper\LogMapper.class
 com\lenovo\bootstrap\po\RoleMenuExample$Criterion.class
+com\lenovo\bootstrap\service\impl\PolicyServiceImpl$1.class
 com\lenovo\bootstrap\shiro\ShrioConfig.class
 com\lenovo\bootstrap\service\RoleMenuService.class
 com\lenovo\bootstrap\BootstrapApplication.class

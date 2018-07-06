@@ -147,6 +147,7 @@ INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`
 INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('3576373e60384ba9b02f445361a4c9b0', '政策管理', 'menu', '/console/policy/setting', 'policy:setting', '0', NULL, '1', '0', '2018-06-20 13:45:02', '2018-06-20 13:45:02');
 INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('6293ffc6c6d14bf8b6e0d9b5317edd49', '政策列表', 'auth', '/console/policy/index', 'policy:index', '3576373e60384ba9b02f445361a4c9b0', NULL, '0', '0', '2018-06-20 13:45:02', '2018-06-20 13:45:02');
 
+
 -- ----------------------------
 -- Table structure for role
 -- ----------------------------

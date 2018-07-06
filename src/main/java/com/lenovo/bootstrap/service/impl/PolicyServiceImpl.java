@@ -2,13 +2,10 @@ package com.lenovo.bootstrap.service.impl;
 
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.FilenameFilter;
-import java.io.PrintWriter;
 import java.net.MalformedURLException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -16,7 +13,6 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
@@ -24,7 +20,6 @@ import org.springframework.util.ResourceUtils;
 
 import com.alibaba.fastjson.JSONObject;
 import com.lenovo.bootstrap.exception.StorageException;
-import com.lenovo.bootstrap.property.StorageProperties;
 import com.lenovo.bootstrap.service.PolicyService;
 import com.lenovo.bootstrap.vo.PolicyPropertyVo;
 
@@ -125,18 +120,25 @@ public class PolicyServiceImpl implements PolicyService {
 
 	@Override
 	public Resource loadAsResource(String filename) {
+		if (filename ==null || filename=="") {
+			return null;
+		}
+		String path ="";
+		if (filename.endsWith(".json")) {
+			 path = FILE_PATH + "/" + filename ;
+		}else {
+			 path = FILE_PATH + "/" + filename + "." + JSON;
+		}
 		try {
-			String path = FILE_PATH + "/" + filename + "." + JSON;
-			Path file = Paths.get(path);
-			Resource resource = new UrlResource(file.toUri());
+			Resource resource = new UrlResource(path);
 			if (resource.exists() || resource.isReadable()) {
 				return resource;
 			} else {
-				throw new StorageException("Could not read file: " + filename);
+				throw new StorageException("Could not read file or file not exist: " + filename);
 
 			}
 		} catch (MalformedURLException e) {
-			throw new StorageException("Could not read file: " + filename, e);
+			throw new StorageException("error Could not read file: " + filename, e);
 		}
 
 	}

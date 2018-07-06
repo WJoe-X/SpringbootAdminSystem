@@ -160,7 +160,7 @@ public class PolicyController {
 	}
 
 	/**
-	 * 下载json文件 路径为   ip地址/console/policy/file/文件名
+	 * 下载json文件 路径为   ip地址/console/policy/file/文件名,可以带json后缀，也可以不带。
 	 * @param filename
 	 * @return
 	 */
