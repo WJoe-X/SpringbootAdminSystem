@@ -1,5 +1,6 @@
 package com.lenovo.bootstrap.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -68,7 +69,6 @@ public class AdminController {
 
 	@Autowired
 	private LogService logService;
-	
 
 	/**
 	 * 后台登录界面
@@ -180,8 +180,8 @@ public class AdminController {
 	}
 
 	@RequestMapping(value = "/main", method = { RequestMethod.GET })
-	public String right(Model model) {
-		model.addAllAttributes(this.getTotal());
+	public String right(String uid ,Model model) {
+		model.addAllAttributes(this.getMenuName(uid));
 		return "console/right";
 	}
 
@@ -212,17 +212,16 @@ public class AdminController {
 		return "redirect:/console/login";
 	}
 
-	@GetMapping("user/{uid}")
-	public ModelAndView edtpwd(@PathVariable("uid") String uid,Model model) {
+	/*@GetMapping("user/{uid}")
+	public ModelAndView edtpwd(@PathVariable("uid") String uid, Model model) {
 		Admin admin = this.adminService.getById(uid);
-		/*Picture picture = this.pictureService.findById(29);*/
 		ModelAndView mv = new ModelAndView();
-		/*mv.addObject("picture", picture);*/
-		
-		mv.addObject("admin",admin);
+		 mv.addObject("picture", picture); 
+
+		mv.addObject("admin", admin);
 		mv.setViewName("/console/admin/savepwd");
 		return mv;
-	}
+	}*/
 
 	@RequestMapping("/403")
 	public String unauthorizedRole() {
@@ -253,6 +252,27 @@ public class AdminController {
 		mp.put("role", roleCount);
 		mp.put("menu", menuCount);
 		return mp;
+	}
+
+	private List<String> getMenuName(String uid) {
+		LOGGER.info("——————参数第一个---- ： {}",uid);
+		List<Menu> menuLists = new ArrayList<>();
+		int IsSystem =  this.adminService.getById(uid).getIsSystem();
+		List<String> list = new ArrayList<>();
+		if(IsSystem==1){
+			menuLists = menuService.findAll();
+		}
+		else{
+			menuLists = this.menuService.findByAdminId(uid);
+		}
+		for (Menu menu : menuLists) {
+			if ("0".equals(menu.getParentId())) {
+				list.add(menu.getMenuName());
+			}
+
+		}
+		LOGGER.info("——————  一级菜单列表有几个---- ： {}",list.size());
+		return list;
 	}
 
 }

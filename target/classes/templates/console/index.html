@@ -78,7 +78,7 @@
 					</div>
 				</div>
 				<ul class="sidebar-menu">
-					<li class="header">控制面板</li>
+					<li class="header">控制面板1</li>
 					<li class="treeview" th:each="menuList:${menuLists}"><a
 						href="#"> <i class="fa fa-dashboard"></i> <b
 							th:text="${menuList.menuName}"></b> <span
@@ -96,7 +96,7 @@
 			</section>
 		</aside>
 		<div class="content-wrapper">
-			<iframe name="mainFrame" id="mainFrame" src="/console/main"
+			<iframe name="mainFrame" id="mainFrame" th:src="'/console/main?uid='+${admin.uid}"
 				frameborder="false" scrolling="auto" style="border: none;"
 				width="100%" height="auto" allowtransparency="true"></iframe>
 		</div>

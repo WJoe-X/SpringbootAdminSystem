@@ -23,7 +23,7 @@ public class PublicController {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public String index(Model model) {
-		return "index";
+		return "/console/login";
 	}
 
 	/**
@@ -34,6 +34,7 @@ public class PublicController {
 	 */
 	@RequestMapping(value = "page/{pageName}", method = RequestMethod.GET)
 	public String pageTo(@PathVariable("pageName") String pageName) {
+		LOGGER.info("---直接访问页面  ：    {}" ,pageName);
 		return pageName;
 
 	}

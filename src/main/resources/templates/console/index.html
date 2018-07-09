@@ -96,7 +96,7 @@
 			</section>
 		</aside>
 		<div class="content-wrapper">
-			<iframe name="mainFrame" id="mainFrame" src="/console/main"
+			<iframe name="mainFrame" id="mainFrame" th:src="'/console/main?uid='+${admin.uid}"
 				frameborder="false" scrolling="auto" style="border: none;"
 				width="100%" height="auto" allowtransparency="true"></iframe>
 		</div>
