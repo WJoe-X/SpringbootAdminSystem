@@ -13,6 +13,7 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
@@ -33,7 +34,10 @@ import com.lenovo.bootstrap.vo.PolicyPropertyVo;
 public class PolicyServiceImpl implements PolicyService {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(PolicyServiceImpl.class);
-	private static final String FILE_PATH = "policy";
+
+	@Value(value = "${policy.path}")
+	private String FILE_PATH;
+	
 	private static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 	private static final String JSON = "json";
@@ -120,14 +124,14 @@ public class PolicyServiceImpl implements PolicyService {
 
 	@Override
 	public Resource loadAsResource(String filename) {
-		if (filename ==null || filename=="") {
+		if (filename == null || filename == "") {
 			return null;
 		}
-		String path ="";
+		String path = "";
 		if (filename.endsWith(".json")) {
-			 path = FILE_PATH + "/" + filename ;
-		}else {
-			 path = FILE_PATH + "/" + filename + "." + JSON;
+			path = FILE_PATH + "/" + filename;
+		} else {
+			path = FILE_PATH + "/" + filename + "." + JSON;
 		}
 		try {
 			Resource resource = new UrlResource(path);

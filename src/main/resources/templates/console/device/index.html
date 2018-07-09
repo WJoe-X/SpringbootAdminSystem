@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="console/header">
+</head>
+<body>
+	<section class="content-header">
+		<h1>设备列表</h1>
+	</section>
+	<section class="content table-content">
+		<table id="dataGrid"></table>
+	</section>
+	<div th:include="console/footer"></div>
+</body>
+<script type="text/javascript">
+	$table = $("#dataGrid");
+	$(function() {
+		initDataGrid();
+		 //2.初始化Button的点击事件
+	   var oButton = new ButtonInit();
+		 oButton.Init();
+	});
+	function initDataGrid() {
+		$table.bootstrapTable({
+			height : tableModel.getHeight(),
+			idField : "logId",
+			columns : [ [ {
+				title : "操作用户",
+				field : "logUser"
+			}, {
+				title : "操作时间",
+				field : "logTime",
+				sortable : true
+			}, {
+				title : "操作IP",
+				field : "logIp"
+			}, {
+				title : "操作地址",
+				field : "logAction"
+			} ] ],
+			url : '/console/log/list',
+			queryParams : function(params) {
+				console.info(params);
+				var temp = {
+					pageNumber : (params.offset / params.limit) + 1,
+					pageSize : params.limit,
+					order : params.order,
+					sort : params.sort,
+					logUser : $("#user").val()
+
+				}
+				return temp;
+			},
+			responseHandler : function(res) {
+				return {
+					rows : res.result.pageInfo.list,
+					total : res.result.pageInfo.total
+				}
+			},
+
+			sortName : 'logTime',
+			sortOrder : 'desc',
+			pagination : true,
+			sidePagination : 'server',
+			pageSize : 10,
+			pageList : [ 10, 30, 50, 70 ],
+			showRefresh : true,
+
+		});
+	}
+
+            var ButtonInit = function() {
+                var oInit = new Object();
+                oInit.Init = function() {
+                    //初始化页面上面的按钮事件
+                    $("#search")
+                        .click(function() {
+                            $table.bootstrapTable('refresh');
+                        });
+                };
+                return oInit;
+            };
+
+	  
+</script>
+</html>

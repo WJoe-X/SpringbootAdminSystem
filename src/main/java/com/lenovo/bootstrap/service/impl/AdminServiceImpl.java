@@ -106,17 +106,6 @@ public class AdminServiceImpl implements AdminService {
 
 	}
 
-	@Override
-	public void saveByExample(Admin admin) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public List<Admin> getPageList(Admin admin) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	@Transactional

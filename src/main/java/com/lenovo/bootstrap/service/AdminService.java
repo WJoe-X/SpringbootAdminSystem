@@ -32,10 +32,6 @@ public interface AdminService {
 	 */
 	public Integer save(Admin admin);
 
-	public void saveByExample(Admin admin);
-
-	public List<Admin> getPageList(Admin admin);
-
 	public Integer updatePwd(String uid, String newPassword);
 
 	/**

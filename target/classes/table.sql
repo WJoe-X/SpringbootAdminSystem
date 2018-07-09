@@ -146,6 +146,21 @@ INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`
 INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('b3496a2ddaf445f881f865a094e71820', '图片处理', 'menu', '/console/picture/setting', 'picture:setting', '0', NULL, '1', '0', '2018-05-16 11:07:09', '2018-05-16 11:07:09');
 INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('3576373e60384ba9b02f445361a4c9b0', '政策管理', 'menu', '/console/policy/setting', 'policy:setting', '0', NULL, '1', '0', '2018-06-20 13:45:02', '2018-06-20 13:45:02');
 INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('6293ffc6c6d14bf8b6e0d9b5317edd49', '政策列表', 'auth', '/console/policy/index', 'policy:index', '3576373e60384ba9b02f445361a4c9b0', NULL, '0', '0', '2018-06-20 13:45:02', '2018-06-20 13:45:02');
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('6ee9911cd9ea496d91cf963dd6dd593c', '域名管理', 'menu', '/console/domain/setting', 'domain:setting', '0', NULL, '0', '0', '2018-07-06 16:02:42', '2018-07-06 16:02:42');
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('d582ffb2c47d4d358e59fb254297939e', '技术支持', 'menu', '/console/support/setting', 'support:setting', '0', NULL, '0', '0', '2018-07-06 16:01:00', '2018-07-06 16:01:00');
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('c11b592271db4468a99d52e0d089c52b', '安全管理', 'menu', '/console/security/setting', 'security:setting', '0', NULL, '0', '0', '2018-07-06 15:59:58', '2018-07-06 15:59:58');
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('f6f54f4ab74f477ba7a519fcf6270dd4', '计费管理', 'menu', '/console/billing/setting', 'billing:setting', '0', NULL, '0', '0', '2018-07-06 15:57:22', '2018-07-06 15:57:22');
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('b3496a2ddaf445f881f865a094e71820', '图片管理', 'menu', '/console/picture/setting', 'picture:setting', '0', NULL, '1', '0', '2018-07-06 15:42:15', '2018-07-06 15:42:15');
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('292b22f5eb834d3eb6cb0a0d9733689c', 'APP应用列表', 'auth', '/console/app/index', 'app:index', '6ba1a9f520784278a4a04f01ff841da3', NULL, '0', '0', '2018-07-06 15:41:23', '2018-07-06 15:41:23');
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('6ba1a9f520784278a4a04f01ff841da3', 'APP应用管理', 'menu', '/console/app/setting', 'app:setting', '0', NULL, '1', '0', '2018-07-06 15:41:23', '2018-07-06 15:41:23');
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('444fa2ef57174a4d915417cf2f6cfc46', '用户管理', 'menu', '/console/user/setting', 'user:setting', '0', NULL, '1', '0', '2018-07-06 15:35:35', '2018-07-06 15:35:35');
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('f1921044ed9c4c01ab14dd2ffb2dcd21', '用户列表', 'auth', '/console/user/index', 'user:setting', '444fa2ef57174a4d915417cf2f6cfc46', NULL, '0', '0', '2018-07-06 15:35:35', '2018-07-06 15:35:35');
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('e97416378c0e4ca289f6d6fd33aa0a05', '组织管理', 'menu', '/console/organization/setting', 'organization:setting', '0', NULL, '1', '10', '2018-07-06 15:07:22', '2018-07-06 15:07:22');
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('eb4f9286525248488c463f06aa9e43a6', '组织列表', 'auth', '/console/organization/index', 'organization:index', 'e97416378c0e4ca289f6d6fd33aa0a05', NULL, '0', '0', '2018-07-06 15:07:22', '2018-07-06 15:07:22');
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('1d5151ea84564f82b3978212d4084365', '日志统计', 'auth', '/console/log/count', 'log:count', 'e5f52fe2115e46229c60803e478d2e9a', NULL, '0', '0', '2018-07-06 14:28:24', '2018-07-06 14:28:24');
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('e5f52fe2115e46229c60803e478d2e9a', '扩展设置', 'menu', '/console/system/setting', 'system:setting', '0', NULL, '2', '3', '2018-07-06 14:28:24', '2018-07-06 14:28:24');
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('2b3081e2c106431983544ad957f2ba86', '设备列表', 'auth', '/console/device/index', 'device:index', 'c21c083805d644c9a908e7691bb11e74', NULL, '0', '0', '2018-07-06 14:27:24', '2018-07-06 14:27:24');
+INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_type`, `menu_url`, `menu_code`, `parent_id`, `parent_ids`, `child_num`, `listorder`, `created_at`, `updated_at`) VALUES ('c21c083805d644c9a908e7691bb11e74', '设备管理', 'menu', '/console/device/setting', 'device:setting', '0', NULL, '1', '0', '2018-07-06 14:27:24', '2018-07-06 14:27:24');
 
 
 -- ----------------------------
@@ -205,3 +220,37 @@ CREATE TABLE `picture` (
   `uploader_name` varchar(20) NOT NULL comment '上传者名称',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `device`;
+CREATE TABLE `device` (
+`id` INT PRIMARY KEY not NULL auto_increment,
+  `device_id` char(20) NOT NULL,
+  `device_name` varchar(20) NOT NULL,
+  `device_brand` varchar(20) NOT NULL COMMENT '设备品牌',
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+ 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE  `user` (
+`id` int PRIMARY KEY not NULL AUTO_INCREMENT,
+  `user_name` varchar(20)  NOT NULL,
+   `sex` TINYINT(1) not null COMMENT '1为男，0为女',
+`emale` VARCHAR(50) not null ,
+ 
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+  
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ;
+
+
+DROP TABLE IF EXISTS `organization`;
+CREATE TABLE `organization` (
+`id` int PRIMARY KEY not NULL AUTO_INCREMENT,
+  `organization_name` varchar(20)  NOT NULL,
+   `created_by` VARCHAR(20) not null , 
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+  
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ;

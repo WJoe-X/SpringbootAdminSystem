@@ -104,7 +104,7 @@ public class ConsoleAdminController {
 	@RequiresPermissions("admin:index")
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	@ResponseBody
-	public ModelMap list(ListVaild listVaild, BindingResult result) {
+	public ModelMap list(@Valid ListVaild listVaild, BindingResult result) {
 		if (result.hasErrors()) {
 			for (ObjectError er : result.getAllErrors())
 				return ReturnUtil.Error(er.getDefaultMessage(), null, null);
