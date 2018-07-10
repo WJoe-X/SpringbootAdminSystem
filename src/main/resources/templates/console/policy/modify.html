@@ -124,8 +124,9 @@
 										result.NewTabPageLocation);
 							}
                             if (result.device_wallpaper_image != null) {
-                                $('#device_wallpaper_image').val(
-                                        result.device_wallpaper_image);
+                           var 	device_wallpaper_image= result.device_wallpaper_image;
+                           var url = device_wallpaper_image.split('"url\\":\\"')[1].split('"\,"hash"')[0]
+                                $('#device_wallpaper_image').val(url);
                             }
 
 							/* $('#URLWhitelist').val(result.URLWhitelist);
