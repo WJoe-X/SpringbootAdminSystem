@@ -9,7 +9,10 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +20,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.ResourceUtils;
 
 import com.alibaba.fastjson.JSONObject;
@@ -37,7 +41,7 @@ public class PolicyServiceImpl implements PolicyService {
 
 	@Value(value = "${policy.path}")
 	private String FILE_PATH;
-	
+
 	private static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 	private static final String JSON = "json";
@@ -79,17 +83,38 @@ public class PolicyServiceImpl implements PolicyService {
 	}
 
 	@Override
+	@Transactional
 	public Boolean savePolicyToJson(String json) throws Exception {
 		try {
+			// client json
+			LOGGER.info(" 修改JSON  : {} ",json);
 			JSONObject jsonObject = JSONObject.parseObject(json);
-
+			// read device_management file
 			String path = FILE_PATH + "/" + jsonObject.getString("name") + "." + JSON;
 			File file = ResourceUtils.getFile(path);
 			LOGGER.info("-------保存绝对路径--{}", file.getAbsolutePath());
 			jsonObject.remove("name");
-			String jsString = jsonObject.toJSONString();
+			
+			// device_management file to fileJSON
+			if (!file.exists()) {
+				return false;
+			}
+			String result = new String(Files.readAllBytes(Paths.get(path)));
+			JSONObject fileJSON = JSONObject.parseObject(result);
+			JSONObject gJsonObject = JSONObject.parseObject( fileJSON.get("google/chromeos/device").toString());
+			gJsonObject.remove("HomepageLocation");
+			gJsonObject.remove("ShowHomeButton");
+			gJsonObject.remove("NewTabPageLocation");
+			gJsonObject.remove("URLWhitelist");
+			gJsonObject.remove("URLBlacklist");
+			gJsonObject.putAll(jsonObject);
+			LOGGER.info("---------修改添加的 json  :  ｛｝",gJsonObject.toString());
+			fileJSON.remove("google/chromeos/device");
+			String jsString = gJsonObject.toJSONString();
+			fileJSON.put("google/chromeos/device", gJsonObject);
+			LOGGER.info("---------修改添加的 文件json  :  ｛｝",fileJSON.toString());
 			BufferedWriter writer = Files.newBufferedWriter(file.toPath(), StandardCharsets.UTF_8);
-			writer.write(jsString);
+			writer.write(fileJSON.toString());
 			writer.flush();
 			writer.close();
 			return true;
@@ -103,13 +128,18 @@ public class PolicyServiceImpl implements PolicyService {
 	@Override
 	public String getPolicy(String policyName) throws Exception {
 		String path = FILE_PATH + "/" + policyName + "." + JSON;
+		LOGGER.info("---------读取文件 路径-- ：{}",path);
 		File file = ResourceUtils.getFile(path);
 		if (!file.exists()) {
+			LOGGER.info("---------文件不存在  ：{}",path);
 			return null;
 		}
 		String result = new String(Files.readAllBytes(Paths.get(path)));
 		LOGGER.info("----------------{}  文件里的内容     --  {}", policyName, result);
-		return result;
+	JSONObject js = 	JSONObject.parseObject(result);
+	LOGGER.info("----google/chromeos/device : {}",js.get("google/chromeos/device"));
+	JSONObject gJsonObject = JSONObject.parseObject(js.get("google/chromeos/device").toString());
+		return gJsonObject.toJSONString();
 	}
 
 	@Override
