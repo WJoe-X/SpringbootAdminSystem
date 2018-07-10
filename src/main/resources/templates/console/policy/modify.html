@@ -75,7 +75,7 @@
                             <div class="form-group">
                                 <label for="URLBlacklist" class="col-sm-3 control-label">设备背景图片</label>
                                 <div class="col-sm-9">
-                                    <input type="text" name="URLBlacklist" class="form-control"
+                                    <input type="text" name="device_wallpaper_image" class="form-control"
                                         id="device_wallpaper_image" placeholder="设备背景图片" />
                                 </div>
                             </div>
@@ -125,7 +125,7 @@
 							}
                             if (result.device_wallpaper_image != null) {
                            var 	device_wallpaper_image= result.device_wallpaper_image;
-                           var url = device_wallpaper_image.split('"url\\":\\"')[1].split('"\,"hash"')[0]
+                           var url = device_wallpaper_image.split("url")[1].split("hash")[0].split('"')[2]
                                 $('#device_wallpaper_image').val(url);
                             }
 
@@ -149,6 +149,7 @@
 			var NewTabPageLocation = $('#NewTabPageLocation').val();
 			var URLWhitelist = $('#URLWhitelist').val();
 			var URLBlacklist = $('#URLBlacklist').val();
+			var device_wallpaper_image=$('#device_wallpaper_image').val();
 			var json = {};
 			json.name = name;
 			if (HomepageLocation != null && HomepageLocation != "") {
@@ -168,6 +169,9 @@
 			if (URLBlacklist != null && URLBlacklist != "") {
 				json.URLBlacklist = URLBlacklist.split(",");
 			}
+			if (device_wallpaper_image != null && device_wallpaper_image != "") {
+                json.device_wallpaper_image = device_wallpaper_image;
+            }
 			var js = JSON.stringify(json); //注意要转字符串				
 			$.ajax({
 				//几个参数需要注意一下

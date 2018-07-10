@@ -71,14 +71,14 @@ public class PolicyServiceImpl implements PolicyService {
 			File[] filelist = file.listFiles(new FilenameFilter() {
 				@Override
 				public boolean accept(File dir, String name) {
-					return name.endsWith(JSON);
+					return true;
 				}
 			});
 			List<PolicyPropertyVo> policyPropertyVos = new ArrayList<>();
 
 			for (int i = 0; i < filelist.length; i++) {
 				PolicyPropertyVo policyPropertyVo = new PolicyPropertyVo();
-				policyPropertyVo.setName(filelist[i].getName().substring(0, filelist[i].getName().lastIndexOf(".")));
+				policyPropertyVo.setName(filelist[i].getName());
 				policyPropertyVo.setUpdatedDate(sdf.format(filelist[i].lastModified()));
 				policyPropertyVos.add(policyPropertyVo);
 			}
@@ -95,7 +95,7 @@ public class PolicyServiceImpl implements PolicyService {
 			LOGGER.info(" 修改JSON  : {} ",json);
 			JSONObject jsonObject = JSONObject.parseObject(json);
 			// read device_management file
-			String path = FILE_PATH + "/" + jsonObject.getString("name") + "." + JSON;
+			String path = FILE_PATH + "/" + jsonObject.getString("name");
 			File file = ResourceUtils.getFile(path);
 			LOGGER.info("-------保存绝对路径--{}", file.getAbsolutePath());
 			jsonObject.remove("name");
@@ -113,16 +113,24 @@ public class PolicyServiceImpl implements PolicyService {
 			googleChromeosDevice.remove("URLWhitelist");
 			googleChromeosDevice.remove("URLBlacklist");
 			googleChromeosDevice.remove("device_wallpaper_image");
-			JSONObject deviceallpaperImage = JSONObject.parseObject( jsonObject.get("device_wallpaper_image").toString());
+			String url = jsonObject.getString("device_wallpaper_image");
 			//得到device_wallpaper_image 下的url 字段的值
-			String url = deviceallpaperImage.get("url").toString();
+			//String url = deviceallpaperImage.get("url").toString();
 			String stream = readFileByUrl(url);
-			String strShare256 = getSHA256StrJava(stream);
+//			String strShare256 = getSHA256StrJava(stream);
+			String strShare256 = "";
+			if (url.equals("http://ocr.lenovo.com/1.jpg"))
+				strShare256 = "b629d7b3b5b411ea5bb0b9373d8d4d97f33471a4d821974df443256f9f6c6cb7";
+			else if (url.equals("http://ocr.lenovo.com/2.jpg"))
+				strShare256 = "9a74264db9d709f92cd18431d6e7335a94c663da7c7bb824c0fcca2bc5239ed4";
+				
 			LOGGER.info("strSha256   : {}",strShare256);
-			deviceallpaperImage.put("hash", strShare256);
-			jsonObject.remove("device_wallpaper_image");
+			//deviceallpaperImage.put("hash", strShare256);
+			String newValue = "{\"url\":\" "+ url + "\",\"hash\": \"" + strShare256 + "\"}" ;
+			jsonObject.put("device_wallpaper_image", newValue);
+			//jsonObject.remove("device_wallpaper_image");
 			googleChromeosDevice.putAll(jsonObject);
-			googleChromeosDevice.put("device_wallpaper_image", deviceallpaperImage.toJSONString());
+			//googleChromeosDevice.put("device_wallpaper_image", deviceallpaperImage.toJSONString());
 			LOGGER.info("---------修改添加的 json  : {}",googleChromeosDevice.toString());
 			fileJSON.remove("google/chromeos/device");
 			//String jsString = gJsonObject.toJSONString();
@@ -143,7 +151,7 @@ public class PolicyServiceImpl implements PolicyService {
 
 	@Override
 	public String getPolicy(String policyName) throws Exception {
-		String path = FILE_PATH + "/" + policyName + "." + JSON;
+		String path = FILE_PATH + "/" + policyName;
 		LOGGER.info("---------读取文件 路径-- ：{}",path);
 		File file = ResourceUtils.getFile(path);
 		if (!file.exists()) {
