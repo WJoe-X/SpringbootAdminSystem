@@ -72,6 +72,14 @@
 								</div>
 							</div>
 
+                            <div class="form-group">
+                                <label for="URLBlacklist" class="col-sm-3 control-label">设备背景图片</label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="URLBlacklist" class="form-control"
+                                        id="device_wallpaper_image" placeholder="设备背景图片" />
+                                </div>
+                            </div>
+
 							<div class="form-group">
 								<div class="col-sm-offset-10 col-sm-10">
 									<input type="button" class="btn btn-default js-ajax-submit"
@@ -115,6 +123,11 @@
 								$('#NewTabPageLocation').val(
 										result.NewTabPageLocation);
 							}
+                            if (result.device_wallpaper_image != null) {
+                                $('#device_wallpaper_image').val(
+                                        result.device_wallpaper_image);
+                            }
+
 							/* $('#URLWhitelist').val(result.URLWhitelist);
 							$('#URLBlacklist').val(result.URLBlacklist);
 							$('#ShowHomeButton').val(result.ShowHomeButton.toString()); */

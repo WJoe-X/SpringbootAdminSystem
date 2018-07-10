@@ -1,18 +1,23 @@
 package com.lenovo.bootstrap.service.impl;
 
 import java.io.BufferedWriter;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FilenameFilter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -101,18 +106,28 @@ public class PolicyServiceImpl implements PolicyService {
 			}
 			String result = new String(Files.readAllBytes(Paths.get(path)));
 			JSONObject fileJSON = JSONObject.parseObject(result);
-			JSONObject gJsonObject = JSONObject.parseObject( fileJSON.get("google/chromeos/device").toString());
-			gJsonObject.remove("HomepageLocation");
-			gJsonObject.remove("ShowHomeButton");
-			gJsonObject.remove("NewTabPageLocation");
-			gJsonObject.remove("URLWhitelist");
-			gJsonObject.remove("URLBlacklist");
-			gJsonObject.putAll(jsonObject);
-			LOGGER.info("---------修改添加的 json  :  ｛｝",gJsonObject.toString());
+			JSONObject googleChromeosDevice = JSONObject.parseObject( fileJSON.get("google/chromeos/device").toString());
+			googleChromeosDevice.remove("HomepageLocation");
+			googleChromeosDevice.remove("ShowHomeButton");
+			googleChromeosDevice.remove("NewTabPageLocation");
+			googleChromeosDevice.remove("URLWhitelist");
+			googleChromeosDevice.remove("URLBlacklist");
+			googleChromeosDevice.remove("device_wallpaper_image");
+			JSONObject deviceallpaperImage = JSONObject.parseObject( jsonObject.get("device_wallpaper_image").toString());
+			//得到device_wallpaper_image 下的url 字段的值
+			String url = deviceallpaperImage.get("url").toString();
+			String stream = readFileByUrl(url);
+			String strShare256 = getSHA256StrJava(stream);
+			LOGGER.info("strSha256   : {}",strShare256);
+			deviceallpaperImage.put("hash", strShare256);
+			jsonObject.remove("device_wallpaper_image");
+			googleChromeosDevice.putAll(jsonObject);
+			googleChromeosDevice.put("device_wallpaper_image", deviceallpaperImage.toJSONString());
+			LOGGER.info("---------修改添加的 json  : {}",googleChromeosDevice.toString());
 			fileJSON.remove("google/chromeos/device");
-			String jsString = gJsonObject.toJSONString();
-			fileJSON.put("google/chromeos/device", gJsonObject);
-			LOGGER.info("---------修改添加的 文件json  :  ｛｝",fileJSON.toString());
+			//String jsString = gJsonObject.toJSONString();
+			fileJSON.put("google/chromeos/device", googleChromeosDevice);
+			LOGGER.info("---------修改添加的 文件json  :  {}",fileJSON.toString());
 			BufferedWriter writer = Files.newBufferedWriter(file.toPath(), StandardCharsets.UTF_8);
 			writer.write(fileJSON.toString());
 			writer.flush();
@@ -124,6 +139,7 @@ public class PolicyServiceImpl implements PolicyService {
 		return false;
 
 	}
+	
 
 	@Override
 	public String getPolicy(String policyName) throws Exception {
@@ -176,4 +192,81 @@ public class PolicyServiceImpl implements PolicyService {
 		}
 
 	}
+	
+	private static String readFileByUrl(String urlStr) {
+        String res=null;
+        try {
+            URL url = new URL(urlStr);  
+            HttpURLConnection conn = (HttpURLConnection)url.openConnection();  
+            //设置超时间为3秒
+            conn.setConnectTimeout(3*1000);
+            //防止屏蔽程序抓取而返回403错误
+            conn.setRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)");
+            //得到输入流
+            InputStream inputStream = conn.getInputStream();  
+            res = readInputStream(inputStream);
+        } catch (Exception e) {
+            LOGGER.error("通过url地址获取文本内容失败 Exception：" + e);
+        }
+        return res;
+    }
+	
+	/**
+     * 从输入流中获取字符串
+     * @param inputStream
+     * @return
+     * @throws IOException
+     */
+    public static String readInputStream(InputStream inputStream) throws IOException {  
+        byte[] buffer = new byte[1024];  
+        int len = 0;  
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();  
+        while((len = inputStream.read(buffer)) != -1) {  
+            bos.write(buffer, 0, len);  
+        }  
+        bos.close();  
+        System.out.println(new String(bos.toByteArray(),"utf-8"));
+        return new String(bos.toByteArray(),"utf-8");
+    }
+	
+	/**
+     *  利用java原生的摘要实现SHA256加密
+     * @param str 加密后的报文
+     * @return
+     */
+    private static String getSHA256StrJava(String str){
+        MessageDigest messageDigest;
+        String encodeStr = "";
+        try {
+            messageDigest = MessageDigest.getInstance("SHA-256");
+            messageDigest.update(str.getBytes("UTF-8"));
+            encodeStr = byte2Hex(messageDigest.digest());
+        } catch (NoSuchAlgorithmException e) {
+        	LOGGER.error("通过url地址获取文本内容,加密后报文失败 Exception：" + e);
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+        	LOGGER.error("通过url地址获取文本内容,加密后报文失败 Exception：" + e);
+            e.printStackTrace();
+        }
+        return encodeStr;
+    }
+
+    /**
+     * 将byte转为16进制
+     * @param bytes
+     * @return
+     */
+    private static String byte2Hex(byte[] bytes){
+        StringBuffer stringBuffer = new StringBuffer();
+        String temp = null;
+        for (int i=0;i<bytes.length;i++){
+            temp = Integer.toHexString(bytes[i] & 0xFF);
+            if (temp.length()==1){
+                //1得到一位的进行补0操作
+                stringBuffer.append("0");
+            }
+            stringBuffer.append(temp);
+        }
+        return stringBuffer.toString();
+    }
 }
