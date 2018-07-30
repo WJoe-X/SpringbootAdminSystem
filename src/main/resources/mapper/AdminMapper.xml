@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lenovo.bootstrap.mapper.AdminMapper">
-  <resultMap id="BaseResultMap" type="com.lenovo.bootstrap.po.Admin">
+<mapper namespace="lib.sixzeroseven.admin.mapper.AdminMapper">
+  <resultMap id="BaseResultMap" type="lib.sixzeroseven.admin.po.Admin">
     <id column="uid" jdbcType="VARCHAR" property="uid" />
     <result column="username" jdbcType="VARCHAR" property="username" />
     <result column="password" jdbcType="VARCHAR" property="password" />
@@ -72,7 +72,7 @@
   <sql id="Base_Column_List">
     uid, username, password, state, salt, is_system, created_at, updated_at
   </sql>
-  <select id="selectByExample" parameterType="com.lenovo.bootstrap.po.AdminExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="lib.sixzeroseven.admin.po.AdminExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -96,13 +96,13 @@
     delete from admin
     where uid = #{uid,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.lenovo.bootstrap.po.AdminExample">
+  <delete id="deleteByExample" parameterType="lib.sixzeroseven.admin.po.AdminExample">
     delete from admin
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.lenovo.bootstrap.po.Admin">
+  <insert id="insert" parameterType="lib.sixzeroseven.admin.po.Admin">
     insert into admin (uid, username, password, 
       state, salt, is_system, 
       created_at, updated_at)
@@ -110,7 +110,7 @@
       #{state,jdbcType=TINYINT}, #{salt,jdbcType=VARCHAR}, #{isSystem,jdbcType=TINYINT}, 
       #{createdAt,jdbcType=TIMESTAMP}, #{updatedAt,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.lenovo.bootstrap.po.Admin">
+  <insert id="insertSelective" parameterType="lib.sixzeroseven.admin.po.Admin">
     insert into admin
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="uid != null">
@@ -165,7 +165,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.lenovo.bootstrap.po.AdminExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="lib.sixzeroseven.admin.po.AdminExample" resultType="java.lang.Long">
     select count(*) from admin
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -217,7 +217,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.lenovo.bootstrap.po.Admin">
+  <update id="updateByPrimaryKeySelective" parameterType="lib.sixzeroseven.admin.po.Admin">
     update admin
     <set>
       <if test="username != null">
@@ -244,7 +244,7 @@
     </set>
     where uid = #{uid,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.lenovo.bootstrap.po.Admin">
+  <update id="updateByPrimaryKey" parameterType="lib.sixzeroseven.admin.po.Admin">
     update admin
     set username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},

@@ -31,8 +31,7 @@ target
 bin/
 gen/
 
-mvnw
-mvnw.cmd
+mvnw*
 
 
 

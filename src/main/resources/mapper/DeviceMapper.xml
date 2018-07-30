@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lenovo.bootstrap.mapper.DeviceMapper">
-  <resultMap id="BaseResultMap" type="com.lenovo.bootstrap.po.Device">
+<mapper namespace="lib.sixzeroseven.admin.mapper.DeviceMapper">
+  <resultMap id="BaseResultMap" type="lib.sixzeroseven.admin.po.Device">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="device_id" jdbcType="CHAR" property="deviceId" />
     <result column="device_name" jdbcType="VARCHAR" property="deviceName" />
@@ -70,7 +70,7 @@
   <sql id="Base_Column_List">
     id, device_id, device_name, device_brand, created_at, updated_at
   </sql>
-  <select id="selectByExample" parameterType="com.lenovo.bootstrap.po.DeviceExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="lib.sixzeroseven.admin.po.DeviceExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -94,13 +94,13 @@
     delete from device
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="com.lenovo.bootstrap.po.DeviceExample">
+  <delete id="deleteByExample" parameterType="lib.sixzeroseven.admin.po.DeviceExample">
     delete from device
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.lenovo.bootstrap.po.Device">
+  <insert id="insert" parameterType="lib.sixzeroseven.admin.po.Device">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -109,7 +109,7 @@
     values (#{deviceId,jdbcType=CHAR}, #{deviceName,jdbcType=VARCHAR}, #{deviceBrand,jdbcType=VARCHAR}, 
       #{createdAt,jdbcType=TIMESTAMP}, #{updatedAt,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.lenovo.bootstrap.po.Device">
+  <insert id="insertSelective" parameterType="lib.sixzeroseven.admin.po.Device">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -149,7 +149,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.lenovo.bootstrap.po.DeviceExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="lib.sixzeroseven.admin.po.DeviceExample" resultType="java.lang.Long">
     select count(*) from device
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -193,7 +193,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.lenovo.bootstrap.po.Device">
+  <update id="updateByPrimaryKeySelective" parameterType="lib.sixzeroseven.admin.po.Device">
     update device
     <set>
       <if test="deviceId != null">
@@ -214,7 +214,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.lenovo.bootstrap.po.Device">
+  <update id="updateByPrimaryKey" parameterType="lib.sixzeroseven.admin.po.Device">
     update device
     set device_id = #{deviceId,jdbcType=CHAR},
       device_name = #{deviceName,jdbcType=VARCHAR},

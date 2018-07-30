@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lenovo.bootstrap.mapper.RoleMapper">
-  <resultMap id="BaseResultMap" type="com.lenovo.bootstrap.po.Role">
+<mapper namespace="lib.sixzeroseven.admin.mapper.RoleMapper">
+  <resultMap id="BaseResultMap" type="lib.sixzeroseven.admin.po.Role">
     <id column="role_id" jdbcType="VARCHAR" property="roleId" />
     <result column="role_name" jdbcType="VARCHAR" property="roleName" />
     <result column="role_desc" jdbcType="VARCHAR" property="roleDesc" />
@@ -70,7 +70,7 @@
   <sql id="Base_Column_List">
     role_id, role_name, role_desc, enable, created_at, updated_at
   </sql>
-  <select id="selectByExample" parameterType="com.lenovo.bootstrap.po.RoleExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="lib.sixzeroseven.admin.po.RoleExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -94,13 +94,13 @@
     delete from role
     where role_id = #{roleId,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.lenovo.bootstrap.po.RoleExample">
+  <delete id="deleteByExample" parameterType="lib.sixzeroseven.admin.po.RoleExample">
     delete from role
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.lenovo.bootstrap.po.Role">
+  <insert id="insert" parameterType="lib.sixzeroseven.admin.po.Role">
     insert into role (role_id, role_name, role_desc, 
       enable, created_at, updated_at
       )
@@ -108,7 +108,7 @@
       #{enable,jdbcType=TINYINT}, #{createdAt,jdbcType=TIMESTAMP}, #{updatedAt,jdbcType=TIMESTAMP}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.lenovo.bootstrap.po.Role">
+  <insert id="insertSelective" parameterType="lib.sixzeroseven.admin.po.Role">
     insert into role
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="roleId != null">
@@ -151,7 +151,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.lenovo.bootstrap.po.RoleExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="lib.sixzeroseven.admin.po.RoleExample" resultType="java.lang.Long">
     select count(*) from role
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -195,7 +195,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.lenovo.bootstrap.po.Role">
+  <update id="updateByPrimaryKeySelective" parameterType="lib.sixzeroseven.admin.po.Role">
     update role
     <set>
       <if test="roleName != null">
@@ -216,7 +216,7 @@
     </set>
     where role_id = #{roleId,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.lenovo.bootstrap.po.Role">
+  <update id="updateByPrimaryKey" parameterType="lib.sixzeroseven.admin.po.Role">
     update role
     set role_name = #{roleName,jdbcType=VARCHAR},
       role_desc = #{roleDesc,jdbcType=VARCHAR},
@@ -232,11 +232,11 @@
         select r.role_name from role r,admin_role ar where r.role_id = ar.role_id and ar.admin_id = #{id}
     </select>
 
-    <resultMap id="queryResulpMap" type="com.lenovo.bootstrap.po.Role">
+    <resultMap id="queryResulpMap" type="lib.sixzeroseven.admin.po.Role">
         <id column="role_id" jdbcType="VARCHAR" property="roleId" />
         <result column="role_name" jdbcType="VARCHAR" property="roleName" />
         <result column="enable" jdbcType="INTEGER" property="enable" />
-        <collection property="adminList" javaType="java.util.List" ofType="com.lenovo.bootstrap.po.Admin">
+        <collection property="adminList" javaType="java.util.List" ofType="lib.sixzeroseven.admin.po.Admin">
             <id column="adminid" jdbcType="VARCHAR" property="uid" />
             <result column="username" jdbcType="VARCHAR" property="username" />
             <result column="state" jdbcType="INTEGER" property="state" />

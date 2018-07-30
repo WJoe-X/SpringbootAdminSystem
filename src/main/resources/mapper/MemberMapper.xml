@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lenovo.bootstrap.mapper.MemberMapper">
-  <resultMap id="BaseResultMap" type="com.lenovo.bootstrap.po.Member">
+<mapper namespace="lib.sixzeroseven.admin.mapper.MemberMapper">
+  <resultMap id="BaseResultMap" type="lib.sixzeroseven.admin.po.Member">
     <id column="uid" jdbcType="VARCHAR" property="uid" />
     <id column="account" jdbcType="VARCHAR" property="account" />
     <result column="password" jdbcType="VARCHAR" property="password" />
@@ -71,7 +71,7 @@
   <sql id="Base_Column_List">
     uid, account, password, salt, state, created_at, updated_at
   </sql>
-  <select id="selectByExample" parameterType="com.lenovo.bootstrap.po.MemberExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="lib.sixzeroseven.admin.po.MemberExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -85,25 +85,25 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="com.lenovo.bootstrap.po.MemberKey" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="lib.sixzeroseven.admin.po.MemberKey" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from member
     where uid = #{uid,jdbcType=VARCHAR}
       and account = #{account,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="com.lenovo.bootstrap.po.MemberKey">
+  <delete id="deleteByPrimaryKey" parameterType="lib.sixzeroseven.admin.po.MemberKey">
     delete from member
     where uid = #{uid,jdbcType=VARCHAR}
       and account = #{account,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.lenovo.bootstrap.po.MemberExample">
+  <delete id="deleteByExample" parameterType="lib.sixzeroseven.admin.po.MemberExample">
     delete from member
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.lenovo.bootstrap.po.Member">
+  <insert id="insert" parameterType="lib.sixzeroseven.admin.po.Member">
     insert into member (uid, account, password, 
       salt, state, created_at, 
       updated_at)
@@ -111,7 +111,7 @@
       #{salt,jdbcType=VARCHAR}, #{state,jdbcType=TINYINT}, #{createdAt,jdbcType=TIMESTAMP}, 
       #{updatedAt,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.lenovo.bootstrap.po.Member">
+  <insert id="insertSelective" parameterType="lib.sixzeroseven.admin.po.Member">
     insert into member
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="uid != null">
@@ -160,7 +160,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.lenovo.bootstrap.po.MemberExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="lib.sixzeroseven.admin.po.MemberExample" resultType="java.lang.Long">
     select count(*) from member
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -208,7 +208,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.lenovo.bootstrap.po.Member">
+  <update id="updateByPrimaryKeySelective" parameterType="lib.sixzeroseven.admin.po.Member">
     update member
     <set>
       <if test="password != null">
@@ -230,7 +230,7 @@
     where uid = #{uid,jdbcType=VARCHAR}
       and account = #{account,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.lenovo.bootstrap.po.Member">
+  <update id="updateByPrimaryKey" parameterType="lib.sixzeroseven.admin.po.Member">
     update member
     set password = #{password,jdbcType=VARCHAR},
       salt = #{salt,jdbcType=VARCHAR},

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.lenovo.bootstrap.mapper.LogMapper">
-	<resultMap id="BaseResultMap" type="com.lenovo.bootstrap.po.Log">
+<mapper namespace="lib.sixzeroseven.admin.mapper.LogMapper">
+	<resultMap id="BaseResultMap" type="lib.sixzeroseven.admin.po.Log">
 		<id column="log_id" jdbcType="VARCHAR" property="logId" />
 		<result column="log_user" jdbcType="VARCHAR" property="logUser" />
 		<result column="log_time" jdbcType="TIMESTAMP" property="logTime" />
@@ -74,7 +74,7 @@
 	<sql id="Base_Column_List">
 		log_id, log_user, log_time, log_ip, log_action
 	</sql>
-	<select id="selectByExample" parameterType="com.lenovo.bootstrap.po.LogExample"
+	<select id="selectByExample" parameterType="lib.sixzeroseven.admin.po.LogExample"
 		resultMap="BaseResultMap">
 		select
 		<if test="distinct">
@@ -100,20 +100,20 @@
 		delete from log
 		where log_id = #{logId,jdbcType=VARCHAR}
 	</delete>
-	<delete id="deleteByExample" parameterType="com.lenovo.bootstrap.po.LogExample">
+	<delete id="deleteByExample" parameterType="lib.sixzeroseven.admin.po.LogExample">
 		delete from log
 		<if test="_parameter != null">
 			<include refid="Example_Where_Clause" />
 		</if>
 	</delete>
-	<insert id="insert" parameterType="com.lenovo.bootstrap.po.Log">
+	<insert id="insert" parameterType="lib.sixzeroseven.admin.po.Log">
 		insert into log (log_id, log_user, log_time,
 		log_ip, log_action)
 		values (#{logId,jdbcType=VARCHAR}, #{logUser,jdbcType=VARCHAR},
 		#{logTime,jdbcType=TIMESTAMP},
 		#{logIp,jdbcType=VARCHAR}, #{logAction,jdbcType=VARCHAR})
 	</insert>
-	<insert id="insertSelective" parameterType="com.lenovo.bootstrap.po.Log">
+	<insert id="insertSelective" parameterType="lib.sixzeroseven.admin.po.Log">
 		insert into log
 		<trim prefix="(" suffix=")" suffixOverrides=",">
 			<if test="logId != null">
@@ -150,7 +150,7 @@
 			</if>
 		</trim>
 	</insert>
-	<select id="countByExample" parameterType="com.lenovo.bootstrap.po.LogExample"
+	<select id="countByExample" parameterType="lib.sixzeroseven.admin.po.LogExample"
 		resultType="java.lang.Long">
 		select count(*) from log
 		<if test="_parameter != null">
@@ -191,7 +191,7 @@
 			<include refid="Update_By_Example_Where_Clause" />
 		</if>
 	</update>
-	<update id="updateByPrimaryKeySelective" parameterType="com.lenovo.bootstrap.po.Log">
+	<update id="updateByPrimaryKeySelective" parameterType="lib.sixzeroseven.admin.po.Log">
 		update log
 		<set>
 			<if test="logUser != null">
@@ -209,7 +209,7 @@
 		</set>
 		where log_id = #{logId,jdbcType=VARCHAR}
 	</update>
-	<update id="updateByPrimaryKey" parameterType="com.lenovo.bootstrap.po.Log">
+	<update id="updateByPrimaryKey" parameterType="lib.sixzeroseven.admin.po.Log">
 		update log
 		set log_user = #{logUser,jdbcType=VARCHAR},
 		log_time = #{logTime,jdbcType=TIMESTAMP},
@@ -218,7 +218,7 @@
 		where log_id = #{logId,jdbcType=VARCHAR}
 	</update>
 
-	<select id="countPerDay" resultType="com.lenovo.bootstrap.vo.CountPerDayVo">
+	<select id="countPerDay" resultType="lib.sixzeroseven.admin.vo.CountPerDayVo">
 		SELECT
 		COUNT(1) AS countNumber,
 		DATE_FORMAT(log_time,'%Y-%m-%d') AS dateTime
