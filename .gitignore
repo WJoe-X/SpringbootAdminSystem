@@ -24,8 +24,15 @@ target
 .project
 .DS_Store
 
+.idea
+.settings
+.mvn
+.springBeans
 bin/
 gen/
+
+mvnw
+mvnw.cmd
 
 
 
