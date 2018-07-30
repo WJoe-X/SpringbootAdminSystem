@@ -1,4 +1,4 @@
-# BootStrap
+# SpringbootAdminSystem
 
 #### 项目介绍
 该项目在SpringBoot2.0的基础上搭建的一个Java基础开发框架，以Spring MVC为模型视图控制器，MyBatis为数据访问层， Apache Shiro为权限授权层，redis对常用数据进行缓存。
